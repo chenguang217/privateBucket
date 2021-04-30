@@ -1,7 +1,7 @@
 {
     "version": "6.3.7",
     "url": "http://81.70.203.45/ecloud.7z",
-    "extract_dir": "eClouc",
+    "extract_dir": "eCloud",
     "shortcust": [
         [
             "eCloud.exe",
