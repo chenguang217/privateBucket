@@ -1,0 +1,34 @@
+{
+    "version": "8.4.6",
+    "description": "\u6597\u9c7c",
+    "license": {
+        "identifier": "Proprietary",
+        "url": "www.douyu.com"
+    },
+    "url": "https://sta-op.douyucdn.cn/dypc-client/pkg/Douyu_Live_PC_Client/20210407104709771/DouyuLive_8.4.6.3_Server_1.1.1.4.exe",
+    "homepage": "http://www.douyu.com",
+    "bin": [
+        [
+            "Client\\DouyuLive.exe",
+            "douyu"
+        ]
+    ],
+    "hash": "md5:cfd6920035199634972e9ff98456fd01",
+    "checkver": {
+        "url": "https://www.douyu.com/client?tab=client#pc",
+        "regex": "Douyu_Live_PC_Client/(?<timestamp>.*?)/DouyuLive_([\\d.]+)_Server_(?<server>[\\d.]+).exe"
+    },
+    "autoupdate": {
+        "url": "https://sta-op.douyucdn.cn/dypc-client/pkg/Douyu_Live_PC_Client/$matchTimestamp/DouyuLive_$version_Server_$matchServer.exe#/dl.7z",
+        "hash": {
+            "mode": "download"
+        }
+    },
+    "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\" -Force -Recurse",
+    "shortcuts": [
+        [
+            "Client\\DouyuLive.exe",
+            "\u6597\u9c7c"
+        ]
+    ]
+}

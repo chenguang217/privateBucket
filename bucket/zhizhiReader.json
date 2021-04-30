@@ -1,0 +1,21 @@
+{
+    "homepage": "https://im.qq.com",
+    "description": "reader",
+    "version": "1.5.0.7",
+    "license": "unknown",
+    "url": "https://github.com/zhizhiyuedu/zhizhiyuedu.github.io/releases/download/1.5.0.9/Zhizhi.Reader.1.5.0.7.exe#/dl.7z",
+    "hash": "md5:538db4e552a2bf4c5bacc5ed0fc28ad1",
+    "shortcuts": [
+        [
+            "ZhizhiReader.exe",
+            "知之阅读"
+        ]
+    ],
+    "checkver": {
+        "url": "https://im.qq.com/download",
+        "regex": "<em class=\"dver justword\" id=\"imedit_justword_pctab\">([\\d.]+)<sup>"
+    },
+    "autoupdate": {
+        "url": "https://down.qq.com/qqweb/PCQQ/PCQQ_EXE/PCQQ2020.exe#/QQ-install.exe#/dl.7z"
+    }
+}

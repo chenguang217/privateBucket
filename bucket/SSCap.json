@@ -1,0 +1,14 @@
+{
+    "homepage": "https://sourceforge.net/projects/sscap/",
+    "description": "A c++ version of shadwosocks gui. support win xp/vista/win7/win8/win10. more fluent and more effective.",
+    "version": "4.0",
+    "url": "https://jaist.dl.sourceforge.net/project/sscap/SSCapV4.0.rar",
+    "hash": "md5:8a698d69dec8fe5659c0d40b8be450b2",
+    "bin": "SSCap",
+    "shortcuts": [
+        [
+            "SSCap.exe",
+            "SSCap"
+        ]
+    ]
+}

@@ -1,0 +1,31 @@
+{
+    "homepage": "https://meeting.tencent.com/",
+    "license": "unknown",
+    "version": "2.10.6.400",
+    "url": "https://updatecdn.meeting.qq.com/99ab5842a25ca73f616ed9883678cf19/TencentMeeting_0300000000_2.10.6.400.publish.exe#/dl.7z",
+    "hash": "md5:99ab5842a25ca73f616ed9883678cf19",
+    "installer": {
+        "script": [
+            "Remove-Item \"$dir\\wemeetapp_new.exe\" -Force",
+            "Rename-Item \"$dir\\`$_7_\" \"$dir\\$version\"",
+            "Remove-Item \"$dir\\`$WINDIR\",\"$dir\\`$PLUGINSDIR\" -Force -Recurse"
+        ]
+    },
+    "bin": "wemeetapp.exe",
+    "shortcuts": [
+        [
+            "wemeetapp.exe",
+            "\u817e\u8baf\u4f1a\u8bae"
+        ]
+    ],
+    "checkver": {
+        "url": "https://api.xuann.wang/api/tencent-meeting",
+        "regex": "([\\d.]+) (?<url>.+)"
+    },
+    "autoupdate": {
+        "url": "$matchUrl",
+        "hash": {
+            "url": "https://api.xuann.wang/api/tencent-meeting?hash=1"
+        }
+    }
+}
