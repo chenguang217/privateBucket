@@ -10,6 +10,10 @@
             "McMusic"
         ]
     ],
+    "persist": [
+	    "music",
+	    "Application.config"
+    ],
     "checkver": {
         "url": "http://www.mcmusic.top/client",
         "regex": "([\\d.]+) (?<url>.+)"
