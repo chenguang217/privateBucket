@@ -1,8 +1,8 @@
 {
 	"homepage": "http://www.portablesoft.org/cajviewer-lite/",
 	"version": "7.2",
-	"url": "https://cdn.jsdelivr.net/gh/Apocalypsor/My-Scoop-Bucket/files/CAJViewerLite.zip",
-	"hash": "4084a0494f8ea8c1a44385bfe69bd869d4b50c594a6b9b3d7f968b0fc53fa7c5",
+	"url": "http://81.70.203.45/cajviewer.zip",
+	"hash": "md5:cf3b5f1099f2a829800d7282b6422573",
 	"shortcuts": [
 		[
 			"CAJVieweru.exe",
