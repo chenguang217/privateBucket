@@ -1,7 +1,7 @@
 {
-    "version": "2.5.5",
-    "extract_dir": "verysync-windows-amd64-v2.5.5",
-    "url": "http://dl-cn.verysync.com/releases/v2.5.5/verysync-windows-amd64-v2.5.5.zip",
+    "version": "2.6.1",
+    "extract_dir": "verysync-windows-amd64-v2.6.1",
+    "url": "http://dl-cn.verysync.com/releases/v2.6.1/verysync-windows-amd64-v2.6.1.zip",
     "homepage": "http://www.verysync.com",
     "persist": "config",
     "bin": [
@@ -11,5 +11,5 @@
             "-home \"$persist_dir/config\""
         ]
     ],
-    "hash": "md5:425969ae41256767b9af96a40669f10d"
+    "hash": "md5:af968dca59ab608d0abc095f67c31536"
 }
