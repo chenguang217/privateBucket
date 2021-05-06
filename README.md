@@ -10,6 +10,10 @@
 - verysync: 微力同步
 - baiduNetdisk: 百度网盘
 - SSCap: SSCap ssr批量检测工具
+- sstap: sstap ssr游戏加速
 - musicTag: 音乐文件标签编辑工具
 - texlive: texlive在线安装版
 - ecloud: 天翼云客户端
+- cajviewer: caj阅读器
+- 115browser: 115浏览器
+- navicat: navicat数据库开发
