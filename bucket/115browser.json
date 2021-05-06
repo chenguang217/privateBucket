@@ -5,8 +5,9 @@
 	"url": "http://m50006.gzcm.natzf.com/fbdownload/chrome.7z?_sid=%22tozkqRdvtARmQ1780PDN123456%22&mode=%22download%22&stdhtml=false&dlink=%222f4d61696e2f50726f6a6563742f546d702f6368726f6d652e377a%22&SynoToken=qo5C90gAE4JSg",
 	"shortcuts": [
 		[
-			"115chrome.exe --no-sandbox",
-			"115浏览器"
+			"115chrome.exe",
+			"115浏览器",
+			"--no-sandbox"
 		]
 	],
 	"hash": "md5:698a6d164b79dbbafc9c418b2b541efe"
