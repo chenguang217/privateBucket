@@ -1,0 +1,13 @@
+{
+	"version": "24.1.0.10",
+	"extract_dir": "Chrome-bin",
+	"homepage": "https://115.com",
+	"url": "http://81.70.203.45/chrome.7z",
+	"shortcuts": [
+		[
+			"115chrome.exe",
+			"115浏览器"
+		]
+	],
+	"hash": "md5:698a6d164b79dbbafc9c418b2b541efe"
+}
