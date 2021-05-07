@@ -11,6 +11,12 @@
 		    "Start-Process $key"
 	    ]
     },
+    "uninstaller":{
+    	"script": [
+		"$key=$dir.ToString()+'\\!)卸载.bat'",
+		"Start-Process $key"
+	]
+    },
     "shortcuts": [
         [
             "IDMan.exe",
