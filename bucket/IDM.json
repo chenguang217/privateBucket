@@ -5,6 +5,12 @@
     "hash": "md5:734d7d1ddf3dcb3bdb8bbf714cf970ff",
     "extract_dir": "IDM",
     "url": "http://81.70.203.45/IDM.7z",
+    "installer": {
+	    "script": [
+		    "$key=$dir.ToString()+'!)绿化.bat'",
+		    "Start-Process $key"
+	    ]
+    },
     "shortcuts": [
         [
             "IDMan.exe",
