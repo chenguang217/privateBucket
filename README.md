@@ -17,3 +17,4 @@
 - cajviewer: caj阅读器
 - 115browser: 115浏览器
 - navicat: navicat数据库开发
+- idm: IDM下载工具
