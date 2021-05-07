@@ -7,7 +7,7 @@
     "url": "http://81.70.203.45/IDM.7z",
     "installer": {
 	    "script": [
-		    "$key=$dir.ToString()+'!)绿化.bat'",
+		    "$key=$dir.ToString()+'\\!)绿化.bat'",
 		    "Start-Process $key"
 	    ]
     },
