@@ -1,0 +1,34 @@
+{
+	"version": "5.91",
+	"description": "最好用的压缩软件，没有之一",
+	"homepage": "https://rarlab.com/",
+	"license": {
+		"identifier": "Shareware",
+		"url": "https://www.win-rar.com/gtb_priv.html?&L=0"
+	},
+	"notes": "Set up context menu within settings window.",
+	"architecture": {
+		"64bit": {
+			"url": "https://m50006.gzcm.natzf.com/fbdownload/WinRAR-x64.rar?_sid=%22tozkqRdvtARmQ1780PDN123456%22&mode=%22download%22&stdhtml=false&dlink=%222f536f6674776172652f6275636b65742f57696e5241522d7836342e726172%22&SynoToken=qo5C90gAE4JSg",
+			"hash": "md5:799ab736c3855ac6f45e70f3ca5edeb4",
+			"extract_dir": "WinRAR-x64"
+		},
+		"32bit": {
+			"url": "https://m50006.gzcm.natzf.com/fbdownload/WinRAR-x86.rar?_sid=%22tozkqRdvtARmQ1780PDN123456%22&mode=%22download%22&stdhtml=false&dlink=%222f536f6674776172652f6275636b65742f57696e5241522d7838362e726172%22&SynoToken=qo5C90gAE4JSg",
+			"hash": "md5:5523206e51a0ff8bee0c5f0faf3256ab",
+			"extract_dir": "WinRAR"
+		}
+	},
+	"post_install": [
+		"cmd /c \"\"$dir\\Uninstall.exe\" /clean\"",
+		"cmd /c \"\"$dir\\Uninstall.exe\" /setup\""
+	],
+	"bin": [
+		"Rar.exe",
+		"UnRAR.exe",
+		"WinRAR.exe"
+	],
+	"uninstaller": {
+		"script": "cmd /c \"\"$dir\\Uninstall.exe\"\""
+	}
+}
