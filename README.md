@@ -18,3 +18,5 @@
 - 115browser: 115浏览器
 - navicat: navicat数据库开发
 - idm: IDM下载工具
+- winrar: 解压软件
+- filegee: 文件同步软件
