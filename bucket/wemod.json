@@ -3,7 +3,7 @@
     "description": "PC Game Cheats, Trainers, and Mods in One App",
     "homepage": "https://www.wemod.com/",
     "url": "https://api.wemod.com/client/channels/stable/releases/latest#dl.7z",
-    "hash": "md5:884a517f5c303c9a6dc28a11a1d87346",
+    "hash": "md5:1b5755e337f14f3a4f0ec25724ad8ee4",
     "pre_install": [
         "$source = $dir.ToString() + '\\WeMod-7.0.19-full.nupkg'",
         "$target = $dir.ToString()",
