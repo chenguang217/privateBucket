@@ -1,31 +1,31 @@
 {
-    "version": "7.0.1",
+    "version": "7.0.19",
     "description": "PC Game Cheats, Trainers, and Mods in One App",
     "homepage": "https://www.wemod.com/",
-	"url": "https://api.wemod.com/client/channels/stable/releases/latest#dl.7z",
-	"hash": "",
-	"pre_install": [
+    "url": "https://api.wemod.com/client/channels/stable/releases/latest#dl.7z",
+    "hash": "md5:884a517f5c303c9a6dc28a11a1d87346",
+    "pre_install": [
         "$source = $dir.ToString() + '\\WeMod-7.0.19-full.nupkg'",
-		"$target = $dir.ToString()",
-		"echo $target",
-		"7z x $source 'lib/net45/*' \"-o$target\"",
-		"$source = $dir.ToString() + '\\lib\\net45\\*'",
-		"mv $source $target",
-		"$source = $dir.ToString() + '\\RELEASES'",
-		"Remove-Item $source",
-		"$source = $dir.ToString() + '\\Update.exe'",
-		"Remove-Item $source",
-		"$source = $dir.ToString() + '\\WeMod-7.0.19-full.nupkg'",
-		"Remove-Item $source",
-		"$source = $dir.ToString() + '\\background.gif'",
-		"Remove-Item $source",
-		"$source = $dir.ToString() + '\\setupIcon.ico'",
-		"Remove-Item $source"
+        "$target = $dir.ToString()",
+        "echo $target",
+        "7z x $source 'lib/net45/*' \"-o$target\"",
+        "$source = $dir.ToString() + '\\lib\\net45\\*'",
+        "mv $source $target",
+        "$source = $dir.ToString() + '\\RELEASES'",
+        "Remove-Item $source",
+        "$source = $dir.ToString() + '\\Update.exe'",
+        "Remove-Item $source",
+        "$source = $dir.ToString() + '\\WeMod-7.0.19-full.nupkg'",
+        "Remove-Item $source",
+        "$source = $dir.ToString() + '\\background.gif'",
+        "Remove-Item $source",
+        "$source = $dir.ToString() + '\\setupIcon.ico'",
+        "Remove-Item $source"
     ],
-	"shortcuts":[
-		[
-			"WeMod.exe",
-			"WeMod"
-		]
-	]
+    "shortcuts": [
+        [
+            "WeMod.exe",
+            "WeMod"
+        ]
+    ]
 }
