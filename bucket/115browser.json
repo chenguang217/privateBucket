@@ -1,14 +1,15 @@
 {
 	"version": "24.1.0.10",
-	"extract_dir": "Chrome-bin",
+	"description": "a browser for 115 netdisk",
 	"homepage": "https://115.com",
 	"url": "https://github.com/chenguang217/bucketFiles/releases/download/1.0/chrome.rar",
+	"hash": "md5:91e3336e4195d0d9270a6f0b21137983",
+	"extract_dir": "Chrome-bin",
 	"shortcuts": [
 		[
 			"115chrome.exe",
 			"115浏览器",
 			"--no-sandbox"
 		]
-	],
-	"hash": "md5:91e3336e4195d0d9270a6f0b21137983"
+	]
 }

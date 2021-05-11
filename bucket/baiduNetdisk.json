@@ -1,26 +1,19 @@
 {
-    "homepage": "https://pan.baidu.com/download",
-    "description": "\u767e\u5ea6\u7f51\u76d8PC\u7248",
-    "version": "7.3.0.34",
-    "url": "https://issuecdn.baidupcs.com/issue/netdisk/yunguanjia/BaiduNetdisk_7.3.0.34.exe#/dl.7z",
-    "hash": "md5:cd791a6d46a10b5a97d7e9daa8cc50cc",
-    "bin": "BaiduNetdisk.exe",
-    "shortcuts": [
-        [
-            "BaiduNetdisk.exe",
-            "\u767e\u5ea6\u7f51\u76d8"
-        ]
-    ],
-    "persist": "users",
-    "post_install": [
-        "Remove-Item \"$dir\\`$PLUGINSDIR\" -Recurse",
-        "Remove-Item \"$dir\\`$TEMP\" -Recurse"
-    ],
-    "checkver": {
-        "url": "https://pan.baidu.com/disk/cmsdata?do=client",
-        "regex": "BaiduNetdisk_(\\d+.\\d+.\\d+.\\d+).exe"
-    },
-    "autoupdate": {
-        "url": "http://issuecdn.baidupcs.com/issue/netdisk/yunguanjia/BaiduNetdisk_$version.exe#dl.7z"
-    }
+	"version": "7.3.0.34",
+	"homepage": "https://pan.baidu.com/download",
+	"description": "a client for baidu netdisk",
+	"url": "https://issuecdn.baidupcs.com/issue/netdisk/yunguanjia/BaiduNetdisk_7.3.0.34.exe#/dl.7z",
+	"hash": "md5:cd791a6d46a10b5a97d7e9daa8cc50cc",
+	"post_install": [
+		"Remove-Item \"$dir\\`$PLUGINSDIR\" -Recurse",
+		"Remove-Item \"$dir\\`$TEMP\" -Recurse"
+	],
+	"bin": "BaiduNetdisk.exe",
+	"shortcuts": [
+		[
+			"BaiduNetdisk.exe",
+			"百度云"
+		]
+	],
+	"persist": "users"
 }

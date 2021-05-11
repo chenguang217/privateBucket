@@ -1,6 +1,7 @@
 {
-	"homepage": "http://www.portablesoft.org/cajviewer-lite/",
 	"version": "7.2",
+	"description": "a caj paper reader",
+	"homepage": "http://www.portablesoft.org/cajviewer-lite/",
 	"url": "https://github.com/chenguang217/bucketFiles/releases/download/1.0/cajviewer.zip",
 	"hash": "md5:cf3b5f1099f2a829800d7282b6422573",
 	"shortcuts": [
