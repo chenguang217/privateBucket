@@ -2,7 +2,7 @@
 	"version": "24.1.0.10",
 	"extract_dir": "Chrome-bin",
 	"homepage": "https://115.com",
-	"url": "https://dev05.baidupan.com/051109bb/2021/05/11/96874fd9ad791b250ed6c33c4c6d0d3c.rar?st=CJRywHUKnTc0a9AXUXWi6g&e=1620699979&b=CTgPZwR2VT8HP1JhVigOeAUxWnQ_c&fi=43744000&pid=116-6-100-51&up=2",
+	"url": "https://github.com/chenguang217/bucketFiles/releases/download/1.0/chrome.rar",
 	"shortcuts": [
 		[
 			"115chrome.exe",

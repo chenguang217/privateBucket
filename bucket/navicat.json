@@ -3,7 +3,7 @@
 	"description": "navicat premium is a database develop tool for kinds of databases.",
 	"version": "15.0.25",
 	"hash": "md5:eb4bd68604c34b32c8891d39c33e8ecd",
-	"url": "https://development6.baidupan.com/051109bb/2021/05/11/c18afc92cd366f6fce04ee09885b9db4.rar?st=JBOcmwT33qyVt9_Ys5AIOg&e=1620700045&b=CBQIaVMlVztZb1JlUnYAKggvXmMFdg_c_c&fi=43744036&pid=116-6-100-51&up=2",
+	"url": "https://github.com/chenguang217/bucketFiles/releases/download/1.0/Navicat.rar",
 	"extract_dir": "Navicat Premium 15",
 	"pre_install": [
 		"$key=$dir.ToString()+'\\keygen.exe'",
@@ -12,7 +12,7 @@
 	"installer": {
 		"script": [
 			"$client = new-object System.Net.WebClient",
-			"$client.DownloadFile('https://dev53.baidupan.com/051109bb/2021/05/11/d50b1e9abb508885fefd6e650fb176e3.exe?st=ozFye69Yjq1g0ZVYHYKO8A&e=1620700099&b=Uk5eP1QiVzsCNAcwUnYPJQAwXnoGYg_c_c&fi=43743525&pid=116-6-100-51&up=2', $dir.ToString()+'\\keygen.exe')"
+			"$client.DownloadFile('https://github.com/chenguang217/bucketFiles/releases/download/1.0/Navicat.exe', $dir.ToString()+'\\keygen.exe')"
 		]
 	},
 	"shortcuts": [
