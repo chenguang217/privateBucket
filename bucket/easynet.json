@@ -1,0 +1,55 @@
+{
+    "version": "7.0.1",
+    "description": "PC Game Cheats, Trainers, and Mods in One App",
+    "homepage": "https://www.easynet.vip/",
+	"url": "https://install.easynet.vip/easynet_client/EasyNetSetup_202001.exe",
+	"hash": "712d4ba8cb375d4e4bcd3dfacf02d3f8ee8d47006b2f2d2505ce21607348a340",
+	"architecture": {
+		"64bit": {
+			"installer": {
+				"script": [
+					"innounp -x $dir\\EasyNetSetup_202001.exe \"-d$dir\" -q",
+					"mv $dir\\`{app`}\\* $dir",
+					"rm $dir\\DPInst32.exe",
+					"rm -Recurse -Force $dir\\`{app`}",
+					"rm $dir\\C_\\ProgramData\\EasyNet\\easynet_x86.exe",
+					"rm -Recurse -Force $dir\\C_\\ProgramData\\EasyNet\\tap-windows\\x86",
+					"mv $dir\\C_\\ProgramData\\EasyNet C:\\ProgramData",
+					"rm -Recurse -Force $dir\\C_",
+					"rm $dir\\EasyNetSetup_202001.exe",
+					"rm $dir\\install_script.iss",
+					"Start-Process powershell \"C:\\ProgramData\\EasyNet\\easynet_x64.exe -I\" -Verb RunAs"
+				]
+			}
+		},
+		"32bit": {
+			"installer": {
+				"script": [
+					"innounp -x $dir\\EasyNetSetup_202001.exe \"-d$dir\" -q",
+					"mv $dir\\`{app`}\\* $dir",
+					"rm $dir\\DPInst64.exe",
+					"rm -Recurse -Force $dir\\`{app`}",
+					"rm $dir\\C_\\ProgramData\\EasyNet\\easynet_x64.exe",
+					"rm -Recurse -Force $dir\\C_\\ProgramData\\EasyNet\\tap-windows\\x64",
+					"mv $dir\\C_\\ProgramData\\EasyNet C:\\ProgramData",
+					"rm -Recurse -Force $dir\\C_",
+					"rm $dir\\EasyNetSetup_202001.exe",
+					"rm $dir\\install_script.iss",
+					"Start-Process powershell \"C:\\ProgramData\\EasyNet\\easynet_x32.exe -I\" -Verb RunAs"
+				]
+			}
+		}
+	},
+	"uninstaller": {
+		"script": [
+			"Start-Process powershell \"sc.exe stop EasyNetService;rm -Recurse -Force C:\\ProgramData\\EasyNet;sc.exe delete EasyNetService\" -Verb RunAs"
+		]
+	},
+	"shortcuts": [
+		[
+			"EasyNet.exe",
+			"EasyNet"
+		]
+	]
+
+}
