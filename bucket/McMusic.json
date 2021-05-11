@@ -1,22 +1,18 @@
 {
-    "homepage": "http://www.mcmusic.top/",
-    "license": "unknown",
-    "version": "5.1.06",
-    "url": "http://118.24.125.30:10002/pass/download/5106/McMusic5.1.6.rar",
-    "hash": "md5:fd41ecd3ab0f8fa929840d12b1c841a3",
-    "shortcuts": [
-        [
-            "McMusic.exe",
-            "McMusic"
-        ]
-    ],
-    "persist": [
-	    "music",
-	    "Application.config"
-    ],
-    "checkver": {
-        "url": "http://www.mcmusic.top/client",
-        "regex": "([\\d.]+) (?<url>.+)"
-    },
-    "extract_dir": "McMusic5.1.6"
+	"version": "5.1.06",
+	"description": "a music player",
+	"homepage": "http://www.mcmusic.top/",
+	"url": "http://118.24.125.30:10002/pass/download/5106/McMusic5.1.6.rar",
+	"hash": "md5:fd41ecd3ab0f8fa929840d12b1c841a3",
+	"extract_dir": "McMusic5.1.6",
+	"shortcuts": [
+		[
+			"McMusic.exe",
+			"McMusic"
+		]
+	],
+	"persist": [
+		"music",
+		"Application.config"
+	]
 }

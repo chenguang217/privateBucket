@@ -1,20 +1,20 @@
 {
-	"homepage": "https://www.navicat.com.cn/",
-	"description": "navicat premium is a database develop tool for kinds of databases.",
 	"version": "15.0.25",
-	"hash": "md5:eb4bd68604c34b32c8891d39c33e8ecd",
+	"description": "navicat premium is a database develop tool for kinds of databases.",
+	"homepage": "https://www.navicat.com.cn/",
 	"url": "https://github.com/chenguang217/bucketFiles/releases/download/1.0/Navicat.rar",
+	"hash": "md5:eb4bd68604c34b32c8891d39c33e8ecd",
 	"extract_dir": "Navicat Premium 15",
-	"pre_install": [
-		"$key=$dir.ToString()+'\\keygen.exe'",
-		"Start-Process powershell \"Add-MpPreference -ExclusionPath $key\" -Verb RunAs"
-	],
 	"installer": {
 		"script": [
 			"$client = new-object System.Net.WebClient",
 			"$client.DownloadFile('https://github.com/chenguang217/bucketFiles/releases/download/1.0/Navicat.exe', $dir.ToString()+'\\keygen.exe')"
 		]
 	},
+	"pre_install": [
+		"$key=$dir.ToString()+'\\keygen.exe'",
+		"Start-Process powershell \"Add-MpPreference -ExclusionPath $key\" -Verb RunAs"
+	],
 	"shortcuts": [
 		[
 			"navicat.exe",

@@ -3,12 +3,6 @@
 	"description": "the client for douyu",
 	"homepage": "http://www.douyu.com",
 	"url": "https://sta-op.douyucdn.cn/dypc-client/pkg/Douyu_Live_PC_Client/20210407104709771/DouyuLive_8.4.6.3_Server_1.1.1.4.exe#/dl.7z",
-	"bin": [
-		[
-			"Client\\DouyuLive.exe",
-			"douyu"
-		]
-	],
 	"hash": "md5:cfd6920035199634972e9ff98456fd01",
 	"post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\" -Force -Recurse",
 	"shortcuts": [

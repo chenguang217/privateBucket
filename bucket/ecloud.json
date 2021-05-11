@@ -1,12 +1,14 @@
 {
-    "version": "6.3.7",
-    "url": "http://81.70.203.45/ecloud.7z",
-    "extract_dir": "eCloud",
-    "shortcuts": [
-        [
-            "eCloud.exe",
-            "eCloud"
-        ]
-    ],
-    "hash": "md5:fca81ae9fb7bb07927384ae3459ab095"
+	"version": "6.3.7",
+	"description": "the client for ecloud",
+	"homepage": "https://cloud.189.cn/",
+	"url": "http://81.70.203.45/ecloud.7z",
+	"hash": "md5:fca81ae9fb7bb07927384ae3459ab095",
+	"extract_dir": "eCloud",
+	"shortcuts": [
+		[
+			"eCloud.exe",
+			"eCloud"
+		]
+	]
 }

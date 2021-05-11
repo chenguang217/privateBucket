@@ -1,17 +1,16 @@
 {
-	"homepage": "https://www.wotianna.com/thunder11/",
-	"description": "cracked version of thunder",
 	"version": "11.1.1.1052",
+	"description": "cracked version of thunder",
+	"homepage": "https://www.wotianna.com/thunder11/",
+	"url": "https://github.com/chenguang217/bucketFiles/releases/download/1.0/Thunder.7z",
 	"hash": "md5:af3e52dafa990d8251da46aca20cb075",
 	"extract_dir": "Thunder 11.1.1.1052",
-	"url": "https://github.com/chenguang217/bucketFiles/releases/download/1.0/Thunder.7z",
 	"installer": {
-            "script": [
-                    "$key=$dir.ToString()+'/!)绿化.bat'",
-					"echo $key",
-                    "Start-Process $key"
-            ]
-    },
+		"script": [
+			"$key=$dir.ToString()+'/!)绿化.bat'",
+			"Start-Process $key"
+		]
+	},
 	"shortcuts": [
 		[
 			"Program/Thunder.exe",

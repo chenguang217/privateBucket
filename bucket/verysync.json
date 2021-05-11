@@ -1,15 +1,16 @@
 {
-    "version": "2.6.2",
-    "extract_dir": "verysync-windows-amd64-v2.6.2",
-    "url": "http://dl-cn.verysync.com/releases/v2.6.2/verysync-windows-amd64-v2.6.2.zip",
-    "homepage": "http://www.verysync.com",
-    "persist": "config",
-    "bin": [
-        [
-            "verysync.exe",
-            "verysync",
-            "-home \"$persist_dir/config\""
-        ]
-    ],
-    "hash": "md5:ce5d59fcd94269eabf497b0dc5d1e067"
+	"version": "2.6.2",
+	"description": "",
+	"homepage": "http://www.verysync.com",
+	"url": "http://dl-cn.verysync.com/releases/v2.6.2/verysync-windows-amd64-v2.6.2.zip",
+	"hash": "md5:ce5d59fcd94269eabf497b0dc5d1e067",
+	"extract_dir": "verysync-windows-amd64-v2.6.2",
+	"shortcuts": [
+		[
+			"verysync.exe",
+			"verysync",
+			"-home \"$persist_dir/config\""
+		]
+	],
+	"persist": "config"
 }

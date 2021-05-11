@@ -8,7 +8,6 @@
 		"Remove-Item \"$dir\\`$PLUGINSDIR\" -Recurse",
 		"Remove-Item \"$dir\\`$TEMP\" -Recurse"
 	],
-	"bin": "BaiduNetdisk.exe",
 	"shortcuts": [
 		[
 			"BaiduNetdisk.exe",

@@ -1,26 +1,26 @@
 {
-    "homepage": "https://www.wotianna.com/idmpc/",
-    "description": "cracked version of IDM",
-    "version": "6.38.16.2",
-    "hash": "md5:734d7d1ddf3dcb3bdb8bbf714cf970ff",
-    "extract_dir": "IDM",
-    "url": "http://81.70.203.45/IDM.7z",
-    "installer": {
-	    "script": [
-		    "$key=$dir.ToString()+'\\!)绿化.bat'",
-		    "Start-Process $key"
-	    ]
-    },
-    "uninstaller":{
-    	"script": [
-		"$key=$dir.ToString()+'\\!)卸载.bat'",
-		"Start-Process $key"
+	"version": "6.38.16.2",
+	"description": "cracked version of IDM",
+	"homepage": "https://www.wotianna.com/idmpc/",
+	"url": "http://81.70.203.45/IDM.7z",
+	"hash": "md5:734d7d1ddf3dcb3bdb8bbf714cf970ff",
+	"extract_dir": "IDM",
+	"installer": {
+		"script": [
+			"$key=$dir.ToString()+'\\!)绿化.bat'",
+			"Start-Process $key"
+		]
+	},
+	"uninstaller":{
+		"script": [
+			"$key=$dir.ToString()+'\\!)卸载.bat'",
+			"Start-Process $key"
+		]
+	},
+	"shortcuts": [
+		[
+			"IDMan.exe",
+			"IDM"
+		]
 	]
-    },
-    "shortcuts": [
-        [
-            "IDMan.exe",
-            "IDM"
-        ]
-    ]
 }

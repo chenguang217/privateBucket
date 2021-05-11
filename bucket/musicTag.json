@@ -1,13 +1,13 @@
 {
-    "homepage": "https://www.cnblogs.com/vinlxc/p/11347744.html",
-    "description": "Music Tag is a program which can edit music information tag. It includes Netease Music api and so on.",
-    "version": "1.0.7.0",
-    "url": "http://81.70.203.45/musicTag.zip",
-    "hash": "md5:208ced9dfb69847e4dac758661dda516",
-    "shortcuts": [
-        [
-            "MusicTag.exe",
-            "MusicTag"
-        ]
-    ]
+	"version": "1.0.7.0",
+	"description": "Music Tag is a program which can edit music information tag. It includes Netease Music api and so on.",
+	"homepage": "https://www.cnblogs.com/vinlxc/p/11347744.html",
+	"url": "http://81.70.203.45/musicTag.zip",
+	"hash": "md5:208ced9dfb69847e4dac758661dda516",
+	"shortcuts": [
+		[
+			"MusicTag.exe",
+			"MusicTag"
+		]
+	]
 }

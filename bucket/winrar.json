@@ -1,11 +1,7 @@
 {
 	"version": "5.91",
-	"description": "最好用的压缩软件，没有之一",
+	"description": "the best extract software",
 	"homepage": "https://rarlab.com/",
-	"license": {
-		"identifier": "Shareware",
-		"url": "https://www.win-rar.com/gtb_priv.html?&L=0"
-	},
 	"notes": "Set up context menu within settings window.",
 	"architecture": {
 		"64bit": {

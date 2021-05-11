@@ -1,31 +1,20 @@
 {
-    "homepage": "https://meeting.tencent.com/",
-    "license": "unknown",
-    "version": "2.11.4.417",
-    "url": "https://updatecdn.meeting.qq.com/2028d3bd2938690c456be4daeb244f75/TencentMeeting_0300000000_2.11.4.417.publish.exe#/dl.7z",
-    "hash": "md5:2028d3bd2938690c456be4daeb244f75",
-    "installer": {
-        "script": [
-            "Remove-Item \"$dir\\wemeetapp_new.exe\" -Force",
-            "Rename-Item \"$dir\\`$_7_\" \"$dir\\$version\"",
-            "Remove-Item \"$dir\\`$WINDIR\",\"$dir\\`$PLUGINSDIR\" -Force -Recurse"
-        ]
-    },
-    "bin": "wemeetapp.exe",
-    "shortcuts": [
-        [
-            "wemeetapp.exe",
-            "\u817e\u8baf\u4f1a\u8bae"
-        ]
-    ],
-    "checkver": {
-        "url": "https://api.xuann.wang/api/tencent-meeting",
-        "regex": "([\\d.]+) (?<url>.+)"
-    },
-    "autoupdate": {
-        "url": "$matchUrl",
-        "hash": {
-            "url": "https://api.xuann.wang/api/tencent-meeting?hash=1"
-        }
-    }
+	"version": "2.11.4.417",
+	"description": "",
+	"homepage": "https://meeting.tencent.com/",
+	"url": "https://updatecdn.meeting.qq.com/2028d3bd2938690c456be4daeb244f75/TencentMeeting_0300000000_2.11.4.417.publish.exe#/dl.7z",
+	"hash": "md5:2028d3bd2938690c456be4daeb244f75",
+	"installer": {
+		"script": [
+			"Remove-Item \"$dir\\wemeetapp_new.exe\" -Force",
+			"Rename-Item \"$dir\\`$_7_\" \"$dir\\$version\"",
+			"Remove-Item \"$dir\\`$WINDIR\",\"$dir\\`$PLUGINSDIR\" -Force -Recurse"
+		]
+	},
+	"shortcuts": [
+		[
+			"wemeetapp.exe",
+			"腾讯会议"
+		]
+	]
 }
