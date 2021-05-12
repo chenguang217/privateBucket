@@ -1,13 +1,13 @@
 {
-    "version": "4.7.2",
-    "description": "Excellent utility that comes packed with various useful features on data recovery, disk partition management, backup & restore.",
-    "homepage": "http://www.diskgenius.cn/",
-    "url": "https://github.com/chenguang217/bucketFiles/releases/download/1.0/diskgenius.zip",
-    "hash": "md5:a2601c817182c339f65f7f4a86acd5fa",
-    "shortcuts": [
-        [
-            "DiskGenius.exe",
-            "DiskGenius"
-        ]
-    ]
+	"version": "4.7.2",
+	"description": "Excellent utility that comes packed with various useful features on data recovery, disk partition management, backup & restore.",
+	"homepage": "http://www.diskgenius.cn/",
+	"url": "https://github.com/chenguang217/bucketFiles/releases/download/1.0/diskgenius.zip",
+	"hash": "md5:a2601c817182c339f65f7f4a86acd5fa",
+	"shortcuts": [
+		[
+			"DiskGenius.exe",
+			"DiskGenius"
+		]
+	]
 }
