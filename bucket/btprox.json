@@ -1,0 +1,13 @@
+{
+	"version": "1.5.0",
+	"description": "BtProx is a small Windows application working both under Windows XP and Vista. It locks your computer when you go away from it based on the bluetooth connection.",
+	"homepage": "http://btprox.sourceforge.net/",
+	"url": "https://github.com/chenguang217/bucketFiles/releases/download/1.0/btprox_1_5_0_2.exe#dl.7z",
+	"hash": "md5:2a074f2fa6706f74c385b28731c6528c",
+	"shortcuts": [
+		[
+			"btprox.exe",
+			"BtProx"
+		]
+	]
+}
