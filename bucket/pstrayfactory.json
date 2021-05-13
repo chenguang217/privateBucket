@@ -1,0 +1,13 @@
+{
+	"version": "3.2",
+	"description": "PS Tray Factory is a powerful and handy tool meant to flexibly control ALL the other icons in the system tray of the taskbar.",
+	"homepage": "https://www.pssoftlab.com/",
+	"url": "https://github.com/chenguang217/bucketFiles/releases/download/1.0/PS.Tray.Factory.3.2.zip",
+	"hash": "md5:4556f07ba1fa40cf061211e15cbf645d",
+	"shortcuts": [
+		[
+			"PSTrayFactory.exe",
+			"PSTrayFactory"
+		]
+	]
+}
