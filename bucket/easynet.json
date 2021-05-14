@@ -50,5 +50,6 @@
 			"EasyNet.exe",
 			"EasyNet"
 		]
-	]
+	],
+	"depends": "innounp"
 }
