@@ -20,3 +20,11 @@
 - idm: IDM下载工具
 - winrar: 解压软件
 - filegee: 文件同步软件
+- Thunder: 迅雷下载工具
+- VMware: VMware虚拟机
+- btprox: 蓝牙自动锁屏/解锁
+- diskgenius-crack: 硬盘精灵(破解版)
+- embytheater: emby客户端
+- pstrayfactory: 托盘管理
+- stairspeedtest.json: SS/SSR/V2RAY批量测速工具
+
