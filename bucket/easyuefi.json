@@ -1,0 +1,17 @@
+{
+	"version": "4.0",
+	"description": "Ext2Read is an explorer like utility to explore ext2/ext3/ext4 files.",
+	"homepage": "https://www.easyuefi.com/index-cn.html",
+	"url": "https://github.com/chenguang217/bucketFiles/releases/download/1.0/EasyUEFI.4.0.zip",
+	"hash": "md5:b4bbd99560dac12ee0fa69bb16dd0f60",
+	"shortcuts": [
+		[
+			"EasyUEFI 4.0 x64.exe",
+			"EasyUEFIx64"
+		],
+		[
+			"EasyUEFI 4.0 x86.exe",
+			"EasyUEFIx32"
+		]
+	]
+}
