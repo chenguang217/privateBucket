@@ -1,0 +1,13 @@
+{
+	"version": "2.2.71",
+	"description": "Ext2Read is an explorer like utility to explore ext2/ext3/ext4 files.",
+	"homepage": "https://sourceforge.net/projects/ext2read/",
+	"url": "https://udomain.dl.sourceforge.net/project/ext2read/Ext2read%20Version%202.2%20%28Latest%29/ext2explore-2.2.71.zip",
+	"hash": "md5:727204919f92766b733f519dbf28c01b",
+	"shortcuts": [
+		[
+			"ext2explore.exe",
+			"ext2explore"
+		]
+	]
+}
