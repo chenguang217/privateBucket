@@ -3,16 +3,12 @@
 	"description": "By means of modifing hosts file,it can provide best CDN IP address to enhance your online function experience.",
 	"homepage": "https://www.dogfight360.com/blog/475/",
 	"url": "http://81.70.203.45/usbeam.zip",
-	"hash": "md5:e6a2760bac4bcd768d91715994f25413",
+	"hash": "md5:f0a7eccef8b20b3674988cbc9c300ba9",
+	"extract_dir": "UsbEAm Hosts Editor",
 	"shortcuts": [
 		[
-			"EasyUEFI 4.0 x64.exe",
-			"EasyUEFIx64"
-		],
-		[
-			"EasyUEFI 4.0 x86.exe",
-			"EasyUEFIx32"
+			"UsbEAm Hosts Editor v3.50.exe",
+			"UsbEAm Hosts Editor"
 		]
-	],
-	"extract_dir": "UsbEAm Hosts Editor"
+	]
 }
