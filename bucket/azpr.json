@@ -1,0 +1,13 @@
+{
+	"version": "4.0",
+	"description": "Advanced ZIP Password Recovery (or AZPR) is a program to recover lost or forgotten passwords to ZIP archives (compressed files) created in programs like WinZip, PKZip etc.",
+	"homepage": "https://www.elcomsoft.com/help/en/azpr/",
+	"url": "http://81.70.203.45/AZPR.rar",
+	"hash": "md5:d757ed6e229b8114a5a225eb84a3e41d",
+	"shortcuts": [
+		[
+			"azpr.exe",
+			"AZPR"
+		]
+	]
+}
