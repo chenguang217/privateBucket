@@ -1,0 +1,28 @@
+{
+	"version": "4..0",
+	"description": "a UWP client for bilibili",
+	"homepage": "https://www.showdoc.com.cn/biliuwpv4",
+	"architecture": {
+		"32bit": {
+			"url": "https://github.com/chenguang217/bucketFiles/releases/download/1.0/bilibili32.zip",
+			"hash": "md5:81bc9f77d8f0959136021e42350228d6"
+		},
+		"64bit": {
+			"url": "https://github.com/chenguang217/bucketFiles/releases/download/1.0/bilibili64.zip",
+			"hash": "md5:806ebf43f669cf0570e7a1200721223a"
+		}
+	},
+	"installer": {
+		"script": [
+			"Get-ChildItem $dir | ForEach-Object -Process{ if ( $_.name -match 'cer'){$certification = $_.name} }",
+			"Get-ChildItem $dir | ForEach-Object -Process{ if ( $_.name -match '\\.appx'){$app = $_.name} }",
+			"Start-Process powershell \"certutil -addstore root $dir\\$certification;Add-AppxPackage '$dir\\$app'\" -Verb RunAs"
+		]
+	},
+	"uninstaller": {
+		"script": [
+			"Get-AppxPackage | Select Publisher, PackageFullName | ForEach-Object -Process{ if ($_.Publisher -match 'xiaoyaocz'){$app = $_.PackageFullName} }",
+			"Start-Process powershell \"Remove-AppxPackage -Package $app;certutil -delstore root xiaoyaocz\" -Verb RunAs"
+		]
+	}
+}
