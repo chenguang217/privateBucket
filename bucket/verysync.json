@@ -5,6 +5,22 @@
 	"url": "http://dl-cn.verysync.com/releases/v2.6.4/verysync-windows-amd64-v2.6.4.zip",
 	"hash": "md5:fbc2a416d42d14e645195b191e10c4e3",
 	"extract_dir": "verysync-windows-amd64-v2.6.4",
+	"installer":{
+		"script": [
+			"$WshShell = New-Object -comObject WScript.Shell",
+			"$startup = [System.Environment]::GetFolderPath('Startup')",
+			"$Shortcut = $WshShell.CreateShortcut(\"$startup\\verysync.lnk\")",
+			"$Shortcut.TargetPath = \"$dir\\verysync.exe\"",
+			"$Shortcut.Arguments = '-no-browser -no-console=true -force-tray=true -home \"$persist_dir/config\"'",
+			"$Shortcut.Save()"
+		]
+	},
+	"uninstaller":{
+		"script": [
+			"$startup = [System.Environment]::GetFolderPath('Startup')",
+			"rm $startup\\verysync.lnk"
+		]
+	},
 	"shortcuts": [
 		[
 			"verysync.exe",
