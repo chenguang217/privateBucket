@@ -1,11 +1,11 @@
 {
-	"version": "2.6.4",
+	"version": "2.6.5",
 	"description": "",
 	"homepage": "http://www.verysync.com",
-	"url": "http://dl-cn.verysync.com/releases/v2.6.4/verysync-windows-amd64-v2.6.4.zip",
-	"hash": "md5:fbc2a416d42d14e645195b191e10c4e3",
-	"extract_dir": "verysync-windows-amd64-v2.6.4",
-	"installer":{
+	"url": "http://dl-cn.verysync.com/releases/v2.6.5/verysync-windows-amd64-v2.6.5.zip",
+	"hash": "md5:466f753078e937a8578f3e1b340b649f",
+	"extract_dir": "verysync-windows-amd64-v2.6.5",
+	"installer": {
 		"script": [
 			"$WshShell = New-Object -comObject WScript.Shell",
 			"$startup = [System.Environment]::GetFolderPath('Startup')",
@@ -15,7 +15,7 @@
 			"$Shortcut.Save()"
 		]
 	},
-	"uninstaller":{
+	"uninstaller": {
 		"script": [
 			"$startup = [System.Environment]::GetFolderPath('Startup')",
 			"rm $startup\\verysync.lnk"
