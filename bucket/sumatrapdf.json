@@ -1,0 +1,34 @@
+{
+	"version": "3.2",
+	"description": "PDF and eBook reader",
+	"homepage": "https://www.sumatrapdfreader.org/free-pdf-reader",
+	"architecture": {
+		"64bit": {
+			"url": "https://kjkpubsf.sfo2.digitaloceanspaces.com/software/sumatrapdf/rel/SumatraPDF-3.2-64.zip",
+			"hash": "md5:a312683b4645c0621fdf58a3e7cf51c3"
+		},
+		"32bit": {
+			"url": "https://kjkpubsf.sfo2.digitaloceanspaces.com/software/sumatrapdf/rel/SumatraPDF-3.2.zip",
+			"hash": "md5:8e62cea769a00ce5391385a90398b9ec"
+		}
+	},
+	"pre_install": [
+		"$file = 'SumatraPDF-settings.txt'",
+		"if (!(Test-Path \"$persist_dir\\$file\")) {",
+		"    Write-Host 'File' $file 'does not exists. Creating.' -f Yellow",
+		"    Set-Content \"$dir\\$file\" 'CheckForUpdates = false' -Encoding Ascii",
+		"}",
+		"Get-ChildItem \"$dir\\SumatraPDF-*.exe\" | Rename-Item -NewName 'SumatraPDF.exe'",
+		"Start-Process powershell \"$dir\\SumatraPDF.exe -register-for-pdf\" -WindowStyle Hidden"
+	],
+	"shortcuts": [
+		[
+			"SumatraPDF.exe",
+			"SumatraPDF"
+		]
+	],
+	"persist": [
+		"SumatraPDF-settings.txt",
+		"sumatrapdfcache"
+	]
+}
