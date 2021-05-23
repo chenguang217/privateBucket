@@ -1,0 +1,21 @@
+{
+	"version": "8.16.180499",
+	"description": "R-STUDIO is a family of powerful, cost-effective disk recovery software.",
+	"homepage": "https://www.r-studio.com/data-recovery-software/",
+	"url": "https://github.com/chenguang217/bucketFiles/releases/download/1.0/R-Studio.rar",
+	"hash": "md5:a96158472bf161901756df1c866776ff",
+	"installer": {
+		"script": [
+			"'Start-Process \"' + $dir + '\\RStudioPortable.exe\" -Verb runAs' | out-file $dir/test.ps1 -encoding ascii",
+			"'@set Path=%Path%;%SystemRoot%\\system32\\WindowsPowerShell\\v1.0\\ & powershell -ExecutionPolicy Unrestricted -NoProfile %~dpn0.ps1 -Verb RunAs -WindowStyle Hidden' | out-file $dir/test.cmd -encoding ascii"
+		]
+	},
+	"shortcuts": [
+		[
+			"test.cmd",
+			"RStudio",
+			"",
+			"RStudioPortable.exe"
+		]
+	]
+}
