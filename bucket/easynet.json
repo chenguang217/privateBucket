@@ -18,6 +18,7 @@
 					"rm -Recurse -Force $dir\\C_",
 					"rm $dir\\EasyNetSetup_202001.exe",
 					"rm $dir\\install_script.iss",
+					"Start-Process $dir\\DPInst64.exe -ArgumentList '/path', 'C:\\ProgramData\\EasyNet\\tap-windows\\x64', '/sw', '/se'",
 					"Start-Process powershell \"C:\\ProgramData\\EasyNet\\easynet_x64.exe -I\" -Verb RunAs"
 				]
 			}
@@ -35,6 +36,7 @@
 					"rm -Recurse -Force $dir\\C_",
 					"rm $dir\\EasyNetSetup_202001.exe",
 					"rm $dir\\install_script.iss",
+					"Start-Process $dir\\DPInst32.exe -ArgumentList '/path', 'C:\\ProgramData\\EasyNet\\tap-windows\\x86', '/sw', '/se'",
 					"Start-Process powershell \"C:\\ProgramData\\EasyNet\\easynet_x32.exe -I\" -Verb RunAs"
 				]
 			}
