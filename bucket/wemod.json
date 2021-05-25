@@ -5,21 +5,13 @@
 	"url": "https://api.wemod.com/client/channels/stable/releases/latest#dl.7z",
 	"hash": "md5:cc266d072039af58f79a10ddddd43261",
 	"pre_install": [
-		"$source = $dir.ToString() + '\\WeMod-7.0.19-full.nupkg'",
-		"$target = $dir.ToString()",
-		"7z x $source 'lib/net45/*' \"-o$target\"",
-		"$source = $dir.ToString() + '\\lib\\net45\\*'",
-		"mv $source $target",
-		"$source = $dir.ToString() + '\\RELEASES'",
-		"Remove-Item $source",
-		"$source = $dir.ToString() + '\\Update.exe'",
-		"Remove-Item $source",
-		"$source = $dir.ToString() + '\\WeMod-7.0.19-full.nupkg'",
-		"Remove-Item $source",
-		"$source = $dir.ToString() + '\\background.gif'",
-		"Remove-Item $source",
-		"$source = $dir.ToString() + '\\setupIcon.ico'",
-		"Remove-Item $source"
+		"7z x $dir\\WeMod-7.1.2-full.nupkg 'lib/net45/*' \"-o$dir\"",
+		"mv $dir\\lib\\net45\\* $dir",
+		"Remove-Item $dir\\RELEASES",
+		"Remove-Item $dir\\Update.exe",
+		"Remove-Item $dir\\WeMod-7.1.2-full.nupkg",
+		"Remove-Item $dir\\background.gif",
+		"Remove-Item $dir\\setupIcon.ico"
 	],
 	"shortcuts": [
 		[
