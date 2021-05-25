@@ -2,29 +2,42 @@
 ## 添加bucket命令
 `scoop bucket add personalBucket https://github.com/chenguang217/privateBucket`
 ## 应用列表
-- wemeet: 腾讯会议
-- QQ: 腾讯QQ
-- zhizhiReader: 知之阅读
-- McMusic: McMusic音乐播放器
-- douyu: 斗鱼客户端
-- verysync: 微力同步
-- baiduNetdisk: 百度网盘
-- SSCap: SSCap ssr批量检测工具
-- sstap: sstap ssr游戏加速
-- musicTag: 音乐文件标签编辑工具
-- texlive: texlive在线安装版
-- ecloud: 天翼云客户端
-- cajviewer: caj阅读器
 - 115browser: 115浏览器
-- navicat: navicat数据库开发
 - idm: IDM下载工具
-- winrar: 解压软件
-- filegee: 文件同步软件
-- Thunder: 迅雷下载工具
-- VMware: VMware虚拟机
-- btprox: 蓝牙自动锁屏/解锁
+- mcmusic: McMusic音乐播放器
+- sscap: SSCap ssr批量检测工具
+- thunder: 迅雷下载工具
+- vmware: VMware虚拟机
+- anotherredisdesktopmanager: Redis图形化客户端
+- azpr: zip密码恢复工具
+- baiduNetdisk: 百度网盘
+- bilibili: 哔哩哔哩UWP客户端
+- bluetoothcltools: 蓝牙命令行工具
+- brookgui: brook图形化客户端
+- btprox: 蓝牙锁屏&解锁
+- cajviewer: caj阅读器
 - diskgenius-crack: 硬盘精灵(破解版)
+- douyu: 斗鱼客户端
+- easynet: 零遁ZeroTierOne客户端
+- easyuefi: uefi启动项管理
+- ecloud: 天翼云客户端 
 - embytheater: emby客户端
+- expect: windows expect程序
+- ext2explore: ext分区浏览去
+- filegee: 文件同步软件
+- heukms: heu_kms激活工具
+- musicTag: 音乐文件标签编辑工具
+- navicat: navicat数据库开发
 - pstrayfactory: 托盘管理
-- stairspeedtest.json: SS/SSR/V2RAY批量测速工具
-
+- rstudio: R-Studio文件恢复工具
+- sstap: sstap ssr游戏加速
+- stairspeedtest: SS/SSR/V2RAY批量测速工具
+- sumatrapdf: PDF阅读器
+- texlive: texlive在线安装版
+- usbeam: hosts文件修改工具
+- verysync: 微力同步
+- wemeet: 腾讯会议
+- wemod: wemod游戏修改器
+- winrar: 解压软件
+- wolcmd: WOL唤醒命令发送器
+- zhizhiReader: 知之阅读
