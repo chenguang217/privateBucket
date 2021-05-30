@@ -5,12 +5,12 @@
 	"notes": "Set up context menu within settings window.",
 	"architecture": {
 		"64bit": {
-			"url": "https://dev8apk.baidupan.com/051109bb/2021/05/11/28969d8fa7f524f94381ff8b72144bb5.rar?st=_fxuXbOwGJfYpRIMEfYvEQ&e=1620698362&b=CQxbMlA_bBFNQRFNXUSxUKFQ3XDQCLQF1VGZaJQ_c_c&fi=43743008&pid=116-6-100-51&up=2",
+			"url": "https://github.com/chenguang217/bucketFiles/releases/download/1.0/WinRAR-x64.rar",
 			"hash": "md5:799ab736c3855ac6f45e70f3ca5edeb4",
 			"extract_dir": "WinRAR-x64"
 		},
 		"32bit": {
-			"url": "https://dev76.baidupan.com/051109bb/2021/05/11/f9459e302324b2de95268b2298e524d0.rar?st=znIMb72PKmf27pGVq8ULtA&e=1620698240&b=BQBeNwZoVwBYTFNXVypTL1I_aXDYNIlElVGZcIw_c_c&fi=43743007&pid=116-6-100-51&up=2",
+			"url": "https://github.com/chenguang217/bucketFiles/releases/download/1.0/WinRAR-x86.rar",
 			"hash": "md5:5523206e51a0ff8bee0c5f0faf3256ab",
 			"extract_dir": "WinRAR"
 		}
