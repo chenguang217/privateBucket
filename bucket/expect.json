@@ -16,6 +16,6 @@
 		"script": [
 			"Start-Process powershell \"Set-MpPreference -DisableRealtimeMonitoring 1;Add-MpPreference -ExclusionPath $dir\\expect.exe;Set-MpPreference -DisableRealtimeMonitoring 0\" -Verb RunAs"
 		]
-	}
+	},
 	"bin": "expect.exe"
 }
