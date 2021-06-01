@@ -3,7 +3,7 @@
 	"description": "a pe setup tool for usb drive",
 	"homepage": "http://www.xtxzb.com/forum.php?mod=viewthread&tid=7918",
 	"url": "https://raw.githubusercontent.com/chenguang217/bucketFiles/main/install.py",
-	"hash": "973e03cacb08ed331b81059c5472d81a7c7a7eb2689be78ed7074ca9cc3595ce",
+	"hash": "c1435a8bb9ce12eb9b0aa0408c672dccdd33c3141f57a83c6c9793e2bb2143ea",
 	"installer": {
 		"script": [
 			"pip install requests rarfile",
