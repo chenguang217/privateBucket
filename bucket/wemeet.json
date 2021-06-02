@@ -1,9 +1,9 @@
 {
-	"version": "2.12.3.408",
+	"version": "2.12.6.403",
 	"description": "",
 	"homepage": "https://meeting.tencent.com/",
-	"url": "https://updatecdn.meeting.qq.com/ea3c39a8e3aaa71630aa4d2fdd0ccc19/TencentMeeting_0300000000_2.12.3.408.publish.exe#/dl.7z",
-	"hash": "md5:ea3c39a8e3aaa71630aa4d2fdd0ccc19",
+	"url": "https://updatecdn.meeting.qq.com/6c0a583a920cbb932eaeb1e75b12d0bf/TencentMeeting_0300000000_2.12.6.403.publish.exe#/dl.7z",
+	"hash": "md5:6c0a583a920cbb932eaeb1e75b12d0bf",
 	"installer": {
 		"script": [
 			"Remove-Item \"$dir\\wemeetapp_new.exe\" -Force",
