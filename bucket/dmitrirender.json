@@ -1,7 +1,7 @@
 {
 	"version": "3.0.0.1",
-	"description": "A free source code editor and Notepad replacement that supports several languages.",
-	"homepage": "https://notepad-plus-plus.org",
+	"description": "A frame interpolation software with a reactive script.",
+	"homepage": "http://www.dmitrirender.ru/",
 	"url": "https://github.com/chenguang217/bucketFiles/releases/download/1.0/DmitriRender.rar",
 	"hash": "bdd508498775f81fedc4f21484a6e0c57d610968659ee0d27313ccfde5c06d06",
 	"architecture": {
@@ -32,7 +32,12 @@
 			"installer":{
 				"script": [
 					"start-process $dir\\install.bat",
-					"'python ' + $dir + '\\reActive.py 86' | out-file -append $dir\\reActive.bat -encoding ascii"
+					"'python ' + $dir + '\\reActive.py 86' | out-file -append $dir\\reActive.bat -encoding ascii",
+					"'%1 %2' | out-file -append $dir\\reActive.bat -encoding ascii",
+					"'ver|find \"5.\">nul&&goto :Admin' | out-file -append $dir\\reActive.bat -encoding ascii",
+					"'mshta vbscript:createobject(\"shell.application\").shellexecute(\"%~s0\",\"goto :Admin\",\"\",\"runas\",1)(window.close)&goto :eof' | out-file -append $dir\\reActive.bat -encoding ascii",
+					"':Admin' | out-file -append $dir\\reActive.bat -encoding ascii",
+					"'python ' + $dir + '\\reActive.py 64' | out-file -append $dir\\reActive.bat -encoding ascii"
 				]
 			},
 			"shortcuts": [

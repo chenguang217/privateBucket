@@ -1,0 +1,18 @@
+{
+	"version": "3.0.0.1",
+	"description": "A dmitrirender patch",
+	"homepage": "http://www.dmitrirender.ru/",
+	"url": "https://github.com/chenguang217/bucketFiles/releases/download/1.0/dmitriRender.dat",
+	"hash": "5b1f7c1e1c0be13431b280adae7d2025dd50275bf98aedfbe475437087aae426",
+	"installer": {
+		"script":[
+			"cp $env:APPDATA\\DmitriRender\\dmitriRender.dat $dir\\dmitriRender.dat.back",
+			"mv -Force $dir\\dmitriRender.dat $env:APPDATA\\DmitriRender"
+		]
+	},
+	"uninstaller": {
+		"script": [
+			"mv -Force $dir\\dmitriRender.dat.back $env:APPDATA\\DmitriRender\\dmitriRender.dat"
+		]
+	}
+}
