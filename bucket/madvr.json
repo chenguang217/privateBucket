@@ -1,0 +1,17 @@
+{
+	"version": "0.92.17",
+	"description": "A dmitrirender patch",
+	"homepage": "http://madvr.com/",
+	"url": "https://github.com/chenguang217/bucketFiles/releases/download/1.0/madVR.zip",
+	"hash": "effe78df8fbf7f640852c9dd7c9eadbcab864849d651b6a2778da92d2f6aa7c6",
+	"installer": {
+		"script":[
+			"start-process $dir\\install.bat -Verb RunAs"
+		]
+	},
+	"uninstaller": {
+		"script": [
+			"start-process $dir\\uninstall.bat -Verb RunAs"
+		]
+	}
+}
