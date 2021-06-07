@@ -1,0 +1,27 @@
+  
+{
+    "version": "0.75",
+    "description": "Open-Source DirectShow Media Splitter and Decoders",
+    "homepage": "https://github.com/Nevcairiel/LAVFilters",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/Nevcairiel/LAVFilters/releases/download/0.75/LAVFilters-0.75-x64.zip",
+            "hash": "076780a98d2a47e4b9135799dfd9d04aa15b113223eb4a74a9e304f7d65e44f7"
+        },
+        "32bit": {
+            "url": "https://github.com/Nevcairiel/LAVFilters/releases/download/0.75/LAVFilters-0.75-x86.zip",
+            "hash": "0abab799020aca842abd128f30d30ca1984231d4b09060366300aa59af049ee2"
+        }
+    },
+    "installer": {
+        "script": [
+            "start-process powershell \"regsvr32.exe /s $dir\\LAVAudio.ax;regsvr32.exe /s $dir\\LAVSplitter.ax;regsvr32.exe /s $dir\\LAVVideo.ax\" -Verb RunAs -WindowStyle Hidden"
+        ]
+    },
+    "uninstaller": {
+        "script": [
+            "start-process powershell \"regsvr32.exe /u /s $dir\\LAVAudio.ax;regsvr32.exe /u /s $dir\\LAVSplitter.ax;regsvr32.exe /u /s $dir\\LAVVideo.ax\" -Verb RunAs -WindowStyle Hidden",
+			"Sleep 3"
+        ]
+    }
+}
