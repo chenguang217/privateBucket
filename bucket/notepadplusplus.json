@@ -17,6 +17,7 @@
 		"if (!(Test-Path \"$persist_dir\\userDefineLang.xml\")) { New-Item \"$dir\\userDefineLang.xml\" -Force | Out-Null }",
 		"'Windows Registry Editor Version 5.00' | out-file $dir\\test.reg -encoding ascii",
 		"'[HKEY_CLASSES_ROOT\\*\\shell\\NotePad++]' | out-file -append $dir\\test.reg -encoding ascii",
+		"cp $dir\\localization\\chineseSimplified.xml $dir\\nativeLang.xml -Force",
 		"'@=\"Edit with NotePad++\"' | out-file -append $dir\\test.reg -encoding ascii",
 		"$result = $dir.toString() + \"\\notepad++.exe\" -replace \"\\\\\", \"\\\\\"",
 		"'\"Icon\"=\"' + $result + '\"' | out-file -append $dir\\test.reg -encoding ascii",
