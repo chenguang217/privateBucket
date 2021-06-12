@@ -14,7 +14,7 @@
 	},
 	"installer": {
 		"script": [
-			"Start-Process powershell \"Set-MpPreference -DisableRealtimeMonitoring 1;Add-MpPreference -ExclusionPath $dir\\expect.exe;Set-MpPreference -DisableRealtimeMonitoring 0\" -Verb RunAs"
+			"Start-Process powershell \"Set-MpPreference -DisableRealtimeMonitoring 1;Add-MpPreference -ExclusionPath $dir\\expect.exe;Set-MpPreference -DisableRealtimeMonitoring 0\" -Verb RunAs -WindowStyle hidden"
 		]
 	},
 	"bin": "expect.exe"
