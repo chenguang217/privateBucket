@@ -2,8 +2,8 @@
 	"version": "3.50",
 	"description": "By means of modifing hosts file,it can provide best CDN IP address to enhance your online function experience.",
 	"homepage": "https://www.dogfight360.com/blog/475/",
-	"url": "http://81.70.203.45/usbeam.zip",
-	"hash": "md5:f0a7eccef8b20b3674988cbc9c300ba9",
+	"url": "https://github.com/chenguang217/bucketFiles/releases/download/1.0/usbeam.zip",
+	"hash": "md5:ef879f7f39164b1bdee5b5c53ef95f67",
 	"extract_dir": "UsbEAm Hosts Editor",
 	"shortcuts": [
 		[

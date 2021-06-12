@@ -13,7 +13,7 @@
 	},
 	"pre_install": [
 		"$key=$dir.ToString()+'\\keygen.exe'",
-		"Start-Process powershell \"Add-MpPreference -ExclusionPath $key\" -Verb RunAs"
+		"Start-Process powershell \"Add-MpPreference -ExclusionPath $key\" -Verb RunAs -WindowStyle hidden -wait"
 	],
 	"shortcuts": [
 		[

@@ -23,11 +23,11 @@
 		"'\"Icon\"=\"' + $result + '\"' | out-file -append $dir\\test.reg -encoding ascii",
 		"'[HKEY_CLASSES_ROOT\\*\\shell\\NotePad++\\Command]' | out-file -append $dir\\test.reg -encoding ascii",
 		"'@=\"\\\"' + $result + '\\\" \\\"%1\\\"\"' | out-file -append $dir\\test.reg -encoding ascii",
-		"Start-Process powershell \"$dir\\test.reg\" -Verb RunAs"
+		"Start-Process powershell \"regedit /s edir\\test.reg\" -Verb RunAs -WindowStyle hidden -wait"
 	],
 	"uninstaller": {
 		"script": [
-			"Start-Process powershell \"reg delete HKEY_CLASSES_ROOT\\*\\shell\\NotePad++ /f\" -Verb RunAs"
+			"Start-Process powershell \"reg delete HKEY_CLASSES_ROOT\\*\\shell\\NotePad++ /f\" -Verb RunAs -WindowStyle hidden -wait"
 		]
 	},
 	"bin": "notepad++.exe",

@@ -2,18 +2,18 @@
 	"version": "6.38.16.2",
 	"description": "cracked version of IDM",
 	"homepage": "https://www.wotianna.com/idmpc/",
-	"url": "http://81.70.203.45/IDM.7z",
+	"url": "https://github.com/chenguang217/bucketFiles/releases/download/1.0/IDM.7z",
 	"hash": "md5:734d7d1ddf3dcb3bdb8bbf714cf970ff",
 	"extract_dir": "IDM",
 	"installer": {
 		"script": [
-			"$key=$dir.ToString()+'\\!)绿化.bat'",
+			"$key=$dir.ToString()+'\\!)\u7eff\u5316.bat'",
 			"Start-Process $key"
 		]
 	},
-	"uninstaller":{
+	"uninstaller": {
 		"script": [
-			"$key=$dir.ToString()+'\\!)卸载.bat'",
+			"$key=$dir.ToString()+'\\!)\u5378\u8f7d.bat'",
 			"Start-Process $key"
 		]
 	},
