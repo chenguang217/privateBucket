@@ -1,0 +1,45 @@
+  
+{
+    "version": "1.0",
+    "description": "open emby link with potplayer and update progress with js",
+    "homepage": "https://github.com/chenguang217/bucketFiles",
+    "url": "https://raw.githubusercontent.com/chenguang217/bucketFiles/main/emby2potplayer.py",
+    "hash": "3753b872335ab354ed587996019794259a78128942eca9b59c5f02d52380182e",
+    "depends": [
+        "potplayer"
+    ],
+    "installer": {
+        "script": [
+            "'Windows Registry Editor Version 5.00' | out-file -append $dir\\test.reg -encoding ascii",
+            "'[HKEY_CLASSES_ROOT\\emby]' | out-file -append $dir\\test.reg -encoding ascii", 
+            "'@=\"URL:emby Protocol Handler\"' | out-file -append $dir\\test.reg -encoding ascii",
+            "'\"URL Protocol\"=\"\"' | out-file -append $dir\\test.reg -encoding ascii",
+            "'[HKEY_CLASSES_ROOT\\emby\\shell]' | out-file -append $dir\\test.reg -encoding ascii",
+            "'[HKEY_CLASSES_ROOT\\emby\\shell\\open]' | out-file -append $dir\\test.reg -encoding ascii",
+            "'[HKEY_CLASSES_ROOT\\emby\\shell\\open\\command]' | out-file -append $dir\\test.reg -encoding ascii",
+            "$result = $dir.toString() + \"\\test.bat\" -replace \"\\\\\", \"\\\\\"",
+            "'@=\"\\\"' + $result + '\\\" \\\"%1\\\"\"' | out-file -append $dir\\test.reg -encoding ascii",
+            "Start-Process powershell \"regedit /s $dir\\test.reg\" -Verb RunAs -WindowStyle hidden",
+            "'@echo off' | out-file -append $dir\\test.bat -encoding ascii",
+            "$result = $dir.toString() + \"\\test.vbs\" -replace \"\\\\\", \"\\\\\"",
+            "'\"' + $result + '\" %1' | out-file -append $dir\\test.bat -encoding ascii",
+            "'set ws=WScript.CreateObject(\"WScript.Shell\")' | out-file -append $dir\\test.vbs -encoding ascii",
+            "'set args1=WScript.Arguments'| out-file -append $dir\\test.vbs -encoding ascii",
+            "'For x = 0 to args1.Count - 1' | out-file -append $dir\\test.vbs -encoding ascii",
+            "$python = $scoopdir.toString() + \"\\shims\\python.exe\" -replace \"\\\\\", \"\\\\\"",
+            "$script = $dir.toString() + \"\\emby2potplayer.py\" -replace \"\\\\\", \"\\\\\"",
+            "'    ws.Run \"' + $python + ' ' + $script +' \"\"\"+args1(x)+\"\"\"\",0' | out-file -append $dir\\test.vbs -encoding ascii",
+            "'Next' | out-file -append $dir\\test.vbs -encoding ascii",
+            "if (!(Test-Path \"$persist_dir\\config.ini\")) { '[baseconf]' | out-file -append $dir\\config.ini -encoding ascii;'persist=' + $scoopdir | out-file -append $dir\\config.ini -encoding ascii;'token=' | out-file -append $dir\\config.ini -encoding ascii;'userName=' | out-file -append $dir\\config.ini -encoding ascii }",
+            "'need token and userName in config.ini'"
+        ]
+    },
+    "persist": [
+        "config.ini"
+    ],
+    "uninstaller": {
+        "script": [
+            "Start-Process powershell \"reg delete HKEY_CLASSES_ROOT\\emby /f\" -Verb RunAs -WindowStyle hidden"
+        ]
+    }
+}
