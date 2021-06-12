@@ -19,7 +19,7 @@
 					"rm $dir\\EasyNetSetup_202001.exe",
 					"rm $dir\\install_script.iss",
 					"Start-Process $dir\\DPInst64.exe -ArgumentList '/path', 'C:\\ProgramData\\EasyNet\\tap-windows\\x64', '/sw', '/se'",
-					"Start-Process powershell \"C:\\ProgramData\\EasyNet\\easynet_x64.exe -I\" -Verb RunAs"
+					"Start-Process powershell \"C:\\ProgramData\\EasyNet\\easynet_x64.exe -I\" -Verb RunAs -WindowStyle hidden -wait"
 				]
 			}
 		},
@@ -37,14 +37,14 @@
 					"rm $dir\\EasyNetSetup_202001.exe",
 					"rm $dir\\install_script.iss",
 					"Start-Process $dir\\DPInst32.exe -ArgumentList '/path', 'C:\\ProgramData\\EasyNet\\tap-windows\\x86', '/sw', '/se'",
-					"Start-Process powershell \"C:\\ProgramData\\EasyNet\\easynet_x32.exe -I\" -Verb RunAs"
+					"Start-Process powershell \"C:\\ProgramData\\EasyNet\\easynet_x32.exe -I\" -Verb RunAs -WindowStyle hidden -wait"
 				]
 			}
 		}
 	},
 	"uninstaller": {
 		"script": [
-			"Start-Process powershell \"sc.exe stop EasyNetService;rm -Recurse -Force C:\\ProgramData\\EasyNet;sc.exe delete EasyNetService\" -Verb RunAs"
+			"Start-Process powershell \"sc.exe stop EasyNetService;rm -Recurse -Force C:\\ProgramData\\EasyNet;sc.exe delete EasyNetService\" -Verb RunAs -WindowStyle hidden -wait"
 		]
 	},
 	"shortcuts": [

@@ -5,7 +5,7 @@
 	"url": "https://raw.githubusercontent.com/zbezj/HEU_KMS_Activator/master/HEU_KMS_Activator_v23.0.0.zip",
 	"hash": "md5:205d3abd6fa8a7801c686474cd606625",
 	"pre_install": [
-		"Start-Process powershell \"Set-MpPreference -DisableRealtimeMonitoring 1;Add-MpPreference -ExclusionPath $dir\\HEU_KMS_Activator_v23.0.0.exe;Set-MpPreference -DisableRealtimeMonitoring 0\" -Verb RunAs",
+		"Start-Process powershell \"Set-MpPreference -DisableRealtimeMonitoring 1;Add-MpPreference -ExclusionPath $dir\\HEU_KMS_Activator_v23.0.0.exe;Set-MpPreference -DisableRealtimeMonitoring 0\" -Verb RunAs -WindowStyle hidden",
 		"'Start-Process powershell \"Set-MpPreference -DisableRealtimeMonitoring 1;Start-Process ' + $dir + '\\HEU_KMS_Activator_v23.0.0.exe;Start-Sleep 30;Set-MpPreference -DisableRealtimeMonitoring 0;\" -Verb RunAs -WindowStyle Hidden' | out-file $dir/test.ps1 -encoding ascii",
 		"'@set Path=%Path%;%SystemRoot%\\system32\\WindowsPowerShell\\v1.0\\ & powershell -ExecutionPolicy Unrestricted -NoProfile %~dpn0.ps1 -Verb RunAs -WindowStyle Hidden' | out-file $dir/test.cmd -encoding ascii"
 	],
@@ -19,7 +19,7 @@
 	],
 	"uninstaller": {
 		"script": [
-			"Start-Process powershell \"Remove-MpPreference -ExclusionPath $dir\\HEU_KMS_Activator_v23.0.0.exe\" -Verb RunAs"
+			"Start-Process powershell \"Remove-MpPreference -ExclusionPath $dir\\HEU_KMS_Activator_v23.0.0.exe\" -Verb RunAs -WindowStyle hidden"
 		]
 	}
 }

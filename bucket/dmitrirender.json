@@ -8,7 +8,7 @@
 		"64bit": {
 			"installer":{
 				"script": [
-					"start-process $dir\\install.bat",
+					"start-process $dir\\install.bat -WindowStyle hidden -wait",
 					"'@echo off' | out-file $dir\\reActive.bat -encoding ascii",
 					"'%1 %2' | out-file -append $dir\\reActive.bat -encoding ascii",
 					"'ver|find \"5.\">nul&&goto :Admin' | out-file -append $dir\\reActive.bat -encoding ascii",
@@ -31,7 +31,7 @@
 		"32bit": {
 			"installer":{
 				"script": [
-					"start-process $dir\\install.bat",
+					"start-process $dir\\install.bat -WindowStyle hidden -wait",
 					"'python ' + $dir + '\\reActive.py 86' | out-file -append $dir\\reActive.bat -encoding ascii",
 					"'%1 %2' | out-file -append $dir\\reActive.bat -encoding ascii",
 					"'ver|find \"5.\">nul&&goto :Admin' | out-file -append $dir\\reActive.bat -encoding ascii",

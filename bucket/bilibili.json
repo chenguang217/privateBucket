@@ -16,13 +16,13 @@
 		"script": [
 			"Get-ChildItem $dir | ForEach-Object -Process{ if ( $_.name -match 'cer'){$certification = $_.name} }",
 			"Get-ChildItem $dir | ForEach-Object -Process{ if ( $_.name -match '\\.appx'){$app = $_.name} }",
-			"Start-Process powershell \"certutil -addstore root $dir\\$certification;Add-AppxPackage '$dir\\$app';Get-AppxPackage | Select Publisher, PackageFullName | ForEach-Object -Process{ if (`$_.Publisher -match 'xiaoyaocz'){move-AppxPackage -Package `$_.PackageFullName -Volume D:\\} }\" -Verb RunAs"
+			"Start-Process powershell \"certutil -addstore root $dir\\$certification;Add-AppxPackage '$dir\\$app';Get-AppxPackage | Select Publisher, PackageFullName | ForEach-Object -Process{ if (`$_.Publisher -match 'xiaoyaocz'){move-AppxPackage -Package `$_.PackageFullName -Volume D:\\} }\" -Verb RunAs -WindowStyle hidden -wait"
 		]
 	},
 	"uninstaller": {
 		"script": [
 			"Get-AppxPackage | Select Publisher, PackageFullName | ForEach-Object -Process{ if ($_.Publisher -match 'xiaoyaocz'){$app = $_.PackageFullName} }",
-			"Start-Process powershell \"Remove-AppxPackage -Package $app;certutil -delstore root xiaoyaocz\" -Verb RunAs"
+			"Start-Process powershell \"Remove-AppxPackage -Package $app;certutil -delstore root xiaoyaocz\" -Verb RunAs -WindowStyle hidden -wait"
 		]
 	}
 }
