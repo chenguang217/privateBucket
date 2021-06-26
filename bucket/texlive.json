@@ -3,7 +3,7 @@
 	"description": "TeX Live is a cross-platform, free software distribution for the TeX typesetting system",
 	"homepage": "https://tug.org/texlive/",
 	"url": "http://mirror.ctan.org/systems/texlive/tlnet/install-tl.zip",
-	"hash": "sha512:6afed1855a1eb52dce98c8f81100c7021e2608985a9e008c7f13d70ed057367c922323575a44cb0e17d7cab2a96d75c6e40f96c5a046405cf2139754a42c7a9a",
+	"hash": "sha512:ee7dc995437eb9c46fa9588a777d80ca1e7df54562fd270318edb674234e5414b66f74ebf1faafa97963c8e234e260b6fac6c0cd6ec030e9a483bfe481ab4425",
 	"installer": {
 		"script": [
 			"Write-Host 'Invoking TeX Live installer...' -ForegroundColor DarkCyan",
