@@ -1,0 +1,18 @@
+  
+{
+    "version": "6.3.1.11098",
+    "description": "a extract software",
+    "homepage": "https://www.ghpym.com/zaozip.html",
+    "url": "https://github.com/chenguang217/bucketFiles/releases/download/1.0/HaoZip_6.3.1.11098_Green.zip",
+    "hash": "81419c095d55bd408a06cfe5a96f5a94412236632234d9c616cab1a427b2ce68",
+    "shortcuts": [
+		[
+			"bin/HaoZip.exe",
+            "haoya"
+		],
+		[
+			"绿化卸载.exe",
+			"green&uninstall"
+		]
+	]
+}
