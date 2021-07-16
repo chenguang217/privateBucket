@@ -5,7 +5,7 @@
 	"architecture": {
 		"64bit": {
 			"url": "https://kjkpubsf.sfo2.digitaloceanspaces.com/software/sumatrapdf/rel/SumatraPDF-3.3.1-64.zip",
-			"hash": "md5:d41d8cd98f00b204e9800998ecf8427e"
+			"hash": "md5:ff074727281dc73759e70e275ae989f3"
 		},
 		"32bit": {
 			"url": "https://kjkpubsf.sfo2.digitaloceanspaces.com/software/sumatrapdf/rel/SumatraPDF-3.3.1.zip",
