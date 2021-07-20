@@ -1,15 +1,15 @@
 {
-	"version": "3.3.1",
+	"version": "3.3.2",
 	"description": "PDF and eBook reader",
 	"homepage": "https://www.sumatrapdfreader.org/free-pdf-reader",
 	"architecture": {
 		"64bit": {
-			"url": "https://kjkpubsf.sfo2.digitaloceanspaces.com/software/sumatrapdf/rel/SumatraPDF-3.3.1-64.zip",
-			"hash": "md5:ff074727281dc73759e70e275ae989f3"
+			"url": "https://kjkpubsf.sfo2.digitaloceanspaces.com/software/sumatrapdf/rel/SumatraPDF-3.3.2-64.zip",
+			"hash": "md5:7f99bba8630e50db1ae16d2900a88eb5"
 		},
 		"32bit": {
-			"url": "https://kjkpubsf.sfo2.digitaloceanspaces.com/software/sumatrapdf/rel/SumatraPDF-3.3.1.zip",
-			"hash": "md5:4794998798404ed8c4b65e2da769c306"
+			"url": "https://kjkpubsf.sfo2.digitaloceanspaces.com/software/sumatrapdf/rel/SumatraPDF-3.3.2.zip",
+			"hash": "md5:fb86724eb597d02fba3ca50fd3f17d1c"
 		}
 	},
 	"pre_install": [
