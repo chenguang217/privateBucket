@@ -1,12 +1,12 @@
 {
-	"version": "24.0.0",
+	"version": "24.1.0",
 	"description": "a KMS activator",
 	"homepage": "https://github.com/zbezj/HEU_KMS_Activator",
-	"url": "https://raw.githubusercontent.com/zbezj/HEU_KMS_Activator/master/HEU_KMS_Activator_v24.0.0.zip",
-	"hash": "md5:150748ff320d46f8fce9ed55d8897ade",
+	"url": "https://raw.githubusercontent.com/zbezj/HEU_KMS_Activator/master/HEU_KMS_Activator_v24.1.0.zip",
+	"hash": "md5:6b8c3382ef81baa9cee3fd05f699af75",
 	"pre_install": [
-		"Start-Process powershell \"Set-MpPreference -DisableRealtimeMonitoring 1;Add-MpPreference -ExclusionPath $dir\\HEU_KMS_Activator_v24.0.0.exe;Set-MpPreference -DisableRealtimeMonitoring 0\" -Verb RunAs -WindowStyle hidden",
-		"'Start-Process powershell \"Set-MpPreference -DisableRealtimeMonitoring 1;Start-Process ' + $dir + '\\HEU_KMS_Activator_v24.0.0.exe;Start-Sleep 30;Set-MpPreference -DisableRealtimeMonitoring 0;\" -Verb RunAs -WindowStyle Hidden' | out-file $dir/test.ps1 -encoding ascii",
+		"Start-Process powershell \"Set-MpPreference -DisableRealtimeMonitoring 1;Add-MpPreference -ExclusionPath $dir\\HEU_KMS_Activator_v24.1.0.exe;Set-MpPreference -DisableRealtimeMonitoring 0\" -Verb RunAs -WindowStyle hidden",
+		"'Start-Process powershell \"Set-MpPreference -DisableRealtimeMonitoring 1;Start-Process ' + $dir + '\\HEU_KMS_Activator_v24.1.0.exe;Start-Sleep 30;Set-MpPreference -DisableRealtimeMonitoring 0;\" -Verb RunAs -WindowStyle Hidden' | out-file $dir/test.ps1 -encoding ascii",
 		"'@set Path=%Path%;%SystemRoot%\\system32\\WindowsPowerShell\\v1.0\\ & powershell -ExecutionPolicy Unrestricted -NoProfile %~dpn0.ps1 -Verb RunAs -WindowStyle Hidden' | out-file $dir/test.cmd -encoding ascii"
 	],
 	"shortcuts": [
@@ -14,12 +14,12 @@
 			"test.cmd",
 			"HEU_KMS_Activator",
 			"",
-			"HEU_KMS_Activator_v24.0.0.exe"
+			"HEU_KMS_Activator_v24.1.0.exe"
 		]
 	],
 	"uninstaller": {
 		"script": [
-			"Start-Process powershell \"Remove-MpPreference -ExclusionPath $dir\\HEU_KMS_Activator_v24.0.0.exe\" -Verb RunAs -WindowStyle hidden"
+			"Start-Process powershell \"Remove-MpPreference -ExclusionPath $dir\\HEU_KMS_Activator_v24.1.0.exe\" -Verb RunAs -WindowStyle hidden"
 		]
 	}
 }
