@@ -1,14 +1,14 @@
 {
-	"version": "8.4.7",
+	"version": "8.4.8",
 	"description": "the client for douyu",
 	"homepage": "http://www.douyu.com",
-	"url": "https://sta-op.douyucdn.cn/dypc-client/pkg/Douyu_Live_PC_Client/20210524114253768/DouyuLive_8.4.7.1_Server_1.1.1.4.exe#/dl.7z",
-	"hash": "md5:c218626c251affa28bdab20c96b01874",
+	"url": "https://sta-op.douyucdn.cn/dypc-client/pkg/Douyu_Live_PC_Client/20210729110811263/DouyuLive_8.4.8.3_Server_1.1.1.4.exe#/dl.7z",
+	"hash": "md5:baff67aa45ca9fae6fba21dfd296b353",
 	"post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\" -Force -Recurse",
 	"shortcuts": [
 		[
 			"Client\\DouyuLive.exe",
-			"\u6597\u9c7c"
+			"斗鱼"
 		]
 	]
 }
