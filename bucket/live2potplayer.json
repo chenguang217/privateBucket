@@ -1,0 +1,32 @@
+{
+    "version": "1.0",
+    "description": "open emby link with potplayer and update progress with js",
+    "homepage": "https://github.com/chenguang217/bucketFiles",
+    "url": "https://github.com/chenguang217/bucketFiles/releases/download/1.0/live2potplayer.rar",
+    "hash": "f0c321bb99f6b6579330d99b80c61a2c267a88287f2215ff9972c5452b18c3ac",
+    "depends": [
+        "potplayer"
+    ],
+    "installer": {
+        "script": [
+            "$result = $dir.toString() + \"\\getSubscribeDouyu.py\"",
+            "'@echo off' | out-file -append $dir\\getSubscribeDouyu.bat -encoding ascii",
+			"'python ' + $result | out-file -append $dir\\getSubscribeDouyu.bat -encoding ascii",
+            "if (!(Test-Path \"$persist_dir\\config.ini\")) { '[baseconf]' | out-file -append $dir\\config.ini -encoding ascii;'persist=' + $scoopdir | out-file -append $dir\\config.ini -encoding ascii;'dir=' + $dir | out-file -append $dir\\config.ini -encoding ascii }"
+        ]
+    },
+    "persist": [
+        "config.ini"
+    ],
+	"uninstaller": {
+        "script": [
+            "cmd.exe /c $dir/uninstall.bat"
+        ]
+    },
+	"shortcuts": [
+		[
+			"getSubscribeDouyu.bat",
+			"getSubscribeDouyu"
+		]
+	]
+}
