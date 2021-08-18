@@ -1,5 +1,5 @@
 {
-	"version": "3.7.2021.0714",
+	"version": "3.7.2021.0808",
 	"description": "a pe setup tool for usb drive",
 	"homepage": "http://www.xtxzb.com/forum.php?mod=viewthread&tid=7918",
 	"url": "https://raw.githubusercontent.com/chenguang217/bucketFiles/main/install.py",
@@ -7,7 +7,7 @@
 	"installer": {
 		"script": [
 			"pip install requests rarfile",
-			"python $dir/install.py $dir 185CEiqFprXlS nZjv"
+			"python $dir/install.py $dir 185C7JO0BJZLz xViy"
 		]
 	},
 	"shortcuts": [
