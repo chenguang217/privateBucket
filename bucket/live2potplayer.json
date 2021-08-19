@@ -3,7 +3,7 @@
     "description": "open emby link with potplayer and update progress with js",
     "homepage": "https://github.com/chenguang217/bucketFiles",
     "url": "https://github.com/chenguang217/bucketFiles/releases/download/1.0/live2potplayer.rar",
-    "hash": "f89853f91a0815fe12d376e28173b189de56ccddd51ea57f6cb89b8f348b3faf",
+    "hash": "21f07dcae77a5624fbc9face1fea5f4175ebc5f0c7f255ba57ecc6928905607c",
     "depends": [
         "potplayer"
     ],
