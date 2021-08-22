@@ -1,0 +1,18 @@
+{
+	"version": "5.00",
+	"description": "A biology software",
+	"homepage": "https://github.com/chenguang217/bucketFiles",
+	"url": "https://github.com/chenguang217/bucketFiles/releases/download/1.0/Primer5.rar",
+	"hash": "cd1ff26b4bd916b7d7151b052649520ad6f3dcedb79255637dd585b8b48f51af",
+	"notes": "run primier5 activation for registration",
+	"shortcuts": [
+		[
+			"Primer Premier 5.exe",
+			"Primer Premier 5"
+		],
+		[
+			"注册机.exe",
+			"Primer5 activation"
+		]
+	]
+}
