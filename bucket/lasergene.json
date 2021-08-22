@@ -1,0 +1,54 @@
+{
+	"version": "8.0.2.263",
+	"description": "A biology software",
+	"homepage": "https://github.com/chenguang217/bucketFiles",
+	"url": "https://github.com/chenguang217/bucketFiles/releases/download/1.0/Lasergene.rar",
+	"hash": "90f8476c171f7d80fa51e5dfaf3df5ef5f2e9a656ddd2f6ec68e9e359db984c9",
+	"installer": {
+		"script": [
+			"$CONFIG_PATH=\"$env:allusersprofile\\DNASTAR\\Licenses\"",
+			"$TRUE_FALSE=(Test-Path $env:allusersprofile\\DNASTAR\\Licenses)",
+			"if($TRUE_FALSE -eq \"True\")",
+			"{",
+			"remove-Item -Recurse -Force $CONFIG_PATH",
+			"}",
+			"mkdir $env:allusersprofile\\DNASTAR\\Licenses",
+			"mv $dir\\LG7.license $env:allusersprofile\\DNASTAR\\Licenses"
+		]
+	},
+	"uninstaller": {
+		"script": [
+			"rm -Recurse -Force $env:allusersprofile\\DNASTAR"
+		]
+	},
+	"shortcuts": [
+		[
+			"Main\\Editseq.exe",
+			"Editseq"
+		],
+		[
+			"Main\\GeneQuest.exe",
+			"GeneQuest"
+		],
+		[
+			"Main\\Megalign.exe",
+			"Megalign"
+		],
+		[
+			"Main\\PrimerSelect.exe",
+			"PrimerSelect"
+		],
+		[
+			"Main\\Protean.exe",
+			"Protean"
+		],
+		[
+			"Main\\SeqBuilder.exe",
+			"SeqBuilder"
+		],
+		[
+			"Main\\SeqMan.exe",
+			"SeqMan"
+		]
+	]
+}
