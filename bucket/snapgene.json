@@ -18,16 +18,13 @@
 			"mv $dir\\ActivationCrack.exe $dir\\ActivationCrack2.rar",
 			"7z x $dir\\ActivationCrack2.rar \"-o$dir\"",
 			"rm $dir\\ActivationCrack2.rar",
+			"start-process $dir\\ActivationCrack.exe -wait",
 			"rm $dir\\SnapGene.exe",
 			"mv $dir\\SnapGene2.exe $dir\\SnapGene.exe"
 		]
 	},
 	"notes": "run snapgene activation for registration",
 	"shortcuts": [
-		[
-			"ActivationCrack.exe",
-			"ActivationCrack"
-		],
 		[
 			"SnapGene.exe",
 			"SnapGene"
@@ -36,7 +33,8 @@
 	"uninstaller": {
 		"script": [
 			"Start-Process powershell \"Remove-MpPreference -ExclusionPath $dir\\ActivationCrack.exe\" -Verb RunAs -WindowStyle hidden",
-			"rm -Recurse -force $env:appdata\\SnapGene"
+			"rm -Recurse -force $env:appdata\\SnapGene",
+			"rm -Recurse -force $env:appdata\\GSLBiotech"
 		]
 	}
 }
