@@ -35,7 +35,8 @@
 	],
 	"uninstaller": {
 		"script": [
-			"Start-Process powershell \"Remove-MpPreference -ExclusionPath $dir\\ActivationCrack.exe\" -Verb RunAs -WindowStyle hidden"
+			"Start-Process powershell \"Remove-MpPreference -ExclusionPath $dir\\ActivationCrack.exe\" -Verb RunAs -WindowStyle hidden",
+			"rm -Recurse -force $env:appdata\\SnapGene"
 		]
 	}
 }
