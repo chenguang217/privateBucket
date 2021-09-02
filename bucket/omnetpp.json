@@ -1,0 +1,40 @@
+{
+	"version": "5.6.2",
+	"description": "A biology software",
+	"homepage": "https://github.com/chenguang217/bucketFiles",
+	"url": "https://github.com/omnetpp/omnetpp/releases/download/omnetpp-5.6.2/omnetpp-5.6.2-src-windows.zip",
+	"hash": "8e53c86524c136612d6ef3be2290977348fe79b417e0be7bf876ca8a4dae8332",
+	"extract_dir": "omnetpp-5.6.2",
+	"installer": {
+		"script": [
+			"'@echo off' | out-file -append $dir\\tmp.bat -encoding ascii",
+			"'set HOME=%~dp0' | out-file -append $dir\\tmp.bat -encoding ascii",
+			"'set PATH=%~dp0\\tools\\win64\\usr\\bin;%PATH%' | out-file -append $dir\\tmp.bat -encoding ascii",
+			"'set WD=%~dp0\\tools\\win64\\usr\\bin\\' | out-file -append $dir\\tmp.bat -encoding ascii",
+			"'set MSYSTEM=MINGW64' | out-file -append $dir\\tmp.bat -encoding ascii",
+			"'set \"CONTITLE=MinGW x64\"' | out-file -append $dir\\tmp.bat -encoding ascii",
+			"'set MSYSCON=mintty.exe' | out-file -append $dir\\tmp.bat -encoding ascii",
+			"'start /wait \"%CONTITLE%\" \"%WD%mintty\" -i /msys2.ico -t \"%CONTITLE%\" /usr/bin/bash --login \"./test.sh\"' | out-file -append $dir\\tmp.bat -encoding ascii",
+			"'./configure' | out-file -append $dir\\test.sh -encoding ascii",
+			"$tmp = $dir -replace '\\\\', '/' -replace ':', ''",
+			"$test = [string]$tmp[0]",
+			"'export PATH=/' + ($test.tolower() +  $tmp::join('', $tmp[1..$tmp.length])) + '/bin:$PATH' | out-file -append $dir\\test.sh -encoding ascii",
+			"'make' | out-file -append $dir\\test.sh -encoding ascii",
+			"7z x -y $dir\\tools\\opp-tools-win64-msys.7z \"-o$dir\\tools\"",
+			"7z x -y $dir\\tools\\opp-tools-win64-extra.7z \"-o$dir\\tools\"",
+			"7z x -y $dir\\tools\\opp-tools-win64-mingw64.7z \"-o$dir\\tools\"",
+			"Remove-Item $dir\\tools\\opp-tools-win64-msys.7z",
+			"Remove-Item $dir\\tools\\opp-tools-win64-extra.7z",
+			"Remove-Item $dir\\tools\\opp-tools-win64-mingw64.7z",
+			"start-process $dir\\tools\\win64\\mingw64\\bin\\qtbinpatcher.exe -ArgumentList \"--qt-dir=$dir\\tools\\win64\\mingw64\" -WindowStyle hidden -Wait",
+			"start-process $dir\\tmp.bat -WindowStyle hidden -Wait",
+			"Remove-Item -Force -Recurse $dir\\tools\\win64"
+		]
+	},
+	"shortcuts": [
+		[
+			"ide/omnetpp.exe",
+			"omnetpp"
+		]
+	]
+}
