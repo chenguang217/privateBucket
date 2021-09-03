@@ -1,0 +1,32 @@
+{
+	"version": "5.1",
+	"description": "A VANET simulator",
+	"homepage": "http://veins.car2x.org/",
+	"url": [
+		"http://veins.car2x.org/download/veins-5.1.zip",
+		"https://jaist.dl.sourceforge.net/projects/sumo/files/sumo/version%201.8.0/sumo-win64-1.8.0.zip"
+	],
+	"hash": [
+		"df67ae2847b4f72c6d276d0d8abb96832086da633e421881e0461d306b71c853",
+		"f7629e16f41f2f5111453542085017d89e92d5fc91b7392c21032d1191e73b74"
+	],
+	"depends": [
+		"omnetpp"
+	],
+	"installer": {
+		"script": [
+			"\"$dir\\sumo-1.8.0\\bin\\sumo.exe -c \" + $dir + '\\veins-veins-5.1\\examples\\veins\\erlangen.sumo.cfg' | out-file -append $dir\\launch.bat -encoding ascii"
+		]
+	},
+	"shortcuts": [
+		[
+			"launch.bat",
+			"veins"
+		]
+	],
+	"notes": [
+		"build veins first",
+		"$dir\\veins-veins-5.1",
+		"then run veins"
+	]
+}
