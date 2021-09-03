@@ -27,8 +27,7 @@
 			"Remove-Item $dir\\tools\\opp-tools-win64-extra.7z",
 			"Remove-Item $dir\\tools\\opp-tools-win64-mingw64.7z",
 			"start-process $dir\\tools\\win64\\mingw64\\bin\\qtbinpatcher.exe -ArgumentList \"--qt-dir=$dir\\tools\\win64\\mingw64\" -WindowStyle hidden -Wait",
-			"start-process $dir\\tmp.bat -WindowStyle hidden -Wait",
-			"Remove-Item -Force -Recurse $dir\\tools\\win64"
+			"start-process $dir\\tmp.bat -WindowStyle hidden -Wait"
 		]
 	},
 	"shortcuts": [
