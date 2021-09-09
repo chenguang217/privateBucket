@@ -1,13 +1,13 @@
 {
-	"version": "3.61",
+	"version": "3.62",
 	"description": "By means of modifing hosts file,it can provide best CDN IP address to enhance your online function experience.",
 	"homepage": "https://www.dogfight360.com/blog/475/",
 	"url": "https://github.com/chenguang217/bucketFiles/releases/download/1.0/usbeam.zip",
-	"hash": "md5:8e5a6000acb7af21b3861fe6016c0840",
+	"hash": "md5:ad385c556b53ed0946a092afa7344a68",
 	"extract_dir": "UsbEAm Hosts Editor",
 	"shortcuts": [
 		[
-			"UsbEAm Hosts Editor v3.61.exe",
+			"UsbEAm Hosts Editor v3.62.exe",
 			"UsbEAm Hosts Editor"
 		]
 	]
