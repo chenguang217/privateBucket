@@ -8,13 +8,13 @@
 	"installer": {
 		"script": [
 			"$key=$dir.ToString()+'\\!)\u7eff\u5316.bat'",
-			"Start-Process $key"
+			"Start-Process $key -wait"
 		]
 	},
 	"uninstaller": {
 		"script": [
 			"$key=$dir.ToString()+'\\!)\u5378\u8f7d.bat'",
-			"Start-Process $key"
+			"Start-Process $key -wait"
 		]
 	},
 	"shortcuts": [

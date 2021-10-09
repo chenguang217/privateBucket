@@ -1,5 +1,5 @@
 {
-	"version": "3.7.2021.0606",
+	"version": "3.7.2021.0915",
 	"description": "a pe setup tool for usb drive",
 	"homepage": "http://www.xtxzb.com/forum.php?mod=viewthread&tid=7918",
 	"url": "https://raw.githubusercontent.com/chenguang217/bucketFiles/main/install.py",
@@ -7,7 +7,7 @@
 	"installer": {
 		"script": [
 			"pip install requests rarfile",
-			"python $dir/install.py $dir https://www.xtxzb.icu/\u8f6f\u4ef6/EasyU_3.7.2021.0606.rar"
+			"python $dir/install.py $dir 185C7IFZANpUj lgp1"
 		]
 	},
 	"shortcuts": [
