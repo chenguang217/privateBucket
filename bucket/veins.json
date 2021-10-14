@@ -15,7 +15,8 @@
 	],
 	"installer": {
 		"script": [
-			"\"$dir\\sumo-1.8.0\\bin\\sumo.exe -c \" + $dir + '\\veins-veins-5.1\\examples\\veins\\erlangen.sumo.cfg' | out-file -append $dir\\launch.bat -encoding ascii"
+			"\"$dir\\sumo-1.8.0\\bin\\sumo.exe -c \" + $dir + '\\veins-veins-5.1\\examples\\veins\\erlangen.sumo.cfg' | out-file -append $dir\\launch.bat -encoding ascii",
+			"python \"$dir\\veins-veins-5.1\\sumo-launchd.py -vv -c \" + $dir + 'sumo-1.8.0\\bin\\sumo.exe' | out-file -append $dir\\launch.bat -encoding ascii"
 		]
 	},
 	"shortcuts": [
