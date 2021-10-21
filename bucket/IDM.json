@@ -4,7 +4,7 @@
 	"homepage": "https://www.wotianna.com/idmpc/",
 	"url": "https://github.com/chenguang217/bucketFiles/releases/download/1.0/IDM.7z",
 	"hash": "md5:3f479ebb10a0d0223380177b4be93b22",
-	"extract_dir": "IDM",
+	"extract_dir": "idm 6.39.5 mod",
 	"installer": {
 		"script": [
 			"$key=$dir.ToString()+'\\!)\u7eff\u5316.bat'",
