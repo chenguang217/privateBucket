@@ -1,9 +1,9 @@
 {
-	"version": "3.0.0.1",
+	"version": "5.0.0.1",
 	"description": "A frame interpolation software with a reactive script.",
 	"homepage": "http://www.dmitrirender.ru/",
 	"url": "https://github.com/chenguang217/bucketFiles/releases/download/1.0/DmitriRender5.rar",
-	"hash": "8d2b92e2ebe6bef9df8fdbb871717e06617af4c71377011bf3997f0994cd9df9",
+	"hash": "72507a0dba7001efc25293464496deeccc2203e88d600f1d7316e36a33274c1e",
 	"architecture": {
 		"64bit": {
 			"installer":{
