@@ -1,0 +1,26 @@
+{
+    "homepage": "https://weixin.qq.com/",
+    "description": "Free messaging and calling app.",
+    "version": "nightly",
+    "license": {
+        "identifier": "EULA",
+        "url": "https://weixin.qq.com/cgi-bin/readtemplate?lang=zh_CN&t=weixin_agreement&s=default"
+    },
+    "url": "https://dldir1.qq.com/weixin/Windows/WeChatSetup.exe#/dl.7z",
+    "post_install": [
+        "Remove-Item \"$dir\\`$PLUGINSDIR\" -Force -Recurse",
+        "Remove-Item \"$dir\\`$_15_\" -Force -Recurse",
+        "Remove-Item \"$dir\\`$R5\" -Force -Recurse",
+        "echo $dir",
+		"$WshShell = New-Object -comObject WScript.Shell",
+		"$Shortcut = $WshShell.CreateShortcut(\"$env:AppData\\Microsoft\\Windows\\Start Menu\\Programs\\Scoop Apps\\Wechat.lnk\")",
+		"$Shortcut.TargetPath = \"$dir\\wechat.exe\"",
+		"$Shortcut.Save()"
+    ],
+    "uninstaller": {
+        "script": [
+            "Remove-Item \"$env:AppData\\Microsoft\\Windows\\Start Menu\\Programs\\Scoop Apps\\Wechat.lnk\""
+        ]
+    },
+    "notes": "We don't persist your WeChat data, they are still storaged in '%APPDATA%\\Tencent\\WeChat'."
+}
