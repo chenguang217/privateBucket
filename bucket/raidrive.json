@@ -1,27 +1,16 @@
 {
-    "homepage": "https://www.raidrive.com/",
-    "description": "RaiDrive官方无广告版",
-    "version": "2019.12.22",
-    "url": "https://scoop-zapps.oss-cn-hangzhou.aliyuncs.com/RaiDrive/RaiDrive-2019.12.22.exe#/setup.exe",
-    "hash": "dcbf4adc85b20867dd33061b7c1686541b8bcbc6acae783a330dbaf689db6383",
-    "installer": {
-        "script": [
-            "Start-Process -Wait \"$dir\\setup.exe\" \"/exenoui /exelang 2052 /exenoupdates /extract $dir /quiet /qb\" -Verb RunAs "
-        ],
-        "keep": true
-    },
-    "uninstaller": {
-        "script": "Start-Process -Wait msiexec \"/qb /x `\"{10AC4CB7-41C2-4403-AA0F-326E3A6DD612}\" -Verb RunAs"
-    },
-    "checkver": {
-        "url": "https://scoop-zapps.oss-cn-hangzhou.aliyuncs.com/RaiDrive/RaiDrive.latest",
-        "regex": "([\\d.]+)"
-    },
-    "autoupdate": {
-        "url": "https://scoop-zapps.oss-cn-hangzhou.aliyuncs.com/RaiDrive/RaiDrive-$version.exe#/setup.exe",
-        "hash": {
-            "url": "$url.sha256",
-            "regex": "$sha256"
-        }
-    }
+	"homepage": "https://www.raidrive.com/",
+	"description": "RaiDrive\u5b98\u65b9\u65e0\u5e7f\u544a\u7248",
+	"version": "2021.10.9",
+	"url": "https://github.com/chenguang217/bucketFiles/releases/download/1.0/raidrive.exe",
+	"hash": "md5:b7591925319b3dae15fb8e75d6313ba5",
+	"installer": {
+		"script": [
+			"Start-Process -Wait \"$dir\\setup.exe\" \"/exenoui /exelang 2052 /exenoupdates /extract $dir /quiet /qb\" -Verb RunAs "
+		],
+		"keep": true
+	},
+	"uninstaller": {
+		"script": "Start-Process -Wait msiexec \"/qb /x `\"{10AC4CB7-41C2-4403-AA0F-326E3A6DD612}\" -Verb RunAs"
+	}
 }
