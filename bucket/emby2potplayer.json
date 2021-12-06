@@ -18,7 +18,7 @@
             "'[HKEY_CLASSES_ROOT\\emby\\shell\\open]' | out-file -append $dir\\test.reg -encoding ascii",
             "'[HKEY_CLASSES_ROOT\\emby\\shell\\open\\command]' | out-file -append $dir\\test.reg -encoding ascii",
             "$result = $dir.toString() + \"\\test.bat\" -replace \"\\\\\", \"\\\\\"",
-            "'@=\"\\\"' + $result + '\\\" \\\"%1\\\"\"' | out-file -append $dir\\test.reg -encoding ascii",
+            "'@=\"wscript \\\"' + $result + '\\\" \\\"%1\\\"\"' | out-file -append $dir\\test.reg -encoding ascii",
             "Start-Process powershell \"regedit /s $dir\\test.reg\" -Verb RunAs -WindowStyle hidden",
             "'@echo off' | out-file -append $dir\\test.bat -encoding ascii",
             "$result = $dir.toString() + \"\\test.vbs\" -replace \"\\\\\", \"\\\\\"",
