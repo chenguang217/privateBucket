@@ -4,7 +4,7 @@
     "description": "open emby link with potplayer and update progress with js",
     "homepage": "https://github.com/chenguang217/bucketFiles",
     "url": "https://raw.githubusercontent.com/chenguang217/bucketFiles/main/emby2potplayer.py",
-    "hash": "d4c77a16451c0b2f8c0f3d0636fe642adf3c2365d1eabf1e8e4b527906bba2e4",
+    "hash": "9a12a1e3463e1e058d98cf968852570c5449978871d084035be13f040d1e8424",
     "depends": [
         "potplayer"
     ],
