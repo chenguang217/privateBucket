@@ -1,0 +1,32 @@
+{
+	"version": "1.1.56",
+	"description": "transfer cloud drive to local drive",
+	"homepage": "https://t.me/cloud_nas",
+	"url": "https://github.com/chenguang217/bucketFiles/releases/download/1.0/CloudDriveSetup.exe",
+	"hash": "ff639f39967058d7528373c45776e700f2e7c67bc59da338e5f1d47b40ef2865",
+	"innosetup": true,
+	"depends": [
+		"winfsp"
+	],
+	"installer": {
+		"script": [
+			"Start-Process powershell \"new-service 每Name CloudDriveService 每DisplayName CloudDriveService 每BinaryPathName $dir\\CloudDriveService.exe 每StartupType Automatic;Start-Service -Name CloudDriveService\" -Verb RunAs -WindowStyle hidden",
+			"rename-Item \"$dir\\appsettings,2.json\" -NewName appsettings.json",
+			"'Set  objeShell = CreateObject(\"Wscript.Shell\")' | out-file -append $dir/test.vbs -encoding ascii",
+			"'objeShell.Run(\"http://localhost:9798\")' | out-file -append $dir/test.vbs -encoding ascii"
+		]
+	},
+	"uninstaller": {
+		"script": [
+			"Start-Process cmd -Args '/c', \"sc stop CloudDriveService & sc delete CloudDriveService\" -Verb RunAs -WindowStyle hidden"
+		]
+	},
+	"shortcuts": [
+		[
+			"test.vbs",
+			"Cloud Drive",
+			"",
+			"wwwroot/Identity/favicon.ico"
+		]
+	]
+}
