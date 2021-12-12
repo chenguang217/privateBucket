@@ -10,7 +10,7 @@
 	],
 	"installer": {
 		"script": [
-			"Start-Process cmd -Args '/c', \"sc create CloudDriveService binpath=$dir\\CloudDriveService.exe DisplayName=CloudDriveService start= auto & sc start CloudDriveService\" -Verb RunAs -WindowStyle hidden",
+			"Start-Process powershell \"new-service 每Name CloudDriveService 每DisplayName CloudDriveService 每BinaryPathName $dir\\CloudDriveService.exe 每StartupType Automatic;Start-Service -Name CloudDriveService\" -Verb RunAs -WindowStyle hidden",
 			"rename-Item \"$dir\\appsettings,2.json\" -NewName appsettings.json",
 			"'Set  objeShell = CreateObject(\"Wscript.Shell\")' | out-file -append $dir/test.vbs -encoding ascii",
 			"'objeShell.Run(\"http://localhost:9798\")' | out-file -append $dir/test.vbs -encoding ascii"
@@ -18,7 +18,8 @@
 	},
 	"uninstaller": {
 		"script": [
-			"Start-Process cmd -Args '/c', \"sc stop CloudDriveService & sc delete CloudDriveService\" -Verb RunAs -WindowStyle hidden"
+			"Start-Process cmd -Args '/c', \"sc stop CloudDriveService & sc delete CloudDriveService\" -Verb RunAs -WindowStyle hidden",
+			"remove-item -Recurse -Force C:\\Windows\\System32\\config\\systemprofile\\Waytech\\CloudDrive"
 		]
 	},
 	"shortcuts": [
