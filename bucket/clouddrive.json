@@ -18,7 +18,7 @@
 	},
 	"uninstaller": {
 		"script": [
-			"Start-Process cmd -Args '/c', \"sc stop CloudDriveService & sc delete CloudDriveService\" -Verb RunAs -WindowStyle hidden",
+			"Start-Process cmd -Args '/c', \"sc stop CloudDriveService & sc delete CloudDriveService\" -Verb RunAs -WindowStyle hidden -Wait",
 			"remove-item -Recurse -Force C:\\Windows\\System32\\config\\systemprofile\\Waytech\\CloudDrive"
 		]
 	},
