@@ -1,0 +1,13 @@
+{
+	"version": "21.08.21",
+	"description": "a bit torrent search tools",
+	"homepage": "http://www.pc936.com/bt/",
+	"url": "https://github.com/chenguang217/bucketFiles/releases/download/1.0/bitsearch.rar",
+	"hash": "md5:f7fbb54eb6435f348daa8cd930b245ba",
+	"shortcuts": [
+		[
+			"\u78c1\u529b\u8d44\u6e90\u641c\u7d22\u52a9\u624b.exe",
+			"\u78c1\u529b\u8d44\u6e90\u641c\u7d22\u52a9\u624b"
+		]
+	]
+}
