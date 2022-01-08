@@ -5,7 +5,7 @@
 	"version": "1.10.22006",
 	"license": "GPL-3.0-only | Unknown",
 	"url": "https://github.com/billziss-gh/winfsp/releases/download/v1.10/winfsp-1.10.22006.msi#dl.msi_",
-	"hash": "md5:d41d8cd98f00b204e9800998ecf8427e",
+	"hash": "md5:5730d1c06062b25f536a2ac220453c4d",
 	"installer": {
 		"script": "Invoke-ExternalCommand msiexec -ArgumentList @('/i', \"$dir\\setup.msi_\", '/qn') -RunAs | Out-Null"
 	},
