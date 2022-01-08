@@ -7,9 +7,9 @@
 	"url": "https://github.com/billziss-gh/winfsp/releases/download/v1.10/winfsp-1.10.22006.msi#/dl.msi_",
 	"hash": "md5:5730d1c06062b25f536a2ac220453c4d",
 	"installer": {
-		"script": "Invoke-ExternalCommand msiexec -ArgumentList @('/i', \"$dir\\setup.msi_\", '/qn') -RunAs | Out-Null"
+		"script": "Invoke-ExternalCommand msiexec -ArgumentList @('/i', \"$dir\\dl.msi_\", '/qn') -RunAs | Out-Null"
 	},
 	"uninstaller": {
-		"script": "Invoke-ExternalCommand msiexec -ArgumentList @('/x', \"$dir\\setup.msi_\", '/qn') -RunAs | Out-Null"
+		"script": "Invoke-ExternalCommand msiexec -ArgumentList @('/x', \"$dir\\dl.msi_\", '/qn') -RunAs | Out-Null"
 	}
 }
