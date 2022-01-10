@@ -1,10 +1,10 @@
 {
-	"version": "5.2.5",
+	"version": "5.2.6",
 	"description": "a music player",
 	"homepage": "http://www.mcmusic.top/",
 	"url": "https://github.com/chenguang217/bucketFiles/releases/download/1.0/McMusic.rar",
-	"hash": "md5:b04dde88b91489db061c06acd6a460df",
-	"extract_dir": "McMusic5.2.5",
+	"hash": "md5:56b38dbca5f116cce2971c2eaa75b8fc",
+	"extract_dir": "McMusic5.2.6",
 	"shortcuts": [
 		[
 			"McMusic.exe",
