@@ -1,5 +1,5 @@
 {
-	"version": "2021.10.20",
+	"version": "2022.01.12",
 	"description": "a pe setup tool for usb drive",
 	"homepage": "http://www.xtxzb.com/forum.php?mod=viewthread&tid=7918",
 	"url": "https://raw.githubusercontent.com/chenguang217/bucketFiles/main/install.py",
@@ -7,7 +7,7 @@
 	"installer": {
 		"script": [
 			"pip install requests rarfile",
-			"python $dir/install.py $dir pan.adycloud.com/30wcR"
+			"python $dir/install.py $dir www.123pan.com/A6cA-BCHJh"
 		]
 	},
 	"shortcuts": [
