@@ -1,0 +1,13 @@
+{
+	"version": "6.3.7",
+	"description": "the client for ecloud",
+	"homepage": "https://cloud.189.cn/",
+	"url": "https://github.com/chenguang217/bucketFiles/releases/download/1.0/aliyunbaiyang.rar",
+	"hash": "7ca7937bbeb6ea684ef6de6d94ee0df1f30a0346b6d90732d59713b59bee0172",
+	"shortcuts": [
+		[
+			"阿里云盘小白羊版v2.exe",
+			"阿里云盘小白羊版"
+		]
+	]
+}
