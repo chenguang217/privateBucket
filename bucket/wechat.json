@@ -10,8 +10,10 @@
 	"hash": "md5:d81ce735e25cf79ac90bdc2c87020d13",
 	"shortcuts": [
 		[
-			"wechat.exe",
-			"WeChat"
+			"start.vbs",
+			"WeChat",
+			"",
+			"wechat.exe"
 		]
 	],
 	"post_install": [
