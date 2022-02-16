@@ -1,26 +1,65 @@
 {
-    "homepage": "https://weixin.qq.com/",
-    "description": "Free messaging and calling app.",
-    "version": "nightly",
-    "license": {
-        "identifier": "EULA",
-        "url": "https://weixin.qq.com/cgi-bin/readtemplate?lang=zh_CN&t=weixin_agreement&s=default"
-    },
-    "url": "https://dldir1.qq.com/weixin/Windows/WeChatSetup.exe#/dl.7z",
-    "post_install": [
-        "Remove-Item \"$dir\\`$PLUGINSDIR\" -Force -Recurse",
-        "Remove-Item \"$dir\\`$_15_\" -Force -Recurse",
-        "Remove-Item \"$dir\\`$R5\" -Force -Recurse",
-        "echo $dir",
-		"$WshShell = New-Object -comObject WScript.Shell",
-		"$Shortcut = $WshShell.CreateShortcut(\"$env:AppData\\Microsoft\\Windows\\Start Menu\\Programs\\Scoop Apps\\Wechat.lnk\")",
-		"$Shortcut.TargetPath = \"$dir\\wechat.exe\"",
-		"$Shortcut.Save()"
-    ],
-    "uninstaller": {
-        "script": [
-            "Remove-Item \"$env:AppData\\Microsoft\\Windows\\Start Menu\\Programs\\Scoop Apps\\Wechat.lnk\""
-        ]
-    },
-    "notes": "We don't persist your WeChat data, they are still storaged in '%APPDATA%\\Tencent\\WeChat'."
+	"homepage": "https://pc.weixin.qq.com/",
+	"description": "Free messaging and calling app.",
+	"version": "3.5.0",
+	"license": {
+		"identifier": "EULA",
+		"url": "https://weixin.qq.com/cgi-bin/readtemplate?lang=zh_CN&t=weixin_agreement&s=default"
+	},
+	"url": "https://dldir1.qq.com/weixin/Windows/WeChatSetup.exe#/dl.7z",
+	"hash": "md5:d81ce735e25cf79ac90bdc2c87020d13",
+	"shortcuts": [
+		[
+			"wechat.exe",
+			"WeChat"
+		]
+	],
+	"post_install": [
+		"Remove-Item \"$dir\\`$PLUGINSDIR\" -Force -Recurse",
+		"Remove-Item \"$dir\\`$_15_\" -Force -Recurse",
+		"Remove-Item \"$dir\\`$R5\" -Force -Recurse"
+	],
+	"installer": {
+		"script": [
+			"pip install psutil",
+			"'import os,subprocess,time,psutil' | out-file -append $dir\\start.py -encoding ascii",
+			"'def judgeprocess(processname):' | out-file -append $dir\\start.py -encoding ascii",
+			"'    pl = psutil.pids()' | out-file -append $dir\\start.py -encoding ascii",
+			"'    for pid in pl:' | out-file -append $dir\\start.py -encoding ascii",
+			"'        if psutil.Process(pid).name() == processname:' | out-file -append $dir\\start.py -encoding ascii",
+			"'            return 0' | out-file -append $dir\\start.py -encoding ascii",
+			"'    else:' | out-file -append $dir\\start.py -encoding ascii",
+			"'        return 1' | out-file -append $dir\\start.py -encoding ascii",
+			"'state = 0' | out-file -append $dir\\start.py -encoding ascii",
+			"'wechat = r\"' + $dir + '\\WeChat.exe\"' | out-file -append $dir\\start.py -encoding ascii",
+			"'subprocess.Popen(wechat)' | out-file -append $dir\\start.py -encoding ascii",
+			"'while True:' | out-file -append $dir\\start.py -encoding ascii",
+			"\"    process_name='LogonUI.exe'\" | out-file -append $dir\\start.py -encoding ascii",
+			"\"    callall='TASKLIST'\" | out-file -append $dir\\start.py -encoding ascii",
+			"'    outputall=subprocess.check_output(callall)' | out-file -append $dir\\start.py -encoding ascii",
+			"'    outputstringall=str(outputall)' | out-file -append $dir\\start.py -encoding ascii",
+			"'    if process_name in outputstringall:' | out-file -append $dir\\start.py -encoding ascii",
+			"'        print(\"Locked.\")' | out-file -append $dir\\start.py -encoding ascii",
+			"'        if state == 0:' | out-file -append $dir\\start.py -encoding ascii",
+			"'            state = 1' | out-file -append $dir\\start.py -encoding ascii",
+			"\"            os.system('taskkill /F /IM `\"WeChat.exe`\"')\" | out-file -append $dir\\start.py -encoding ascii",
+			"'    else:' | out-file -append $dir\\start.py -encoding ascii",
+			"'        print(\"Unlocked.\")' | out-file -append $dir\\start.py -encoding ascii",
+			"'        if state == 1:' | out-file -append $dir\\start.py -encoding ascii",
+			"'            state = 0' | out-file -append $dir\\start.py -encoding ascii",
+			"'            subprocess.Popen(wechat)' | out-file -append $dir\\start.py -encoding ascii",
+			"\"        elif judgeprocess('WeChat.exe') == 1:\" | out-file -append $dir\\start.py -encoding ascii",
+			"'            exit()' | out-file -append $dir\\start.py -encoding ascii",
+			"'    time.sleep(5)' | out-file -append $dir\\start.py -encoding ascii",
+			"'set ws=WScript.CreateObject(\"WScript.Shell\")' | out-file -append $dir\\start.vbs -encoding ascii",
+			"$python = $scoopdir.toString() + \"\\shims\\python.exe\" -replace \"\\\\\", \"\\\\\"",
+			"$script = $dir.toString() + \"\\start.py\" -replace \"\\\\\", \"\\\\\"",
+			"'ws.Run \"' + $python + ' ' + $script + '\",0' | out-file -append $dir\\start.vbs -encoding ascii"
+		]
+	},
+	"checkver": "<span class=\"download-version\">([\\d.]+)</span>",
+	"autoupdate": {
+		"url": "https://dldir1.qq.com/weixin/Windows/WeChatSetup.exe#/dl.7z"
+	},
+	"notes": "We don't persist your WeChat data, they are still storaged in '%APPDATA%\\Tencent\\WeChat'."
 }
