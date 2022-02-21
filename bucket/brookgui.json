@@ -1,9 +1,9 @@
 {
-	"version": "20210701",
+	"version": "20220401",
 	"homepage": "https://github.com/txthinking/brook/",
 	"description": "cross-platform strong encryption and not detectable proxy",
-	"url": "https://github.com/txthinking/brook/releases/download/v20210701/Brook.exe#dl.7z",
-	"hash": "md5:521436c39d471e7b46672edcb99ddcc0",
+	"url": "https://github.com/txthinking/brook/releases/download/v20220401/Brook.exe#dl.7z",
+	"hash": "md5:fc9075e6686aa9e3cea80dc38da70025",
 	"installer": {
 		"script": [
 			"rm -Recurse -Force $dir\\'$PLUGINSDIR'"
