@@ -13,6 +13,6 @@
 	],
 	"persist": [
 		"music",
-		"Application.config"
+		"cache/UserInfo.json"
 	]
 }
