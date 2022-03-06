@@ -11,6 +11,9 @@
 			"McMusic"
 		]
 	],
+	"pre_install": [
+		"new-item $dir\\cache\\UserInfo.json -type file"
+	],
 	"persist": [
 		"music",
 		"cache/UserInfo.json"
