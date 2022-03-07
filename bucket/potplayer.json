@@ -51,7 +51,7 @@
 		"        Set-Content \"$dir\\$f\" $CONT -Encoding Ascii",
 		"    }",
 		"}",
-		"Start-Process cmd -Args '/c', \"for /f \\\"usebackq\\\" %s in (`scoop list ^| grep dmitrirender5`) do xcopy /D $scoopdir\\apps\\dmitrirender\\version64\\version.dll $dir\\version.dll\""
+		"Start-Process cmd -Args '/c', \"for /f \\\"usebackq\\\" %s in (`scoop list ^| grep dmitrirender5`) do xcopy /D $scoopdir\\apps\\dmitrirender\\version64\\version.dll $dir\\version.dll && pause\" -wait"
 	],
 	"persist": [
 		"Capture",
