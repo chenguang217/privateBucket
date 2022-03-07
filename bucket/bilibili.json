@@ -1,15 +1,15 @@
 {
-	"version": "4.3.5",
+	"version": "4.3.6",
 	"description": "a UWP client for bilibili",
 	"homepage": "https://www.showdoc.com.cn/biliuwpv4",
 	"architecture": {
 		"32bit": {
 			"url": "https://github.com/chenguang217/bucketFiles/releases/download/1.0/bilibili32.zip",
-			"hash": "md5:353f7886e098dbf18ba9b2219b25f07d"
+			"hash": "md5:9b48a283f1f5f0f176101af97c9b4a14"
 		},
 		"64bit": {
 			"url": "https://github.com/chenguang217/bucketFiles/releases/download/1.0/bilibili64.zip",
-			"hash": "md5:5c10ccb4c3d3bbcbc426edf926411a8c"
+			"hash": "md5:0aa3c2588ea7ab4237d2b702997542f5"
 		}
 	},
 	"installer": {
