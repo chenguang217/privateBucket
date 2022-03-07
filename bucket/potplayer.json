@@ -65,8 +65,7 @@
 		"PotPlayer.ini",
 		"PotPlayer64.ini",
 		"PotPlayerMini.ini",
-		"PotPlayerMini64.ini",
-		"version.dll"
+		"PotPlayerMini64.ini"
 	],
 	"checkver": {
 		"url": "https://t1.daumcdn.net/potplayer/PotPlayer/v4/Update2/UpdateEng.html",
