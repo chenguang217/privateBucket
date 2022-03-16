@@ -1,9 +1,34 @@
   
 {
-    "version": "4.0",
-    "description": "open emby link with potplayer and update progress with js",
-    "homepage": "https://github.com/chenguang217/bucketFiles",
-    "url": "https://raw.githubusercontent.com/chenguang217/bucketFiles/main/emby2potplayer.py",
+	"version": "4.0",
+	"description": "open emby link with potplayer and update progress with js",
+	"homepage": "https://github.com/chenguang217/bucketFiles",
+	"architecture":{
+		"32bit":{
+			"url": [
+				"https://raw.githubusercontent.com/chenguang217/bucketFiles/main/emby2potplayer.py",
+				"https://github.com/bradgearon/hdr-switch/releases/download/default/HDRSwitch-x86.zip"
+			],
+			"hash": [
+				"4b5e27813868377a0442146fd43a36108c7d1b67d68fac66a7968583dc58d26d",
+				"c5d5dae5dfbdf0c5b76e6b96a0681400d1d64e5f17a500855e9f4079df028ffb"
+			]
+		}, 
+		"64bit":{
+			"url": [
+				"https://raw.githubusercontent.com/chenguang217/bucketFiles/main/emby2potplayer.py",
+				"https://github.com/bradgearon/hdr-switch/releases/download/default/HDRSwitch-x64.zip"                         
+			],
+			"hash": [
+				"4b5e27813868377a0442146fd43a36108c7d1b67d68fac66a7968583dc58d26d",
+				"0a1b1abc86bc3bb5d94cb8d48dfdef396a8c07a56f1e99e9ee4d844b6db07f63"
+			]
+		}
+	},
+	"url": [
+		"https://raw.githubusercontent.com/chenguang217/bucketFiles/main/emby2potplayer.py",
+		"https://github.com/bradgearon/hdr-switch/releases/download/default/HDRSwitch-x64.zip"
+    ],
     "hash": "4b5e27813868377a0442146fd43a36108c7d1b67d68fac66a7968583dc58d26d",
     "depends": [
         "potplayer"
