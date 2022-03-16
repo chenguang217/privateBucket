@@ -1,6 +1,6 @@
   
 {
-	"version": "4.0",
+	"version": "5.0",
 	"description": "open emby link with potplayer and update progress with js",
 	"homepage": "https://github.com/chenguang217/bucketFiles",
 	"architecture":{
@@ -25,47 +25,44 @@
 			]
 		}
 	},
-	"url": [
-		"https://raw.githubusercontent.com/chenguang217/bucketFiles/main/emby2potplayer.py",
-		"https://github.com/bradgearon/hdr-switch/releases/download/default/HDRSwitch-x64.zip"
-    ],
-    "hash": "4b5e27813868377a0442146fd43a36108c7d1b67d68fac66a7968583dc58d26d",
-    "depends": [
-        "potplayer"
-    ],
-    "installer": {
-        "script": [
-            "(get-content $dir\\emby2potplayer.py).replace(\"import sys\", \"import sys`nimport time`nimport threading\") | Set-content $dir\\emby2potplayer.py",
-            "(get-content $dir\\emby2potplayer.py).replace(\"    url = url.replace(' hdr', '')\", \"        t.setDaemon(True)`n        t.start()`n    url = url.replace(' hdr', '')`n    time.sleep(1.5)`n\") | Set-content $dir\\emby2potplayer.py",
-	    "(get-content $dir\\emby2potplayer.py).replace(\"import configparser\", \"import configparser`nfrom pykeyboard import *`n`ndef d11():`n    time.sleep(5)`n    k = PyKeyboard()`n    k.press_key(k.alt_key)`n    k.press_key(k.control_key)`n    k.tap_key(k.function_keys[6])`n    k.release_key(k.alt_key)`n    k.release_key(k.control_key)`n`nt = threading.Thread(target=d11)`n\") | Set-content $dir\\emby2potplayer.py",
-	    "pip install PyUserInput",
-            "'Windows Registry Editor Version 5.00' | out-file -append $dir\\test.reg -encoding ascii",
-            "'[HKEY_CLASSES_ROOT\\emby]' | out-file -append $dir\\test.reg -encoding ascii", 
-            "'@=\"URL:emby Protocol Handler\"' | out-file -append $dir\\test.reg -encoding ascii",
-            "'\"URL Protocol\"=\"\"' | out-file -append $dir\\test.reg -encoding ascii",
-            "'[HKEY_CLASSES_ROOT\\emby\\shell]' | out-file -append $dir\\test.reg -encoding ascii",
-            "'[HKEY_CLASSES_ROOT\\emby\\shell\\open]' | out-file -append $dir\\test.reg -encoding ascii",
-            "'[HKEY_CLASSES_ROOT\\emby\\shell\\open\\command]' | out-file -append $dir\\test.reg -encoding ascii",
-            "$result = $dir.toString() + \"\\test.vbs\" -replace \"\\\\\", \"\\\\\"",
-            "'@=\"wscript \\\"' + $result + '\\\" \\\"%1\\\"\"' | out-file -append $dir\\test.reg -encoding ascii",
-            "Start-Process powershell \"regedit /s $dir\\test.reg\" -Verb RunAs -WindowStyle hidden",
-            "'set ws=WScript.CreateObject(\"WScript.Shell\")' | out-file -append $dir\\test.vbs -encoding ascii",
-            "'set args1=WScript.Arguments'| out-file -append $dir\\test.vbs -encoding ascii",
-            "'For x = 0 to args1.Count - 1' | out-file -append $dir\\test.vbs -encoding ascii",
-            "$python = $scoopdir.toString() + \"\\shims\\python.exe\" -replace \"\\\\\", \"\\\\\"",
-            "$script = $dir.toString() + \"\\emby2potplayer.py\" -replace \"\\\\\", \"\\\\\"",
-            "'    ws.Run \"' + $python + ' ' + $script +' \"\"\"+args1(x)+\"\"\"\",0' | out-file -append $dir\\test.vbs -encoding ascii",
-            "'Next' | out-file -append $dir\\test.vbs -encoding ascii",
-            "if (!(Test-Path \"$persist_dir\\config.ini\")) { '[baseconf]' | out-file -append $dir\\config.ini -encoding ascii;'persist=' + $scoopdir | out-file -append $dir\\config.ini -encoding ascii;'token=' | out-file -append $dir\\config.ini -encoding ascii;'userName=' | out-file -append $dir\\config.ini -encoding ascii }",
-            "'need token and userName in config.ini'"
-        ]
-    },
-    "persist": [
-        "config.ini"
-    ],
-    "uninstaller": {
-        "script": [
-            "Start-Process powershell \"reg delete HKEY_CLASSES_ROOT\\emby /f\" -Verb RunAs -WindowStyle hidden"
-        ]
-    }
+	"depends": [
+		"potplayer"
+	],
+	"installer": {
+		"script": [
+			"(get-content $dir\\emby2potplayer.py).replace(\"import sys\", \"import sys`nimport time`nimport threading\") | Set-content $dir\\emby2potplayer.py",
+			"(get-content $dir\\emby2potplayer.py).replace(\"    url = url.replace(' hdr', '')\", \"        t.setDaemon(True)`n        t.start()`n    url = url.replace(' hdr', '')`n    time.sleep(1.5)`n\") | Set-content $dir\\emby2potplayer.py", 
+			"(get-content $dir\\emby2potplayer.py).replace(\"import configparser\", \"import configparser`nfrom pykeyboard import *`nimport subprocess`n`ndef d11():`n    time.sleep(5)`n    k = PyKeyboard()`n    k.press_key(k.alt_key)`n    k.press_key(k.control_key)`n    k.tap_key(k.function_keys[6])`n    k.release_key(k.alt_key)`n    k.release_key(k.control_key)`n`nt = threading.Thread(target=d11)`n\") | Set-content $dir\\emby2potplayer.py",
+			"(get-content $dir\\emby2potplayer.py).replace(\"config1.set('Settings', 'VideoRen2', '15')`n        config1.write(open(persist + '\\\\apps\\\\potplayer\\\\current\\\\PotPlayer64.ini', `\"`w\", encoding=`\"utf-16`\"), space_around_delimiters=False)\", , \"config1.set('Settings', 'VideoRen2', '15')`n        config1.write(open(persist + '\\\\apps\\\\potplayer\\\\current\\\\PotPlayer64.ini', `\"`w\", encoding=`\"utf-16`\"), space_around_delimiters=False)`n        subprocess.Popen(persist + '\\apps\\emby2potplayer\\current\\HDRSwitch.exe')\") | Set-content $dir\\emby2potplayer.py",
+			"(get-content $dir\\emby2potplayer.py).replace(\"PotPlayer64.exe `\"' + url + '`\"')\", \"PotPlayer64.exe `\"' + url + '`\"')`n    os.system(' taskkill /F /IM HDRSwitch.exe')\") | Set-content $dir\\emby2potplayer.py",
+			"pip install PyUserInput",
+			"'Windows Registry Editor Version 5.00' | out-file -append $dir\\test.reg -encoding ascii",
+			"'[HKEY_CLASSES_ROOT\\emby]' | out-file -append $dir\\test.reg -encoding ascii", 
+			"'@=\"URL:emby Protocol Handler\"' | out-file -append $dir\\test.reg -encoding ascii",
+			"'\"URL Protocol\"=\"\"' | out-file -append $dir\\test.reg -encoding ascii",
+			"'[HKEY_CLASSES_ROOT\\emby\\shell]' | out-file -append $dir\\test.reg -encoding ascii",
+			"'[HKEY_CLASSES_ROOT\\emby\\shell\\open]' | out-file -append $dir\\test.reg -encoding ascii",
+			"'[HKEY_CLASSES_ROOT\\emby\\shell\\open\\command]' | out-file -append $dir\\test.reg -encoding ascii",
+			"$result = $dir.toString() + \"\\test.vbs\" -replace \"\\\\\", \"\\\\\"",
+			"'@=\"wscript \\\"' + $result + '\\\" \\\"%1\\\"\"' | out-file -append $dir\\test.reg -encoding ascii",
+			"Start-Process powershell \"regedit /s $dir\\test.reg\" -Verb RunAs -WindowStyle hidden",
+			"'set ws=WScript.CreateObject(\"WScript.Shell\")' | out-file -append $dir\\test.vbs -encoding ascii",
+			"'set args1=WScript.Arguments'| out-file -append $dir\\test.vbs -encoding ascii",
+			"'For x = 0 to args1.Count - 1' | out-file -append $dir\\test.vbs -encoding ascii",
+			"$python = $scoopdir.toString() + \"\\shims\\python.exe\" -replace \"\\\\\", \"\\\\\"",
+			"$script = $dir.toString() + \"\\emby2potplayer.py\" -replace \"\\\\\", \"\\\\\"",
+			"'    ws.Run \"' + $python + ' ' + $script +' \"\"\"+args1(x)+\"\"\"\",0' | out-file -append $dir\\test.vbs -encoding ascii",
+			"'Next' | out-file -append $dir\\test.vbs -encoding ascii",
+			"if (!(Test-Path \"$persist_dir\\config.ini\")) { '[baseconf]' | out-file -append $dir\\config.ini -encoding ascii;'persist=' + $scoopdir | out-file -append $dir\\config.ini -encoding ascii;'token=' | out-file -append $dir\\config.ini -encoding ascii;'userName=' | out-file -append $dir\\config.ini -encoding ascii }",
+			"'need token and userName in config.ini'"
+		]
+	},
+	"persist": [
+		"config.ini"
+	],
+	"uninstaller": {
+		"script": [
+			"Start-Process powershell \"reg delete HKEY_CLASSES_ROOT\\emby /f\" -Verb RunAs -WindowStyle hidden"
+		]
+	}
 }
