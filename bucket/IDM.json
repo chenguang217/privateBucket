@@ -1,10 +1,10 @@
 {
-	"version": "6.40.8",
+	"version": "6.40.9",
 	"description": "cracked version of IDM",
 	"homepage": "https://www.wotianna.com/idmpc/",
 	"url": "https://github.com/chenguang217/bucketFiles/releases/download/1.0/IDM.7z",
-	"hash": "md5:9894145de6b5ee4c12bffb9803223b01",
-	"extract_dir": "IDM/Bin",
+	"hash": "md5:de739d7382b894614762f17517ab19e6",
+	"extract_dir": "InternetDownloadManager_6.40.9_Green/Bin",
 	"installer": {
 		"script": [
 			"$line1 = \"taskkill /F /IM `\"IDM*`\" /T >NUL 2>NUL\"",
