@@ -63,7 +63,24 @@
 			"'set ws=WScript.CreateObject(\"WScript.Shell\")' | out-file -append $dir\\start.vbs -encoding ascii",
 			"$python = $scoopdir.toString() + \"\\shims\\python.exe\" -replace \"\\\\\", \"\\\\\"",
 			"$script = $dir.toString() + \"\\start.py\" -replace \"\\\\\", \"\\\\\"",
-			"'ws.Run \"' + $python + ' ' + $script + '\",0' | out-file -append $dir\\start.vbs -encoding ascii"
+			"'ws.Run \"' + $python + ' ' + $script + '\",0' | out-file -append $dir\\start.vbs -encoding ascii",
+			"$triggers = @()",
+			"$trigger = New-CimInstance -CimClass $CIMTriggerClass -ClientOnly",
+			"$trigger.Subscription = \"<QueryList><Query Id=`\"0`\" Path=`\"System`\"><Select Path=`\"System`\">*[System[Provider[@Name='Microsoft-Windows-Kernel-Power'] and EventID=42]]</Select></Query></QueryList>\"",
+			"$trigger.Enabled = $True",
+			"$triggers += $trigger",
+			"$trigger = New-CimInstance -CimClass $CIMTriggerClass -ClientOnly",
+			"$trigger.Subscription = \"<QueryList><Query Id=`\"0`\" Path=`\"System`\"><Select Path=`\"System`\">*[System[Provider[@Name='Microsoft-Windows-Kernel-Power'] and EventID=1074]]</Select></Query></QueryList>\"",
+			"$trigger.Enabled = $True",
+			"$triggers += $trigger",
+			"$User='Nt Authority\System'",
+			"$Action=New-ScheduledTaskAction -Execute \"cmd.exe\" -Argument \"/c taskkill /f /im WeChat.exe\"",
+			"Register-ScheduledTask -TaskName 'WeChat Shutdown' -Trigger $triggers -User $User -Action $Action -RunLevel Highest -Force"
+		]
+	},
+	"uninstaller": {
+		"script":[
+			"unregister-scheduledtask -taskname 'WeChat Shutdown' -confirm:$false"
 		]
 	},
 	"checkver": "<span class=\"download-version\">([\\d.]+)</span>",
