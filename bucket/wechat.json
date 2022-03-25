@@ -83,7 +83,7 @@
 	},
 	"uninstaller": {
 		"script":[
-			"Start-Process powershell \"unregister-scheduledtask -taskname 'WeChat Shutdown' -confirm:$false\" -Verb RunAs -WindowStyle hidden -wait"
+			"Start-Process powershell \"unregister-scheduledtask -taskname 'WeChat Shutdown' -confirm:`$false\" -Verb RunAs -WindowStyle hidden -wait"
 		]
 	},
 	"checkver": "<span class=\"download-version\">([\\d.]+)</span>",
