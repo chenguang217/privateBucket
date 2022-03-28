@@ -1,9 +1,9 @@
 {
-	"version": "6.40.10.2",
+	"version": "6.40.11.2",
 	"description": "cracked version of IDM",
 	"homepage": "https://www.wotianna.com/idmpc/",
 	"url": "https://github.com/chenguang217/bucketFiles/releases/download/1.0/IDM.7z",
-	"hash": "md5:8911cab38d62037e3421876c41a6b36d",
+	"hash": "md5:0a0f9d2f8afb1e4b5726105a63f8ad7a",
 	"extract_dir": "IDM/Bin",
 	"installer": {
 		"script": [
