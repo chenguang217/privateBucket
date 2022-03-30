@@ -1,9 +1,9 @@
 {
-	"version": "7.13.0.21",
+	"version": "7.14.1.6",
 	"homepage": "https://pan.baidu.com/download",
 	"description": "a client for baidu netdisk",
-	"url": "https://issuepcdn.baidupcs.com/issue/netdisk/yunguanjia/BaiduNetdisk_7.13.0.21.exe#/dl.7z",
-	"hash": "md5:528ad6df2b8e649d2b01da066b831f3e",
+	"url": "https://issuepcdn.baidupcs.com/issue/netdisk/yunguanjia/BaiduNetdisk_7.14.1.6.exe#/dl.7z",
+	"hash": "md5:c7c5ef5319ba0c047e4852759134338c",
 	"post_install": [
 		"Remove-Item \"$dir\\`$PLUGINSDIR\" -Recurse",
 		"Remove-Item \"$dir\\`$TEMP\" -Recurse"
