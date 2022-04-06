@@ -1,5 +1,5 @@
 {
-	"version": "0.7.1",
+	"version": "\n  0.7.1\n  \n",
 	"description": "Proxy performance batch tester based on Shadowsocks(R), V2Ray and Trojan",
 	"homepage": "https://github.com/tindy2013/stairspeedtest-reborn",
 	"architecture": {
