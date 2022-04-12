@@ -67,6 +67,7 @@
 	"persist": [
 		"mpc-be64.ini",
 		"mpc-be.ini",
-		"Default.mpcpl"
+		"Default.mpcpl",
+		"history.mpc_lst"
 	]
 }
