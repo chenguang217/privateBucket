@@ -62,6 +62,7 @@
 	"uninstaller": {
 		"script": [
 			"Start-Process powershell \"regsvr32.exe $dir\\MpcVideoRenderer64.ax /u /s\" -Verb RunAs -WindowStyle hidden -wait"
+			"Start-Process cmd -Args '/c', \"for /f `\"usebackq`\" %s in (``scoop list ^| grep dmitrirender5``) do xcopy /D $scoopdir\\apps\\dmitrirender5\\version64\\version.dll $dir\\version.dll && pause\" -wait -WindowStyle hidden"
 		]
 	},
 	"persist": [
