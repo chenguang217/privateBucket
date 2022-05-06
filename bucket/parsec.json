@@ -2,8 +2,8 @@
 	"homepage": "https://parsec.app/",
 	"description": "Parsec's remote access tech is tested on the most demanding media: games.",
 	"version": "20220427",
-	"url": "https://builds.parsecgaming.com/package/parsec-flat-windows.zip",
-	"hash": "e936e0b5291004d90bd427ec65b615fb75f152bf1f502ac90880381b0a01f2ab",
+	"url": "https://builds.parsecgaming.com/package/parsec-flat-windows32.zip",
+	"hash": "744cadaf37f5db37703587d8284c719de7b61da4aaa4270e38488a76e72eda74",
 	"shortcuts": [
 		[
 			"parsecd.exe",
