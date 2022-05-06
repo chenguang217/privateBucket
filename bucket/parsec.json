@@ -6,7 +6,7 @@
 	"hash": "744cadaf37f5db37703587d8284c719de7b61da4aaa4270e38488a76e72eda74",
 	"shortcuts": [
 		[
-			"parsecd.exe",
+			"$dir\\parsecd.exe",
 			"Parsec"
 		]
 	],
