@@ -2,7 +2,7 @@
 	"homepage": "https://parsec.app/",
 	"description": "Parsec's remote access tech is tested on the most demanding media: games.",
 	"version": "20220427",
-	"url": "https://builds.parsecgaming.com/package/parsec-windows.exe#/dl.7z",
+	"url": "https://builds.parsecgaming.com/package/parsec-flat-windows.zip",
 	"hash": "816227fa874c070c40e12b72ed96c899093d4dc188850a8d595d8d23b953a0b6",
 	"shortcuts": [
 		[
@@ -10,30 +10,5 @@
 			"Parsec"
 		]
 	],
-	"post_install": [
-		"Remove-Item \"$dir\\`$PLUGINSDIR\" -Force -Recurse"
-	],
-	"installer": {
-		"script": [
-			"Start-Process cmd -Args '/c', \"sc create Parsec binpath=$dir\\pservice.exe DisplayName=Parsec start=auto & sc start Parsec\" -Verb RunAs -WindowStyle hidden",
-			"$runtimeCache = \"$env:APPDATA\\Parsec\"",
-			"if (!(Test-Path $runtimeCache)) {",
-			"    mkdir $runtimeCache",
-			"    Copy-Item $dir\\skel\\* $runtimeCache -Force",
-			"}"
-		]
-	},
-	"uninstaller": {
-		"script": [
-			"Start-Process cmd -Args '/c', \"sc stop Parsec & sc delete Parsec\" -Verb RunAs -WindowStyle hidden -Wait",
-			"$runtimeCache = \"$env:APPDATA\\Parsec\"",
-			"$runtimeCachePersist = \"$persist_dir\\Parsec\"",
-			"if (!(Test-Path $runtimeCachePersist)) {",
-			"    Move-Item $runtimeCache $runtimeCachePersist -Force",
-			"} else {",
-			"    Remove-Item $runtimeCache -Force -Recurse -ErrorAction SilentlyContinue",
-			"}"
-		]
-	},
 	"notes": "We don't persist your Parsec data, they are still storaged in '%APPDATA%\\Parsec'."
 }
