@@ -1,8 +1,8 @@
 {
-	"version": "2.13.",
+	"version": "2.13.2",
 	"description": "",
 	"homepage": "http://www.verysync.com",
-	"url": "http://dl-cn.verysync.com/releases/v2.13.2/verysync-windows-amd64-v2.13.2.zip",
+	"url": "http://dl-cn.verysync.com/releases/v2.13.2-a/verysync-windows-amd64-v2.13.2.zip",
 	"hash": "md5:40046664b9c5a70864441aa5e2dd0b5b",
 	"extract_dir": "verysync-windows-amd64-v2.13.2",
 	"installer": {
