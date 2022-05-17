@@ -1,9 +1,9 @@
 {
-	"version": "11.1.5",
+	"version": "11.1.6",
 	"description": "a file synchronization software(free version)",
 	"homepage": "http://cn.filegee.com/",
 	"url": "http://xiazai.filegee.com/FileGeeCNP.exe",
-	"hash": "md5:d5000e499d13ef6c6ef2184289777a1e",
+	"hash": "md5:6ea8c08cdb3a36a8e65d888906a7fec5",
 	"innosetup": true,
 	"shortcuts": [
 		[
