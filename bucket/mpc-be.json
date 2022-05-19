@@ -6,7 +6,7 @@
 	"architecture": {
 		"64bit": {
 			"url": [
-				"https://downloader.disk.yandex.ru/disk/2586dbf490e9e72cd60ce6d8fcf7f6d267d07e2b4517f3867326bfe3aca08d4a/6285fd1c/fKqInKw3d7bLFOeFnMGnhIlPJs3EGV1DdVoVQx2AOYD3gvvVSoh5a23TSnKsLxaT2PVonBsw76xfUdxG4Da4MkhZdrIWQqzLMD6S4liQD7-r8npumZHI4midPdWhecNq?uid=0&filename=MPC-BE.x64.7z&disposition=attachment&hash=0orfHgRGOmkgwFuE7rYB7aj5mqYc%2BfHoQ12mt3rT5dXGxYQ/8IcYqHCcCAf6aqMeq/J6bpmRyOJonT3VoXnDag%3D%3D%3A/%21_last/MPC-BE.x64.7z&limit=0&content_type=application%2Fx-7z-compressed&owner_uid=1130000015185878&fsize=13137820&hid=25f97657a037e183a81cc35da06ebccb&media_type=compressed&tknv=v2",
+				"https://github.com/chenguang217/bucketFiles/releases/download/1.0/mpc-be.x64.7z",
 				"https://github.com/hooke007/MPCVR_chs/releases/download/chs_v03.1/MPCVR_chs_20220513.7z"
 			],
 			"hash": [
@@ -33,7 +33,7 @@
 		},
 		"32bit": {
 			"url": [
-				"https://downloader.disk.yandex.ru/disk/1db61a94bc050158b8a3791bf4eea646d6f2f551523ac2b7fdc4737cd1d06326/6285fd1c/fKqInKw3d7bLFOeFnMGnhOAEdgS7f28rPtT56_gAUcdXYRxZJfXryo1E_m251gfQteayW7FAUndX7r3jFP_utUtk3U-kBYv-oajYB4XcIbir8npumZHI4midPdWhecNq?uid=0&filename=MPC-BE.x86.7z&disposition=attachment&hash=0orfHgRGOmkgwFuE7rYB7aj5mqYc%2BfHoQ12mt3rT5dXGxYQ/8IcYqHCcCAf6aqMeq/J6bpmRyOJonT3VoXnDag%3D%3D%3A/%21_last/MPC-BE.x86.7z&limit=0&content_type=application%2Fx-7z-compressed&owner_uid=1130000015185878&fsize=11809621&hid=1be44bb2b31750bc92a64ad4aeb15a18&media_type=compressed&tknv=v2",
+				"https://github.com/chenguang217/bucketFiles/releases/download/1.0/mpc-be.x32.7z",
 				"https://github.com/hooke007/MPCVR_chs/releases/download/chs_v03.1/MPCVR_chs_20220513.7z"
 			],
 			"hash": [
