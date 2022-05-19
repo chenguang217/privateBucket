@@ -1,20 +1,20 @@
 {
-	"version": "1.6.1.6845.2022051",
+	"version": "1.6.2.7111.20220513",
 	"description": "Fork of Media Player Classic containing additional features and bug fixes.",
 	"homepage": "https://sourceforge.net/projects/mpcbe/",
 	"license": "GPL-3.0-only",
 	"architecture": {
 		"64bit": {
 			"url": [
-				"https://jaist.dl.sourceforge.net/project/mpcbe/MPC-BE/Release%20builds/1.6.1/MPC-BE.1.6.1.6845.x64.7z",
+				"https://downloader.disk.yandex.ru/disk/2586dbf490e9e72cd60ce6d8fcf7f6d267d07e2b4517f3867326bfe3aca08d4a/6285fd1c/fKqInKw3d7bLFOeFnMGnhIlPJs3EGV1DdVoVQx2AOYD3gvvVSoh5a23TSnKsLxaT2PVonBsw76xfUdxG4Da4MkhZdrIWQqzLMD6S4liQD7-r8npumZHI4midPdWhecNq?uid=0&filename=MPC-BE.x64.7z&disposition=attachment&hash=0orfHgRGOmkgwFuE7rYB7aj5mqYc%2BfHoQ12mt3rT5dXGxYQ/8IcYqHCcCAf6aqMeq/J6bpmRyOJonT3VoXnDag%3D%3D%3A/%21_last/MPC-BE.x64.7z&limit=0&content_type=application%2Fx-7z-compressed&owner_uid=1130000015185878&fsize=13137820&hid=25f97657a037e183a81cc35da06ebccb&media_type=compressed&tknv=v2",
 				"https://github.com/hooke007/MPCVR_chs/releases/download/chs_v03.1/MPCVR_chs_20220513.7z"
 			],
 			"hash": [
-				"md5:4bdac31aec984441a70fe1833295c96b",
+				"md5:fd7c43e513664d62a30ddb719974ae91",
 				"md5:ebc867d231709b9be448e24862fc7f28"
 			],
 			"extract_dir": [
-				"MPC-BE.1.6.1.6845.x64",
+				"MPC-BE.1.6.2.7111.x64",
 				"mpcvr"
 			],
 			"bin": [
@@ -33,15 +33,15 @@
 		},
 		"32bit": {
 			"url": [
-				"https://jaist.dl.sourceforge.net/project/mpcbe/MPC-BE/Release%20builds/1.6.1/MPC-BE.1.6.1.6845.x86.7z",
+				"https://downloader.disk.yandex.ru/disk/1db61a94bc050158b8a3791bf4eea646d6f2f551523ac2b7fdc4737cd1d06326/6285fd1c/fKqInKw3d7bLFOeFnMGnhOAEdgS7f28rPtT56_gAUcdXYRxZJfXryo1E_m251gfQteayW7FAUndX7r3jFP_utUtk3U-kBYv-oajYB4XcIbir8npumZHI4midPdWhecNq?uid=0&filename=MPC-BE.x86.7z&disposition=attachment&hash=0orfHgRGOmkgwFuE7rYB7aj5mqYc%2BfHoQ12mt3rT5dXGxYQ/8IcYqHCcCAf6aqMeq/J6bpmRyOJonT3VoXnDag%3D%3D%3A/%21_last/MPC-BE.x86.7z&limit=0&content_type=application%2Fx-7z-compressed&owner_uid=1130000015185878&fsize=11809621&hid=1be44bb2b31750bc92a64ad4aeb15a18&media_type=compressed&tknv=v2",
 				"https://github.com/hooke007/MPCVR_chs/releases/download/chs_v03.1/MPCVR_chs_20220513.7z"
 			],
 			"hash": [
-				"md5:71cd8dc4b1ed52f63b63a6805993b82a",
+				"md5:3bffdea5040db7eb76777e0af93f59bb",
 				"md5:ebc867d231709b9be448e24862fc7f28"
 			],
 			"extract_dir": [
-				"MPC-BE.1.6.1.6845.x86",
+				"MPC-BE.1.6.2.7111.x86",
 				"mpcvr"
 			],
 			"bin": "mpc-be.exe",
