@@ -19,8 +19,17 @@
 		"    Set-Content \"$dir\\$file\" 'CheckForUpdates = false' -Encoding Ascii",
 		"}",
 		"Get-ChildItem \"$dir\\SumatraPDF-*.exe\" | Rename-Item -NewName 'SumatraPDF.exe'",
-		"Start-Process powershell \"$dir\\SumatraPDF.exe -register-for-pdf\" -WindowStyle Hidden"
+		"'Windows Registry Editor Version 5.00' | out-file $dir\\test.reg -encoding ascii",
+		"'[HKEY_CLASSES_ROOT\\Applications\\SumatraPDF.exe\\Shell\\Open\\Command]' | out-file -append $dir\\test.reg -encoding ascii",
+		"$result = $dir.toString() + \"\\SumatraPDF.exe\" -replace \"\\\\\", \"\\\\\"",
+		"'@=\"\\\"' + $result + '\\\" \\\"%1\\\"\"' | out-file -append $dir\\test.reg -encoding ascii",
+		"Start-Process powershell \"regedit /s $dir\\test.reg\" -Verb RunAs -WindowStyle hidden -wait"
 	],
+	"uninstaller": {
+		"script": [
+			"Start-Process powershell \"reg delete HKEY_CLASSES_ROOT\\Applications\\SumatraPDF.exe /f\" -Verb RunAs -WindowStyle hidden -wait"
+		]
+	},
 	"shortcuts": [
 		[
 			"SumatraPDF.exe",
