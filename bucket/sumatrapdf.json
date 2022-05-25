@@ -1,15 +1,15 @@
 {
-	"version": "3.4",
+	"version": "3.4.1",
 	"description": "PDF and eBook reader",
 	"homepage": "https://www.sumatrapdfreader.org/free-pdf-reader",
 	"architecture": {
 		"64bit": {
-			"url": "https://www.sumatrapdfreader.org/dl/rel/3.4/SumatraPDF-3.4-64.zip",
-			"hash": "md5:bed312222ea702f1ddf660a05531ad2c"
+			"url": "https://www.sumatrapdfreader.org/dl/rel/3.4.1/SumatraPDF-3.4.1-64.zip",
+			"hash": "md5:7689ea87d3b525d6e1eebb45f52817ed"
 		},
 		"32bit": {
-			"url": "https://www.sumatrapdfreader.org/dl/rel/3.4/SumatraPDF-3.4.zip",
-			"hash": "md5:f83d2f002bfd15f81e530c2b51bbcdaa"
+			"url": "https://www.sumatrapdfreader.org/dl/rel/3.4.1/SumatraPDF-3.4.1.zip",
+			"hash": "md5:ee7c6a380327a2fcfa1df629fa14ecb2"
 		}
 	},
 	"pre_install": [
