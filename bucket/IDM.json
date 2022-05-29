@@ -4,7 +4,7 @@
 	"homepage": "https://www.wotianna.com/idmpc/",
 	"url": "https://github.com/chenguang217/bucketFiles/releases/download/1.0/IDM.7z",
 	"hash": "md5:2635bc2000e07823c50b639abd580276",
-	"extract_dir": "IDM/Bin",
+	"extract_dir": "InternetDownloadManager_6.41.1_Green/IDM/Bin",
 	"installer": {
 		"script": [
 			"$line1 = \"taskkill /F /IM `\"IDM*`\" /T >NUL 2>NUL\"",
