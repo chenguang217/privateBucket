@@ -6,8 +6,8 @@
 		"identifier": "Proprietary",
 		"url": "https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/downloads/eula/universal_eula.pdf"
 	},
-	"url": "https://download3.vmware.com/software/wkst/file/VMware-workstation-full-16.2.3.19376536.exe#/cosi.exe",
-	"hash": "",
+	"url": "https://download3.vmware.com/software/WKST-1623-WIN-NEW/VMware-workstation-full-16.2.3.19376536.exe#/cosi.exe",
+	"hash": "117ad0b17335032d1b03ba44b03da2128d29c65925ea79efd2e03786b0129e94",
 	"installer": {
 		"args": [
 			"/s",
