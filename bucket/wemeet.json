@@ -7,7 +7,7 @@
 	"installer": {
 		"script": [
 			"Remove-Item \"$dir\\wemeetapp_new.exe\" -Force",
-			"Rename-Item \"$dir\\`$_9_\" \"$dir\\$version\"",
+			"Rename-Item \"$dir\\`$_10_\" \"$dir\\$version\"",
 			"Remove-Item \"$dir\\`$WINDIR\",\"$dir\\`$PLUGINSDIR\",\"$dir\\`$TEMP\" -Force -Recurse",
 			"$shell = New-Object -ComObject WScript.Shell",
 			"$shortcut = $shell.CreateShortcut(\"$env:userprofile\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Scoop Apps\\\u817e\u8baf\u4f1a\u8bae.lnk\")",
