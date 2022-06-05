@@ -5,7 +5,7 @@
 	"license": "MIT",
 	"architecture": {
 		"64bit": {
-			"url": "https://hub.gitfast.tk/Fndroid/clash_for_windows_pkg/releases/download/0.19.20/Clash.for.Windows.Setup.0.19.20.ia32.exe#dl.7z",
+			"url": "https://hub.gitfast.tk/Fndroid/clash_for_windows_pkg/releases/download/0.19.20/Clash.for.Windows.Setup.0.19.20.exe#dl.7z",
 			"hash": "c72da768cf35f7c52f0ec84f3e09b77590e81f654b9fa5c312a5eb5ec84ae040",
 			"pre_install": [
 				"Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
@@ -13,7 +13,7 @@
 			]
 		},
 		"32bit": {
-			"url": "https://hub.gitfast.tk/Fndroid/clash_for_windows_pkg/releases/download/0.19.20/Clash.for.Windows.Setup.0.19.20.exe#dl.7z",
+			"url": "https://hub.gitfast.tk/Fndroid/clash_for_windows_pkg/releases/download/0.19.20/Clash.for.Windows.Setup.0.19.20.ia32.exe#dl.7z",
 			"hash": "d49cdb89ca178c4409c7f9acf472e509af8918abf66d3830d5bf29d820c6b0b1",
 			"pre_install": [
 				"Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-32.7z\" \"$dir\"",
