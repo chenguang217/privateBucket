@@ -77,7 +77,8 @@
 			"'$triggers += $trigger' | out-file -append $dir\\register.ps1 -encoding ascii",
 			"'$User=\"Nt Authority\\System\"' | out-file -append $dir\\register.ps1 -encoding ascii",
 			"'$Action=New-ScheduledTaskAction -Execute \"cmd.exe\" -Argument \"/c taskkill /f /im WeChat.exe\"' | out-file -append $dir\\register.ps1 -encoding ascii",
-			"\"Register-ScheduledTask -TaskName 'WeChat Shutdown' -Trigger `$triggers -User `$User -Action `$Action -RunLevel Highest -Force\" | out-file -append $dir\\register.ps1 -encoding ascii",
+			"'$setting = New-ScheduledTaskSettingsSet -AllowStartIfOnBatteries' | out-file -append $dir\\register.ps1 -encoding ascii",
+			"\"Register-ScheduledTask -TaskName 'WeChat Shutdown' -Settings `$setting -Trigger `$triggers -User `$User -Action `$Action -RunLevel Highest -Force\" | out-file -append $dir\\register.ps1 -encoding ascii",
 			"start-process powershell -ArgumentList \"-noprofile -file $dir\\register.ps1\" -verb RunAs -WindowStyle hidden -wait"
 		]
 	},
