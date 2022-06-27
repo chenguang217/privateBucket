@@ -1,9 +1,9 @@
 {
-	"version": "1.1.58",
+	"version": "1.1.60",
 	"description": "transfer cloud drive to local drive",
 	"homepage": "https://t.me/cloud_nas",
 	"url": "https://github.com/chenguang217/bucketFiles/releases/download/1.0/CloudDriveSetup.exe",
-	"hash": "392b83f542734973df158d00f3b4464a51399d48140e932128ca71c5b7cfdd06",
+	"hash": "5c1a931c495e35c23295b0c4e044cfc7bdcb8f8d3ad8b610c4fab5bade615633",
 	"innosetup": true,
 	"depends": [
 		"winfsp"
