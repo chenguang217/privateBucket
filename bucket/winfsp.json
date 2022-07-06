@@ -4,7 +4,7 @@
 	"description": "WinFsp attempts to ease the task of writing a new file system for Windows in the same way that FUSE has done so for UNIX.",
 	"version": "1.11.22176",
 	"license": "GPL-3.0-only | Unknown",
-	"url": "https://github.com/winfsp/winfsp/releases/download/v1.11/winfsp-1.11.22176.msi#dl.msi_",
+	"url": "https://github.com/winfsp/winfsp/releases/download/v1.11/winfsp-1.11.22176.msi#/dl.msi_",
 	"hash": "md5:af6003e6f4db9ca71e028c8c59e061c3",
 	"installer": {
 		"script": "Invoke-ExternalCommand msiexec -ArgumentList @('/i', \"$dir\\dl.msi_\", '/qn') -RunAs | Out-Null"
