@@ -1,0 +1,44 @@
+{
+	"version": "1.0.7.7",
+	"homepage": "https://pan.baidu.com/download",
+	"description": "a client for baidu netdisk",
+	"url": "https://down.115.com/client/115pc/win/115pc_1.0.7.7.exe#/dl.7z",
+	"hash": "md5:2c9f9e76d30c4f0048df7166d917eb2a",
+	"pre_install": [
+		"Remove-Item \"$dir\\`$PLUGINSDIR\" -Recurse",
+		"mv $dir\\115\\Application\\* $dir",
+		"Remove-Item \"$dir\\115\" -Recurse"
+	],
+	"installer": {
+		"script": [
+			"$runtimeCache = \"$env:LOCALAPPDATA\\115\"",
+			"$runtimeCachePersist = \"$persist_dir\\115\"",
+			"if (Test-Path $runtimeCachePersist) {",
+			"    Remove-Item $runtimeCache -Force -Recurse -ErrorAction SilentlyContinue",
+			"    New-Item -Type Junction -Path $runtimeCache -Target $runtimeCachePersist | Out-Null",
+			"} else {",
+			"    if (Test-Path $runtimeCache) {",
+			"        Move-Item $runtimeCache $runtimeCachePersist -Force",
+			"        New-Item -Type Junction -Path $runtimeCache -Target $runtimeCachePersist | Out-Null",
+			"    }",
+			"}"
+		]
+	},
+	"uninstaller": {
+		"script": [
+			"$runtimeCache = \"$env:LOCALAPPDATA\\115\"",
+			"$runtimeCachePersist = \"$persist_dir\\115\"",
+			"if (!(Test-Path $runtimeCachePersist)) {",
+			"    Move-Item $runtimeCache $runtimeCachePersist -Force",
+			"} else {",
+			"    Remove-Item $runtimeCache -Force -Recurse -ErrorAction SilentlyContinue",
+			"}"
+		]
+	},
+	"shortcuts": [
+		[
+			"115.exe",
+			"115"
+		]
+	]
+}
