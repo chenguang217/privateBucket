@@ -1,0 +1,89 @@
+{
+	"version": "1.69.1",
+	"description": "Lightweight but powerful source code editor",
+	"homepage": "https://code.visualstudio.com/",
+	"license": {
+		"identifier": "Freeware",
+		"url": "https://code.visualstudio.com/License/"
+	},
+	"notes": [
+		"Add Visual Studio Code as a context menu option by running: '$dir\\install-context.reg'",
+		"For file associations, run '$dir\\install-associations.reg'"
+	],
+	"architecture": {
+		"64bit": {
+			"url": "https://update.code.visualstudio.com/1.69.1/win32-x64-archive/stable#/dl.7z",
+			"hash": "7c17395bc5d2663cab17f421540fc122574bbbbd2a5eaf87450c80bb9b322d93"
+		},
+		"32bit": {
+			"url": "https://update.code.visualstudio.com/1.69.1/win32-archive/stable#/dl.7z",
+			"hash": "7eb9d522de95b0c1f888bcfd71ec86c2efde36ae7feb7d417b2142107324e17f"
+		}
+	},
+	"env_add_path": "bin",
+	"shortcuts": [
+		[
+			"code.exe",
+			"Visual Studio Code"
+		]
+	],
+	"post_install": [
+		"$dirpath = \"$dir\".Replace('\\', '\\\\')",
+		"$exepath = \"$dir\\Code.exe\".Replace('\\', '\\\\')",
+		"'install-associations', 'uninstall-associations', 'install-context', 'uninstall-context' | ForEach-Object {",
+		"  if (Test-Path \"$bucketsdir\\extras\\scripts\\vscode\\$_.reg\") {",
+		"    $content = Get-Content \"$bucketsdir\\extras\\scripts\\vscode\\$_.reg\"",
+		"    $content = $content.Replace('$codedir', $dirpath)",
+		"    $content = $content.Replace('$code', $exepath)",
+		"    if ($global) {",
+		"      $content = $content.Replace('HKEY_CURRENT_USER', 'HKEY_LOCAL_MACHINE')",
+		"    }",
+		"    $content | Set-Content -Path \"$dir\\$_.reg\"",
+		"  }",
+		"}",
+		"if (Test-Path \"$persist_dir\\data\\extensions\") {",
+		"    Remove-Item \"$env:USERPROFILE\\.vscode\\extensions\" -Force -Recurse -ErrorAction SilentlyContinue",
+		"    New-Item -Type Junction -Path \"$env:USERPROFILE\\.vscode\\extensions\" -Target \"$persist_dir\\data\\extensions\" | Out-Null",
+		"} else {",
+		"    if (Test-Path \"$env:USERPROFILE\\.vscode\\extensions\") {",
+		"        Move-Item \"$env:USERPROFILE\\.vscode\\extensions\" \"$persist_dir\\data\\extensions\" -Force",
+		"        New-Item -Type Junction -Path \"$env:USERPROFILE\\.vscode\\extensions\" -Target \"$persist_dir\\data\\extensions\" | Out-Null",
+		"    }",
+		"}",
+		"if (Test-Path \"$persist_dir\\data\\user-data\") {",
+		"    Remove-Item \"$env:AppData\\Code\" -Force -Recurse -ErrorAction SilentlyContinue",
+		"    New-Item -Type Junction -Path \"$env:AppData\\Code\" -Target \"$persist_dir\\data\\user-data\" | Out-Null",
+		"} else {",
+		"    if (Test-Path \"$env:AppData\\Code\") {",
+		"        Move-Item \"$env:AppData\\Code\" \"$persist_dir\\data\\user-data\" -Force",
+		"        New-Item -Type Junction -Path \"$env:AppData\\Code\" -Target \"$persist_dir\\data\\user-data\" | Out-Null",
+		"    }",
+		"}"
+	],
+	"uninstaller": {
+		"script": "if ($cmd -eq 'uninstall') { reg import \"$dir\\uninstall-context.reg\" }"
+	},
+	"persist": "data",
+	"checkver": {
+		"url": "https://code.visualstudio.com/sha?build=stable",
+		"jsonpath": "$.products[?(@.platform.os == 'win32-x64-archive')].name"
+	},
+	"autoupdate": {
+		"architecture": {
+			"64bit": {
+				"url": "https://update.code.visualstudio.com/$version/win32-x64-archive/stable#/dl.7z",
+				"hash": {
+					"url": "https://code.visualstudio.com/sha?build=stable",
+					"jsonpath": "$.products[?(@.platform.os == 'win32-x64-archive')].sha256hash"
+				}
+			},
+			"32bit": {
+				"url": "https://update.code.visualstudio.com/$version/win32-archive/stable#/dl.7z",
+				"hash": {
+					"url": "https://code.visualstudio.com/sha?build=stable",
+					"jsonpath": "$.products[?(@.platform.os == 'win32-archive')].sha256hash"
+				}
+			}
+		}
+	}
+}
