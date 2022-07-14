@@ -8,9 +8,6 @@
 	},
 	"url": "https://dldir1.qq.com/weixin/Windows/WeChatSetup.exe#/dl.7z",
 	"hash": "md5:f051ff988f36b1c9e2ba3b98cebbc7b6",
-	"depends": [
-		"python"
-	],
 	"shortcuts": [
 		[
 			"start.vbs",

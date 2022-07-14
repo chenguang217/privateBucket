@@ -6,8 +6,7 @@
 	"url": "https://raw.githubusercontent.com/chenguang217/bucketFiles/main/emby2Mpc.py",
 	"hash": "bbb3b9d8c6962206ce61331a788a848bcf3dc8feafbf6de3f065ae04c77848cf",
 	"depends": [
-		"mpc-be",
-		"python"
+		"mpc-be"
 	],
 	"installer": {
 		"script": [
