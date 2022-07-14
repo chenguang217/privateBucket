@@ -7,7 +7,7 @@
 		"url": "https://weixin.qq.com/cgi-bin/readtemplate?lang=zh_CN&t=weixin_agreement&s=default"
 	},
 	"url": "https://dldir1.qq.com/weixin/Windows/WeChatSetup.exe#/dl.7z",
-	"hash": "md5:12dfdf74fa1db8c436da301d0d732685",
+	"hash": "md5:f051ff988f36b1c9e2ba3b98cebbc7b6",
 	"shortcuts": [
 		[
 			"start.vbs",
@@ -77,19 +77,32 @@
 			"'$triggers += $trigger' | out-file -append $dir\\register.ps1 -encoding ascii",
 			"'$User=\"Nt Authority\\System\"' | out-file -append $dir\\register.ps1 -encoding ascii",
 			"'$Action=New-ScheduledTaskAction -Execute \"cmd.exe\" -Argument \"/c taskkill /f /im WeChat.exe\"' | out-file -append $dir\\register.ps1 -encoding ascii",
-			"'$setting = New-ScheduledTaskSettingsSet -AllowStartIfOnBatteries' | out-file -append $dir\\register.ps1 -encoding ascii",
-			"\"Register-ScheduledTask -TaskName 'WeChat Shutdown' -Settings `$setting -Trigger `$triggers -User `$User -Action `$Action -RunLevel Highest -Force\" | out-file -append $dir\\register.ps1 -encoding ascii",
-			"start-process powershell -ArgumentList \"-noprofile -file $dir\\register.ps1\" -verb RunAs -WindowStyle hidden -wait"
+			"\"Register-ScheduledTask -TaskName 'WeChat Shutdown' -Trigger `$triggers -User `$User -Action `$Action -RunLevel Highest -Force\" | out-file -append $dir\\register.ps1 -encoding ascii",
+			"start-process powershell -ArgumentList \"-noprofile -file $dir\\register.ps1\" -verb RunAs -WindowStyle hidden -wait",
+			"if (Test-Path \"$persist_dir\\WeChat\") {",
+			"    Remove-Item \"$env:APPDATA\\Tencent\\WeChat\" -Force -Recurse -ErrorAction SilentlyContinue",
+			"    New-Item -Type Junction -Path \"$env:APPDATA\\Tencent\\WeChat\" -Target \"$persist_dir\\WeChat\" | Out-Null",
+			"} else {",
+			"    if (Test-Path \"$env:APPDATA\\Tencent\\WeChat\") {",
+			"        Move-Item \"$env:APPDATA\\Tencent\\WeChat\" \"$persist_dir\\WeChat\" -Force",
+			"        New-Item -Type Junction -Path \"$env:APPDATA\\Tencent\\WeChat\" -Target \"$persist_dir\\WeChat\" | Out-Null",
+			"    }",
+			"}"
 		]
 	},
 	"uninstaller": {
 		"script": [
-			"Start-Process powershell \"unregister-scheduledtask -taskname 'WeChat Shutdown' -confirm:`$false\" -Verb RunAs -WindowStyle hidden -wait"
+			"Start-Process powershell \"unregister-scheduledtask -taskname 'WeChat Shutdown' -confirm:`$false\" -Verb RunAs -WindowStyle hidden -wait",
+			"if (!(Test-Path \"$persist_dir\\WeChat\")) {",
+			"    Move-Item \"$env:APPDATA\\Tencent\\WeChat\" \"$persist_dir\\WeChat\" -Force",
+			"} else {",
+			"    Remove-Item \"$env:APPDATA\\Tencent\\WeChat\" -Force -Recurse -ErrorAction SilentlyContinue",
+			"}"
 		]
 	},
 	"checkver": "<span class=\"download-version\">([\\d.]+)</span>",
 	"autoupdate": {
 		"url": "https://dldir1.qq.com/weixin/Windows/WeChatSetup.exe#/dl.7z"
 	},
-	"notes": "We don't persist your WeChat data, they are still storaged in '%APPDATA%\\Tencent\\WeChat'."
+	"persist": "WeChat",
 }
