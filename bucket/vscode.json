@@ -61,7 +61,19 @@
 		"}"
 	],
 	"uninstaller": {
-		"script": "if ($cmd -eq 'uninstall') { reg import \"$dir\\uninstall-context.reg\" }"
+		"script": [
+			"if ($cmd -eq 'uninstall') { reg import \"$dir\\uninstall-context.reg\" }",
+			"if (!(Test-Path \"$persist_dir\\data\\extensions\")) {",
+			"    Move-Item \"$env:USERPROFILE\\.vscode\\extensions\" \"$persist_dir\\data\\extensions\" -Force",
+			"} else {",
+			"    Remove-Item \"$env:USERPROFILE\\.vscode\\extensions\" -Force -Recurse -ErrorAction SilentlyContinue",
+			"}",
+			"if (!(Test-Path \"$persist_dir\\data\\user-data\")) {",
+			"    Move-Item \"$env:AppData\\Code\" \"$persist_dir\\data\\user-data\" -Force",
+			"} else {",
+			"    Remove-Item \"$env:AppData\\Code\" -Force -Recurse -ErrorAction SilentlyContinue",
+			"}"
+		]
 	},
 	"persist": "data",
 	"checkver": {
