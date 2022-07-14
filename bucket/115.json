@@ -9,6 +9,9 @@
 		"mv $dir\\115\\Application\\* $dir",
 		"Remove-Item \"$dir\\115\" -Recurse"
 	],
+	"persist": [
+		"115"
+	],
 	"installer": {
 		"script": [
 			"$runtimeCache = \"$env:LOCALAPPDATA\\115\"",

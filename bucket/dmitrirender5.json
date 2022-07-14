@@ -4,6 +4,9 @@
 	"homepage": "http://www.dmitrirender.ru/",
 	"url": "https://github.com/chenguang217/bucketFiles/releases/download/1.0/DmitriRender5.rar",
 	"hash": "72507a0dba7001efc25293464496deeccc2203e88d600f1d7316e36a33274c1e",
+	"depends": [
+		"python"
+	],
 	"architecture": {
 		"64bit": {
 			"installer":{

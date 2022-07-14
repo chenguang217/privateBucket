@@ -8,6 +8,9 @@
 	},
 	"url": "https://dldir1.qq.com/weixin/Windows/WeChatSetup.exe#/dl.7z",
 	"hash": "md5:f051ff988f36b1c9e2ba3b98cebbc7b6",
+	"depends": [
+		"python"
+	],
 	"shortcuts": [
 		[
 			"start.vbs",
@@ -63,7 +66,7 @@
 			"'set ws=WScript.CreateObject(\"WScript.Shell\")' | out-file -append $dir\\start.vbs -encoding ascii",
 			"$python = $scoopdir.toString() + \"\\shims\\python.exe\" -replace \"\\\\\", \"\\\\\"",
 			"$script = $dir.toString() + \"\\start.py\" -replace \"\\\\\", \"\\\\\"",
-			"'ws.Run \"' + $python + ' ' + $script + '\",0' | out-file -append $dir\\start.vbs -encoding ascii",
+			"'ws.Run \"python ' + $script + '\",0' | out-file -append $dir\\start.vbs -encoding ascii",
 			"'$triggers = @()' | out-file -append $dir\\register.ps1 -encoding ascii",
 			"'$CIMTriggerClass = Get-CimClass -ClassName MSFT_TaskEventTrigger -Namespace Root/Microsoft/Windows/TaskScheduler:MSFT_TaskEventTrigger' | out-file -append $dir\\register.ps1 -encoding ascii",
 			"'$trigger = New-CimInstance -CimClass $CIMTriggerClass -ClientOnly' | out-file -append $dir\\register.ps1 -encoding ascii",

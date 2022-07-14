@@ -26,7 +26,8 @@
 		}
 	},
 	"depends": [
-		"potplayer"
+		"potplayer",
+		"python"
 	],
 	"installer": {
 		"script": [
