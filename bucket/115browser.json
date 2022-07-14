@@ -5,11 +5,18 @@
 	"url": "https://github.com/chenguang217/bucketFiles/releases/download/1.0/chrome.rar",
 	"hash": "md5:91e3336e4195d0d9270a6f0b21137983",
 	"extract_dir": "Chrome-bin",
+	"post_install": [
+		"if (!(Test-Path \"$dir\\User Data\\*\") -and (Test-Path \"$env:LocalAppData\\115Chrome\\User Data\")) {",
+		"    info '[Portable Mode]: Copying user data...'",
+		"    Copy-Item \"$env:LocalAppData\\115Chrome\\User Data\\*\" \"$dir\\User Data\" -Recurse",
+		"}"
+	],
+	"persist": "User Data",
 	"shortcuts": [
 		[
 			"115chrome.exe",
 			"115浏览器",
-			"--no-sandbox"
+			"--no-sandbox --user-data-dir=\"$dir\\User Data\""
 		]
 	]
 }
