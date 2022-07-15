@@ -25,7 +25,7 @@
 			"'For x = 0 to args1.Count - 1' | out-file -append $dir\\test.vbs -encoding ascii",
 			"$python = $scoopdir.toString() + \"\\shims\\python.exe\" -replace \"\\\\\", \"\\\\\"",
 			"$script = $dir.toString() + \"\\emby2Mpc.py\" -replace \"\\\\\", \"\\\\\"",
-			"'    ws.Run \"' + $python + ' ' + $script +' \"\"\"+args1(x)+\"\"\"\",0' | out-file -append $dir\\test.vbs -encoding ascii",
+			"'    ws.Run \"python ' + $script +' \"\"\"+args1(x)+\"\"\"\",0' | out-file -append $dir\\test.vbs -encoding ascii",
 			"'Next' | out-file -append $dir\\test.vbs -encoding ascii",
 			"if (!(Test-Path \"$persist_dir\\config.ini\")) { '[baseconf]' | out-file -append $dir\\config.ini -encoding ascii;'persist=' + $scoopdir | out-file -append $dir\\config.ini -encoding ascii;'token=' | out-file -append $dir\\config.ini -encoding ascii;'userName=' | out-file -append $dir\\config.ini -encoding ascii }",
 			"'need token and userName in config.ini'"
