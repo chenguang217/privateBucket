@@ -15,6 +15,11 @@
 		"$key=$dir.ToString()+'\\keygen.exe'",
 		"Start-Process powershell \"Add-MpPreference -ExclusionPath $key\" -Verb RunAs -WindowStyle hidden -wait"
 	],
+	"uninstaller": {
+		"script": [
+			"Start-Process powershell \"Remove-MpPreference -ExclusionPath $dir\\keygen.exe\" -Verb RunAs -WindowStyle hidden"
+		]
+	},
 	"shortcuts": [
 		[
 			"navicat.exe",
