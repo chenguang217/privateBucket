@@ -1,14 +1,15 @@
 {
-	"version": "5.0.0",
+	"version": "25.0.0",
 	"description": "a KMS activator",
 	"homepage": "https://github.com/zbezj/HEU_KMS_Activator",
-	"url": "https://hub.gitfast.tk/zbezj/HEU_KMS_Activator/releases/download/25.0.0/HEU_KMS_Activator_v25.0.0_.HEU168.zip",
-	"hash": "md5:8bde47de50290a4dd866f288cc9bb6fd",
+	"url": "https://hub.gitfast.tk/zbezj/HEU_KMS_Activator/releases/download/25.0.0/HEU_KMS_Activator_v25.0.0_.HEU168.zip#/dl.zip_",
+	"hash": "md5:ff06f9535ab041e07477ecf17a9d5002",
 	"pre_install": [
-		"7z x $dir\\HEU_KMS_Activator_v25.0.0_.HEU168.zip -pHEU168 -o $dir",
+		"7z x $dir\\dl.zip_ -pHEU168 $('-o' + $dir)",
 		"Start-Process powershell \"Set-MpPreference -DisableRealtimeMonitoring 1;Add-MpPreference -ExclusionPath $dir\\HEU_KMS_Activator_v25.0.0.exe;Set-MpPreference -DisableRealtimeMonitoring 0\" -Verb RunAs -WindowStyle hidden",
 		"'Start-Process powershell \"Set-MpPreference -DisableRealtimeMonitoring 1;Start-Process ' + $dir + '\\HEU_KMS_Activator_v25.0.0.exe;Start-Sleep 30;Set-MpPreference -DisableRealtimeMonitoring 0;\" -Verb RunAs -WindowStyle Hidden' | out-file $dir/test.ps1 -encoding ascii",
-		"'@set Path=%Path%;%SystemRoot%\\system32\\WindowsPowerShell\\v1.0\\ & powershell -ExecutionPolicy Unrestricted -NoProfile %~dpn0.ps1 -Verb RunAs -WindowStyle Hidden' | out-file $dir/test.cmd -encoding ascii"
+		"'@set Path=%Path%;%SystemRoot%\\system32\\WindowsPowerShell\\v1.0\\ & powershell -ExecutionPolicy Unrestricted -NoProfile %~dpn0.ps1 -Verb RunAs -WindowStyle Hidden' | out-file $dir/test.cmd -encoding ascii",
+		"remove-item $dir\\dl.zip_"
 	],
 	"shortcuts": [
 		[
