@@ -1,5 +1,5 @@
 {
-	"version": "1.6.3.107.2022072",
+	"version": "1.6.3.107.20220727",
 	"description": "Fork of Media Player Classic containing additional features and bug fixes.",
 	"homepage": "https://sourceforge.net/projects/mpcbe/",
 	"license": "GPL-3.0-only",
@@ -10,11 +10,11 @@
 				"https://github.com/hooke007/MPCVR_chs/releases/download/chs_v03.2/MPCVR_chs_20220727.7z"
 			],
 			"hash": [
-				"md5:8355447ad9642a8fbf8cedafdebf8b03",
+				"md5:6c2d308ab82ff384b3c0b77f4074c38e",
 				"md5:1ca1a09f203d03404303c218d4e0a847"
 			],
 			"extract_dir": [
-				"standalone_filters-mpc-be.1.6.3.107.x64",
+				"MPC-BE.1.6.3.107.x64",
 				"mpcvr"
 			],
 			"bin": [
@@ -37,11 +37,11 @@
 				"https://github.com/hooke007/MPCVR_chs/releases/download/chs_v03.2/MPCVR_chs_20220727.7z"
 			],
 			"hash": [
-				"md5:9963538cef2da6659343891df431f271",
+				"md5:3c62cbcafc45da3142d6979e2073ef8b",
 				"md5:1ca1a09f203d03404303c218d4e0a847"
 			],
 			"extract_dir": [
-				"standalone_filter-mpc-be.1.6.3.107.x86",
+				"MPC-BE.1.6.3.107.x86",
 				"mpcvr"
 			],
 			"bin": "mpc-be.exe",
