@@ -1,10 +1,10 @@
 {
-	"version": "2.13.2",
+	"version": "2.14.0",
 	"description": "",
 	"homepage": "http://www.verysync.com",
-	"url": "http://dl-cn.verysync.com/releases/v2.13.2/verysync-windows-amd64-v2.13.2.zip",
-	"hash": "md5:40046664b9c5a70864441aa5e2dd0b5b",
-	"extract_dir": "verysync-windows-amd64-v2.13.2",
+	"url": "http://dl-cn.verysync.com/releases/v2.14.0/verysync-windows-amd64-v2.14.0.zip",
+	"hash": "md5:904896f8c67e13cbe9ed3fdf82944a29",
+	"extract_dir": "verysync-windows-amd64-v2.14.0",
 	"installer": {
 		"script": [
 			"$WshShell = New-Object -comObject WScript.Shell",
