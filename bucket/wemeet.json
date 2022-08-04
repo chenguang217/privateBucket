@@ -12,11 +12,11 @@
 			"Remove-Item \"$dir\\wemeetapp_new.exe\" -Force",
 			"Rename-Item \"$dir\\`$_10_\" \"$dir\\$version\"",
 			"Remove-Item \"$dir\\`$WINDIR\",\"$dir\\`$PLUGINSDIR\",\"$dir\\`$TEMP\" -Force -Recurse",
-			"$shell = New-Object -ComObject WScript.Shell",
-			"$shortcut = $shell.CreateShortcut(\"$env:userprofile\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Scoop Apps\\\u817e\u8baf\u4f1a\u8bae.lnk\")",
-			"$shortcut.TargetPath = \"$dir\\wemeetapp.exe\"",
-			"$shortcut.WorkingDirectory = \"$dir\"",
-			"$shortcut.Save()",
+			"'$dir=dir .. | ?{$_.LinkType} | select Target' | out-file $dir/test.ps1 -encoding ascii",
+			"'$dir=$dir.target' | out-file -append $dir/test.ps1 -encoding ascii",
+			"'start-process $dir\\wemeetapp.exe' | out-file -append $dir/test.ps1 -encoding ascii",
+			"'set ws=WScript.CreateObject(\"WScript.Shell\")' | out-file $dir/test.vbs -encoding ascii",
+			"'ws.Run \"powershell.exe -WindowStyle Hidden -file D:\\\\scoop\\\\apps\\\\wemeet\\\\current\\\\test.ps1\",0' | out-file -append $dir/test.vbs -encoding ascii",
 			"if (Test-Path \"$persist_dir\\WeMeet\") {",
 			"    Remove-Item \"$env:APPDATA\\Tencent\\WeMeet\" -Force -Recurse -ErrorAction SilentlyContinue",
 			"    New-Item -Type Junction -Path \"$env:APPDATA\\Tencent\\WeMeet\" -Target \"$persist_dir\\WeMeet\" | Out-Null",
@@ -37,5 +37,13 @@
 			"    Remove-Item \"$env:APPDATA\\Tencent\\WeMeet\" -Force -Recurse -ErrorAction SilentlyContinue",
 			"}"
 		]
-	}
+	},
+	"shortcuts": [
+		[
+			"test.vbs",
+			"\u817e\u8baf\u4f1a\u8bae",
+			"",
+			"wemeetapp.exe"
+		]
+	]
 }
