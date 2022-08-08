@@ -36,7 +36,7 @@
 			"'        return 0' | out-file -append $dir\\start.py -encoding ascii",
 			"'state = 0' | out-file -append $dir\\start.py -encoding ascii",
 			"'wechat = r\"' + $dir + '\\WeChat.exe\"' | out-file -append $dir\\start.py -encoding ascii",
-			"'os.system(r\"del /F /Q ''' + $persist_dir + 'WeChat\\XPlugin\\Plugins\\WMPFRuntime''\")' | out-file -append $dir\\start.py -encoding ascii",
+			"'os.system(r\"rmdir /S /Q ' + $persist_dir + '\\WeChat\\XPlugin\\Plugins\\WMPFRuntime\")' | out-file -append $dir\\start.py -encoding ascii",
 			"'subprocess.Popen(wechat)' | out-file -append $dir\\start.py -encoding ascii",
 			"'times = 0' | out-file -append $dir\\start.py -encoding ascii",
 			"'while True:' | out-file -append $dir\\start.py -encoding ascii",
