@@ -7,7 +7,6 @@
 		"url": "https://weixin.qq.com/cgi-bin/readtemplate?lang=zh_CN&t=weixin_agreement&s=default"
 	},
 	"url": "https://dldir1.qq.com/weixin/Windows/WeChatSetup.exe#/dl.7z",
-	"hash": "md5:930141b82ed317250274c3aeb3750ae2",
 	"shortcuts": [
 		[
 			"start.vbs",
