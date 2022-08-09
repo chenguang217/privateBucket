@@ -56,6 +56,7 @@
 			"'        if state == 1:' | out-file -append $dir\\start.py -encoding ascii",
 			"'            state = 0' | out-file -append $dir\\start.py -encoding ascii",
 			"'            times = 0' | out-file -append $dir\\start.py -encoding ascii",
+			"'            os.system(r\"rmdir /S /Q ' + $persist_dir + '\\WeChat\\XPlugin\\Plugins\\WMPFRuntime\")' | out-file -append $dir\\start.py -encoding ascii",
 			"'            subprocess.Popen(wechat)' | out-file -append $dir\\start.py -encoding ascii",
 			"\"        elif judgeprocess('WeChat.exe') == 1:\" | out-file -append $dir\\start.py -encoding ascii",
 			"'            exit()' | out-file -append $dir\\start.py -encoding ascii",
