@@ -1,0 +1,98 @@
+{
+	"version": "1.28.0",
+	"description": "a vpn software",
+	"homepage": "https://tailscale.com/",
+	"url": "https://pkgs.tailscale.com/stable/tailscale-ipn-setup-1.28.0.exe#/dl.exe",
+	"hash": "476c2d87a9450f9d1404e506e902bdad5694c2654c209f84d365545af3305241",
+	"architecture": {
+		"64bit": {
+			"installer": {
+				"script": [
+					"7z x $dir\\dl.exe -aou -o\"$dir\"",
+					"rm -Recurse -Force $dir\\`$PLUGINSDIR",
+					"rm -Force $dir\\`$_5_",
+					"rm -Force $dir\\tailscale.exe",
+					"rm -Force $dir\\tailscaled.exe",
+					"rm -Force $dir\\wintun.dll",
+					"rm -Force $dir\\dl.exe",
+					"rm -Force $dir\\Uninstall-Tailscale.exe.nsis",
+					"mv $dir\\`$_5__1 $dir\\tailscale-ipn.exe",
+					"mv $dir\\tailscale_1.exe $dir\\tailscale.exe",
+					"mv $dir\\tailscaled_1.exe $dir\\tailscaled.exe",
+					"mv $dir\\wintun_1.dll $dir\\wintun.dll",
+					"$WshShell = New-Object -comObject WScript.Shell",
+					"$startup = [System.Environment]::GetFolderPath('Startup')",
+					"$Shortcut = $WshShell.CreateShortcut(\"$startup\\Tailscale.lnk\")",
+					"$Shortcut.TargetPath = \"$dir\\Tailscale-ipn.exe\"",
+					"$Shortcut.Save()",
+					"if (Test-Path \"$persist_dir\\Tailscale\") {",
+					"    Remove-Item \"$env:PROGRAMDATA\\Tailscale\" -Force -Recurse -ErrorAction SilentlyContinue",
+					"    New-Item -Type Junction -Path \"$env:PROGRAMDATA\\Tailscale\" -Target \"$persist_dir\\Tailscale\" | Out-Null",
+					"} else {",
+					"    if (Test-Path \"$env:PROGRAMDATA\\Tailscale\") {",
+					"        Move-Item \"$env:PROGRAMDATA\\Tailscale\" \"$persist_dir\\Tailscale\" -Force",
+					"        New-Item -Type Junction -Path \"$env:PROGRAMDATA\\Tailscale\" -Target \"$persist_dir\\Tailscale\" | Out-Null",
+					"    }",
+					"}",
+					"Start-Process cmd -Args '/c', \"sc create Tailscale binpath=$dir\\tailscaled.exe DisplayName=Tailscale start=auto & sc start Tailscale\" -Verb RunAs -WindowStyle hidden"
+				]
+			}
+		},
+		"32bit": {
+			"installer": {
+				"script": [
+					"7z x $dir\\dl.exe -aou -o\"$dir\"",
+					"rm -Recurse -Force $dir\\`$PLUGINSDIR",
+					"rm -Force $dir\\`$_5__1",
+					"rm -Force $dir\\tailscale_1.exe",
+					"rm -Force $dir\\tailscaled_1.exe",
+					"rm -Force $dir\\wintun_1.dll",
+					"rm -Force $dir\\dl.exe",
+					"rm -Force $dir\\Uninstall-Tailscale.exe.nsis",
+					"mv $dir\\`$_5_ $dir\\tailscale-ipn.exe",
+					"$WshShell = New-Object -comObject WScript.Shell",
+					"$startup = [System.Environment]::GetFolderPath('Startup')",
+					"$Shortcut = $WshShell.CreateShortcut(\"$startup\\Tailscale.lnk\")",
+					"$Shortcut.TargetPath = \"$dir\\Tailscale-ipn.exe\"",
+					"$Shortcut.Save()",
+					"if (Test-Path \"$persist_dir\\Tailscale\") {",
+					"    Remove-Item \"$env:PROGRAMDATA\\Tailscale\" -Force -Recurse -ErrorAction SilentlyContinue",
+					"    New-Item -Type Junction -Path \"$env:PROGRAMDATA\\Tailscale\" -Target \"$persist_dir\\Tailscale\" | Out-Null",
+					"} else {",
+					"    if (Test-Path \"$env:PROGRAMDATA\\Tailscale\") {",
+					"        Move-Item \"$env:PROGRAMDATA\\Tailscale\" \"$persist_dir\\Tailscale\" -Force",
+					"        New-Item -Type Junction -Path \"$env:PROGRAMDATA\\Tailscale\" -Target \"$persist_dir\\Tailscale\" | Out-Null",
+					"    }",
+					"}",
+					"if (Test-Path \"$persist_dir\\Tailscale-local\") {",
+					"    Remove-Item \"$env:LOCALAPPDATA\\Tailscale\" -Force -Recurse -ErrorAction SilentlyContinue",
+					"    New-Item -Type Junction -Path \"$env:LOCALAPPDATA\\Tailscale\" -Target \"$persist_dir\\Tailscale-local\" | Out-Null",
+					"} else {",
+					"    if (Test-Path \"$env:LOCALAPPDATA\\Tailscale\") {",
+					"        Move-Item \"$env:LOCALAPPDATA\\Tailscale\" \"$persist_dir\\Tailscale-local\" -Force",
+					"        New-Item -Type Junction -Path \"$env:LOCALAPPDATA\\Tailscale\" -Target \"$persist_dir\\Tailscale-local\" | Out-Null",
+					"    }",
+					"}",
+					"Start-Process cmd -Args '/c', \"sc create Tailscale binpath=$dir\\tailscaled.exe DisplayName=Tailscale start=auto & sc start Tailscale\" -Verb RunAs -WindowStyle hidden"
+				]
+			}
+		}
+	},
+	"uninstaller": {
+		"script": [
+			"$startup = [System.Environment]::GetFolderPath('Startup')",
+			"rm $startup\\Tailscale.lnk",
+			"if (!(Test-Path \"$persist_dir\\Tailscale\")) {",
+			"    Start-Process powershell \"sc.exe stop Tailscale;sc.exe delete Tailscale;Start-Sleep 1\" -Verb RunAs -WindowStyle hidden -wait",
+			"    Move-Item \"$env:PROGRAMDATA\\Tailscale\" \"$persist_dir\\Tailscale\" -Force",
+			"} else {",
+			"    Start-Process powershell \"sc.exe stop Tailscale;sc.exe delete Tailscale;Remove-Item $env:PROGRAMDATA\\Tailscale -Force -Recurse -ErrorAction SilentlyContinue;Start-Sleep 1\" -Verb RunAs -WindowStyle hidden -wait",
+			"}",
+			"if (!(Test-Path \"$persist_dir\\Tailscale-local\")) {",
+			"    Move-Item \"$env:LOCALAPPDATA\\Tailscale\" \"$persist_dir\\Tailscale-local\" -Force",
+			"} else {",
+			"    Remove-Item \"$env:LOCALAPPDATA\\Tailscale\" -Force -Recurse -ErrorAction SilentlyContinue",
+			"}"
+		]
+	}
+}
