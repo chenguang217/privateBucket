@@ -4,7 +4,7 @@
 	"description": "open emby link with potplayer and update progress with js",
 	"homepage": "https://github.com/chenguang217/bucketFiles",
 	"url": "https://raw.githubusercontent.com/chenguang217/bucketFiles/main/emby2Mpc.py",
-	"hash": "bbb3b9d8c6962206ce61331a788a848bcf3dc8feafbf6de3f065ae04c77848cf",
+	"hash": "8638af5c7eef138fa184f8ae84fbbc1f3857d8ed7c27fce3126ef3037bb478dd",
 	"depends": [
 		"mpc-be"
 	],
