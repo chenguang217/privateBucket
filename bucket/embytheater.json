@@ -5,11 +5,11 @@
 	"architecture": {
 		"32bit": {
 			"url": "https://github.com/MediaBrowser/emby-theater-windows/releases/download/3.0.16/emby-theater-x86.zip",
-			"hash": "md5:d41d8cd98f00b204e9800998ecf8427e"
+			"hash": "md5:6e984d23c125ac7d522b271f2a9cb099"
 		},
 		"64bit": {
 			"url": "https://github.com/MediaBrowser/emby-theater-windows/releases/download/3.0.16/emby-theater-x64.zip",
-			"hash": "md5:d41d8cd98f00b204e9800998ecf8427e"
+			"hash": "md5:c52244310981e0a61bd87b75649fd370"
 		}
 	},
 	"shortcuts": [
