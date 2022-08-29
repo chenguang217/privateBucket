@@ -7,19 +7,27 @@
         "url": "https://www.sordum.org/eula/"
     },
     "changelog": "ReadMe.txt",
-    "url": "https://www.sordum.org/files/download/d-control/dControl.zip",
+    "url": "https://www.sordum.org/files/download/d-control/dControl.zip#/dl.zip",
     "hash": "280ef33d0c94594e8d4b88fa07b44d1c65807cb4c1dcbb69fe53b4c684bccd5b",
     "extract_dir": "dControl",
     "pre_install": [
+		"Start-Process powershell \"Set-MpPreference -DisableRealtimeMonitoring 1\" -Verb RunAs -WindowStyle hidden -wait",
         "$splat = @{ 'ExtractDir' = $manifest.extract_dir; 'Switches' = '-psordum'; 'Removal' = $true }",
-        "Expand-7zipArchive \"$dir\\$fname\" @splat",
-        "Expand-7zipArchive \"$dir\\dControl.zip\" @splat"
+        "Expand-7zipArchive \"$dir\\dControl.zip\" @splat",
+		"Start-Process powershell \"Add-MpPreference -ExclusionPath $dir\\dControl.exe;Set-MpPreference -DisableRealtimeMonitoring 0\" -Verb RunAs -WindowStyle hidden -wait"
     ],
     "shortcuts": [
-        "dfControl.exe",
-        "Sordum\\Defender Control"
+        [
+			"dControl.exe",
+			"Defender Control"
+		]
     ],
-    "persist": "dfControl.ini",
+	"uninstaller": {
+		"script": [
+			"Start-Process powershell \"Remove-MpPreference -ExclusionPath $dir\\dControl.exe\" -Verb RunAs -WindowStyle hidden -wait"
+		]
+	},
+    "persist": "dControl.ini",
     "checkver": "Defender Control\\s*v([\\d.]+)",
     "autoupdate": {
         "url": "https://www.sordum.org/files/download/d-control/dControl.zip"
