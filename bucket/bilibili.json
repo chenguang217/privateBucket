@@ -5,11 +5,11 @@
 	"architecture": {
 		"32bit": {
 			"url": "https://github.com/chenguang217/bucketFiles/releases/download/1.0/bilibili32.zip",
-			"hash": "md5:fe57e2bea2a23176e56e939a008150b1"
+			"hash": "md5:bd222efe9cd5c580f45230980bbfc47d"
 		},
 		"64bit": {
 			"url": "https://github.com/chenguang217/bucketFiles/releases/download/1.0/bilibili64.zip",
-			"hash": "md5:c1a9b64d6f87e2c165fd533219c93f96"
+			"hash": "md5:c6da6fd37b9e3aabc29aeab072a6e01f"
 		}
 	},
 	"installer": {
