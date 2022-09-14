@@ -6,8 +6,8 @@
 		"identifier": "Proprietary",
 		"url": "https://www.epicgames.com/store/en-US/eula"
 	},
-	"url": "https://epicgames-download1.akamaized.net/Builds/UnrealEngineLauncher/Installers/Win32/EpicInstaller-13.3.0.msi",
-	"hash": "md5:353c216084477014c75d7d7545bd7353",
+	"url": "https://epicgames-download1.akamaized.net/Builds/UnrealEngineLauncher/Installers/Win32/EpicInstaller-14.2.1.msi?launcherfilename=EpicInstaller-14.2.1.msi",
+	"hash": "a60db9fc0b290f4bea8bc5729b6878d97392156979c1a47498bb27269e16915a",
 	"extract_dir": "Epic Games",
 	"shortcuts": [
 		[
