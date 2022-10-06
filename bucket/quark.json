@@ -15,7 +15,13 @@
 			"        Move-Item \"$env:APPDATA\\quark-cloud-drive\" \"$persist_dir\\quark-cloud-drive\" -Force",
 			"        New-Item -Type Junction -Path \"$env:APPDATA\\quark-cloud-drive\" -Target \"$persist_dir\\quark-cloud-drive\" | Out-Null",
 			"    }",
-			"}"
+			"}",
+			"\"start $dir\\QuarkCloudDrive.exe\" | out-file -append $dir/startup.bat -encoding ascii",
+			"'timeout 5' | out-file -append $dir/startup.bat -encoding ascii",
+			"'reg delete \"HKEY_CLASSES_ROOT\\*\\shell\\QuarkCloudDrive.upload\" /f' | out-file -append $dir/startup.bat -encoding ascii",
+			"'set ws=WScript.CreateObject(\"WScript.Shell\")' | out-file -append $dir/startup.vbs -encoding ascii",
+			"$script = $dir.toString() + \"\\startup.bat\" -replace \"\\\\\", \"\\\\\"",
+			"'ws.Run \"' + $script + '\",0' | out-file -append $dir\\startup.vbs -encoding ascii"
 		]
 	},
 	"uninstaller": {
@@ -29,8 +35,10 @@
 	},
 	"shortcuts": [
 		[
-			"QuarkCloudDrive.exe",
-			"\u5938\u514b\u7f51\u76d8"
+			"startup.vbs",
+			"\u5938\u514b\u7f51\u76d8",
+			"",
+			"QuarkCloudDrive.exe"
 		]
 	]
 }
