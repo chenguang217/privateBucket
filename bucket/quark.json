@@ -19,8 +19,8 @@
 			"\"start $dir\\QuarkCloudDrive.exe\" | out-file -append $dir/startup.bat -encoding ascii",
 			"'timeout 5' | out-file -append $dir/startup.bat -encoding ascii",
 			"'reg delete \"HKEY_CLASSES_ROOT\\*\\shell\\QuarkCloudDrive.upload\" /f' | out-file -append $dir/startup.bat -encoding ascii",
-			"'reg delete \"HKEY_CLASSES_ROOT\Directory\shell\QuarkCloudDrive.upload\" /f' | out-file -append $dir/startup.bat -encoding ascii",
-			"'reg delete \"HKEY_CLASSES_ROOT\Directory\shell\QuarkCloudDrive.backup\" /f' | out-file -append $dir/startup.bat -encoding ascii",
+			"'reg delete \"HKEY_CLASSES_ROOT\\Directory\\shell\\QuarkCloudDrive.upload\" /f' | out-file -append $dir/startup.bat -encoding ascii",
+			"'reg delete \"HKEY_CLASSES_ROOT\\Directory\\shell\\QuarkCloudDrive.backup\" /f' | out-file -append $dir/startup.bat -encoding ascii",
 			"'set ws=WScript.CreateObject(\"WScript.Shell\")' | out-file -append $dir/startup.vbs -encoding ascii",
 			"$script = $dir.toString() + \"\\startup.bat\" -replace \"\\\\\", \"\\\\\"",
 			"'ws.Run \"' + $script + '\",0' | out-file -append $dir\\startup.vbs -encoding ascii"
