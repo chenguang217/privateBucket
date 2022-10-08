@@ -1,9 +1,9 @@
 {
-	"version": "1.5.8",
+	"version": "1.5.9",
 	"description": "A faster, better and more stable redis desktop manager, compatible with Linux, windows, mac. What's more, it won't crash when loading a large number of keys.",
 	"homepage": "https://github.com/qishibo/AnotherRedisDesktopManager",
-	"url": "https://github.com/qishibo/AnotherRedisDesktopManager/releases/download/v1.5.8/Another-Redis-Desktop-Manager.1.5.8.exe#/dl.7z",
-	"hash": "md5:32f020e180dde31f3020b3f41cb63d75",
+	"url": "https://github.com/qishibo/AnotherRedisDesktopManager/releases/download/v1.5.9/Another-Redis-Desktop-Manager.1.5.9.exe#/dl.7z",
+	"hash": "md5:381a180d676772df8b873f94a61868f3",
 	"installer": {
 		"script": [
 			"mv $dir\\`$PLUGINSDIR\\app-64.7z $dir",
