@@ -1,5 +1,5 @@
 {
-	"version": "1.6.4.91.6.4.83.20221016",
+	"version": "1.6.4.83.20221016",
 	"description": "Fork of Media Player Classic containing additional features and bug fixes.",
 	"homepage": "https://sourceforge.net/projects/mpcbe/",
 	"license": "GPL-3.0-only",
@@ -14,7 +14,7 @@
 				"md5:8da9dc4a3af1543a805f5dc496e6291e"
 			],
 			"extract_dir": [
-				"MPC-BE.1.6.4.9.x64",
+				"MPC-BE.1.6.4.83.x64",
 				"mpcvr"
 			],
 			"bin": [
@@ -41,7 +41,7 @@
 				"md5:8da9dc4a3af1543a805f5dc496e6291e"
 			],
 			"extract_dir": [
-				"MPC-BE.1.6.4.9.x86",
+				"MPC-BE.1.6.4.83.x86",
 				"mpcvr"
 			],
 			"bin": "mpc-be.exe",
