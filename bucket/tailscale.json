@@ -1,9 +1,9 @@
 {
-	"version": "1.32.1",
+	"version": "1.32.2",
 	"description": "a vpn software",
 	"homepage": "https://tailscale.com/",
-	"url": "https://pkgs.tailscale.com/stable/tailscale-ipn-setup-1.32.1.exe#/dl.exe",
-	"hash": "b2c4dd467e425c92b9933dba76518fc596a6b4443d247b77c0e5f39103b9c01f",
+	"url": "https://pkgs.tailscale.com/stable/tailscale-ipn-setup-1.32.2.exe#/dl.exe",
+	"hash": "b0a4919851047efb92aa38c9425a5881dd790ac7268fcce6dbdb1c97ed8d64dd",
 	"architecture": {
 		"64bit": {
 			"installer": {
