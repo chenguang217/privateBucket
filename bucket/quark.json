@@ -1,9 +1,9 @@
 {
-	"version": "2.3.4",
+	"version": "2.3.5",
 	"description": "client for Quark Netdisk",
 	"homepage": "https://pan.quark.cn/",
-	"url": "https://pdds.ucweb.com/download/stfile/fflghfhkkfgjfhnho/QuarkCloudDrive-2.3.4-win.exe#/dl.7z",
-	"hash": "672c64b4a6ddeaa3ba6de48f2f72d72da2619b6cb1855f77f4c4865619513f91",
+	"url": "https://pdds.ucweb.com/download/stfile/rrxstvwwyrsvrtztp/QuarkCloudDrive-2.3.5-win-release7.exe#/dl.7z",
+	"hash": "8126fb457486700055db082104973c775fe74f3c7cec18d1c38b44b95b273a7a",
 	"innosetup": true,
 	"installer": {
 		"script": [
