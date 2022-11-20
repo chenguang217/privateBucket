@@ -112,6 +112,7 @@
 			"        mkdir \"$persist_dir\\WeChat\\XPlugin\\Plugins\\XWeb\"",
 			"    }",
 			"    New-Item -Type Junction -Path \"$env:APPDATA\\Tencent\\WeChat\\XPlugin\\Plugins\\XWeb\" -Target \"$persist_dir\\WeChat\\XPlugin\\Plugins\\XWeb\" | Out-Null",
+			"    mkdir \"$env:APPDATA\\Tencent\\WeChat\\XPlugin\\Plugins\\WMPFRuntime\"",
 			"    if ((Test-Path \"$persist_dir\\WeChat\\XPlugin\\Plugins\\WMPFRuntime\")) {",
 			"        $wmpfruntime = get-childitem \"$persist_dir\\WeChat\\XPlugin\\Plugins\\WMPFRuntime\"",
 			"        foreach($wmpf in $wmpfruntime){",
