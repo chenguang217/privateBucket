@@ -7,7 +7,7 @@
 		"url": "https://weixin.qq.com/cgi-bin/readtemplate?lang=zh_CN&t=weixin_agreement&s=default"
 	},
 	"url": [
-		"https://dldir1.qq.com/weixin/Windows/WeChatSetup.exe#/dl.7z",
+		"https://webcdn.m.qq.com/spcmgr/download/WeChatSetup_3.8.0.41.exe#/dl.7z",
 		"https://raw.githubusercontent.com/chenguang217/bucketFiles/main/wechatStart.py"
 	],
 	"shortcuts": [
@@ -112,7 +112,6 @@
 			"        mkdir \"$persist_dir\\WeChat\\XPlugin\\Plugins\\XWeb\"",
 			"    }",
 			"    New-Item -Type Junction -Path \"$env:APPDATA\\Tencent\\WeChat\\XPlugin\\Plugins\\XWeb\" -Target \"$persist_dir\\WeChat\\XPlugin\\Plugins\\XWeb\" | Out-Null",
-			"    mkdir \"$env:APPDATA\\Tencent\\WeChat\\XPlugin\\Plugins\\WMPFRuntime\"",
 			"    if ((Test-Path \"$persist_dir\\WeChat\\XPlugin\\Plugins\\WMPFRuntime\")) {",
 			"        $wmpfruntime = get-childitem \"$persist_dir\\WeChat\\XPlugin\\Plugins\\WMPFRuntime\"",
 			"        foreach($wmpf in $wmpfruntime){",
@@ -160,5 +159,8 @@
 		"url": "https://dldir1.qq.com/weixin/Windows/WeChatSetup.exe#/dl.7z"
 	},
 	"persist": "WeChat",
-	"hash": "md5:d841406c6a892707904029953266ad41"
+	"hash": [
+		"md5:d841406c6a892707904029953266ad41",
+		"md5:7478499393cd77fc0794bca9b2d7e8df"
+	]
 }
