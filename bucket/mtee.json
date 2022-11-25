@@ -6,6 +6,6 @@
 	"extract_dir": "mtee-2.21/bin/Release",
 	"hash":  "edfa380fe9f175512427dbbc5696680374d97b64b1d8e5b2e6fcf9bc937a2fd4",
 	"bin": [
-		["mtee", "mtee"]
+		["mtee.exe", "mtee"]
 	]
 }
