@@ -1,0 +1,11 @@
+{
+	"version":  "2.21",
+	"license":  "",
+	"url":  "https://github.com/ritchielawrence/mtee/archive/refs/tags/v2.21.zip",
+	"homepage":  "https://github.com/ritchielawrence/mtee",
+	"extract_dir": "mtee-2.21/bin/Release",
+	"hash":  "edfa380fe9f175512427dbbc5696680374d97b64b1d8e5b2e6fcf9bc937a2fd4",
+	"bin": [
+		["mtee", "mtee"]
+	]
+}
