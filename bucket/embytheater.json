@@ -1,15 +1,15 @@
 {
-	"version": "3.0.17",
+	"version": "3.0.19",
 	"description": "EmbyTheater. Media browser for Emby",
 	"homepage": "https://emby.media/emby-theater.html",
 	"architecture": {
 		"32bit": {
-			"url": "https://github.com/MediaBrowser/emby-theater-windows/releases/download/3.0.17/emby-theater-x86.zip",
-			"hash": "md5:d27628c8dce5f24266c543aee57cb4a7"
+			"url": "https://github.com/MediaBrowser/emby-theater-windows/releases/download/3.0.19/emby-theater-x86.zip",
+			"hash": "md5:5c394566ebfc811b13ed77529c134b49"
 		},
 		"64bit": {
-			"url": "https://github.com/MediaBrowser/emby-theater-windows/releases/download/3.0.17/emby-theater-x64.zip",
-			"hash": "md5:0ead549610e19ba9744bfbd2e8f6714a"
+			"url": "https://github.com/MediaBrowser/emby-theater-windows/releases/download/3.0.19/emby-theater-x64.zip",
+			"hash": "md5:65324f0980dfbd0108669c704501d396"
 		}
 	},
 	"shortcuts": [
