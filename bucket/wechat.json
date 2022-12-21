@@ -1,7 +1,7 @@
 {
 	"homepage": "https://pc.weixin.qq.com/",
 	"description": "Free messaging and calling app.",
-	"version": "3.8.0.41",
+	"version": "3.8.1.26",
 	"license": {
 		"identifier": "EULA",
 		"url": "https://weixin.qq.com/cgi-bin/readtemplate?lang=zh_CN&t=weixin_agreement&s=default"
@@ -159,8 +159,5 @@
 		"url": "https://dldir1.qq.com/weixin/Windows/WeChatSetup.exe#/dl.7z"
 	},
 	"persist": "WeChat",
-	"hash": [
-		"md5:d841406c6a892707904029953266ad41",
-		"md5:7478499393cd77fc0794bca9b2d7e8df"
-	]
+	"hash": "md5:4f374b1a0961dc7ca734db90ebc5e635"
 }
