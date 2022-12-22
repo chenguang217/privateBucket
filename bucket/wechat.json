@@ -159,5 +159,8 @@
 		"url": "https://dldir1.qq.com/weixin/Windows/WeChatSetup.exe#/dl.7z"
 	},
 	"persist": "WeChat",
-	"hash": "md5:4f374b1a0961dc7ca734db90ebc5e635"
+	"hash": [
+		"md5:4f374b1a0961dc7ca734db90ebc5e635",
+		"md5:7478499393cd77fc0794bca9b2d7e8df"
+	]
 }
