@@ -1,0 +1,53 @@
+{
+	"version": "20221110",
+	"description": "MPV_CM",
+	"homepage": "https://www.lckp.top/archives/mpvnetcm",
+	"license": "GPL-3.0-only",
+	"architecture": {
+		"64bit": {
+			"url": [
+				"https://github.com/chenguang217/bucketFiles/releases/download/1.0/mpvnet.zip"
+			],
+			"hash": [
+				"3e2aa6ad4c51158e06e447152dc121040eb9b3c559f639cfee0baf9e2e48a4fa"
+			],
+			"extract_dir": [
+				"mpvnet"
+			],
+			"bin": [
+				[
+					"mpvnet.exe",
+					"mpv"
+				]
+			],
+			"shortcuts": [
+				[
+					"mpvnet.exe",
+					"MPV"
+				]
+			]
+		}
+	},
+	"pre_install": [
+			"'Windows Registry Editor Version 5.00' | out-file -append $dir\\test.reg -encoding ascii",
+			"'[HKEY_CLASSES_ROOT\\mpv]' | out-file -append $dir\\test.reg -encoding ascii", 
+			"'@=\"URL:mpv Protocol Handler\"' | out-file -append $dir\\test.reg -encoding ascii",
+			"'\"URL Protocol\"=\"\"' | out-file -append $dir\\test.reg -encoding ascii",
+			"'[HKEY_CLASSES_ROOT\\mpv\\shell]' | out-file -append $dir\\test.reg -encoding ascii",
+			"'[HKEY_CLASSES_ROOT\\mpv\\shell\\open]' | out-file -append $dir\\test.reg -encoding ascii",
+			"'[HKEY_CLASSES_ROOT\\mpv\\shell\\open\\command]' | out-file -append $dir\\test.reg -encoding ascii",
+			"$result = $dir.toString() + \"\\test.vbs\" -replace \"\\\\\", \"\\\\\"",
+			"'@=\"wscript \\\"' + $result + '\\\" \\\"%1\\\"\"' | out-file -append $dir\\test.reg -encoding ascii",
+			"Start-Process powershell \"regedit /s $dir\\test.reg\" -Verb RunAs -WindowStyle hidden",
+			"'set ws=WScript.CreateObject(\"WScript.Shell\")' | out-file -append $dir\\test.vbs -encoding ascii",
+			"'set args1=WScript.Arguments'| out-file -append $dir\\test.vbs -encoding ascii",
+			"'For x = 0 to args1.Count - 1' | out-file -append $dir\\test.vbs -encoding ascii",
+			"'    ws.Run \"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe -command \"\"Add-Type -AssemblyName System.Web;$test=[System.Web.HTTPUtility]::UrlDecode(''\"+args1(x)+\"''); $test=''' + $dir + '\\mpvnet.exe ''+$test.replace(''mpv://'',''''); if($(get-process -name mpvnet -ErrorAction SilentlyContinue)){if((New-TimeSpan $(get-process -Name mpvnet|select starttime).starttime $(get-Date)).totalseconds -gt 10){Invoke-Expression $test}} else{Invoke-Expression $test}\"\"\",0' | out-file -append $dir\\test.vbs -encoding ascii",
+			"'Next' | out-file -append $dir\\test.vbs -encoding ascii"
+	],
+	"uninstaller": {
+		"script": [
+			"Start-Process powershell \"reg delete HKEY_CLASSES_ROOT\\mpv /f\" -Verb RunAs -WindowStyle hidden"
+		]
+	}
+}
