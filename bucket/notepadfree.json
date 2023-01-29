@@ -1,0 +1,50 @@
+{
+	"version": "8.4.6",
+	"description": "A free source code editor and Notepad replacement that supports several languages.",
+	"homepage": "https://github.com/NotepadFree/NotepadFree",
+	"architecture": {
+		"64bit": {
+			"url": "https://github.com/NotepadFree/NotepadFree/releases/download/v8.4.6.ntf/ntf.8.4.6.portable.x64.7z",
+			"hash": "ba69a07d727f2c28677b1c8cdf812953f812224cb802b0d97b0a011887ad8ead"
+		},
+		"32bit": {
+			"url": "https://github.com/NotepadFree/NotepadFree/releases/download/v8.4.6.ntf/ntf.8.4.6.portable.7z",
+			"hash": "60b01d9b2a97699e366e2d79883495f688fe455ef4698a3b474b461bb3cea083"
+		}
+	},
+	"pre_install": [
+		"if (!(Test-Path \"$persist_dir\\session.xml\")) { New-Item \"$dir\\session.xml\" -Force | Out-Null }",
+		"if (!(Test-Path \"$persist_dir\\userDefineLang.xml\")) { New-Item \"$dir\\userDefineLang.xml\" -Force | Out-Null }",
+		"'Windows Registry Editor Version 5.00' | out-file $dir\\test.reg -encoding ascii",
+		"'[HKEY_CLASSES_ROOT\\*\\shell\\NotepadFree]' | out-file -append $dir\\test.reg -encoding ascii",
+		"cp $dir\\localization\\chineseSimplified.xml $dir\\nativeLang.xml -Force",
+		"'@=\"Edit with NotepadFree\"' | out-file -append $dir\\test.reg -encoding ascii",
+		"$result = $dir.toString() + \"\\notepadfree.exe\" -replace \"\\\\\", \"\\\\\"",
+		"'\"Icon\"=\"' + $result + '\"' | out-file -append $dir\\test.reg -encoding ascii",
+		"'[HKEY_CLASSES_ROOT\\*\\shell\\NotepadFree\\Command]' | out-file -append $dir\\test.reg -encoding ascii",
+		"'@=\"\\\"' + $result + '\\\" \\\"%1\\\"\"' | out-file -append $dir\\test.reg -encoding ascii",
+		"Start-Process powershell \"regedit /s $dir\\test.reg\" -Verb RunAs -WindowStyle hidden -wait"
+	],
+	"uninstaller": {
+		"script": [
+			"Start-Process powershell \"reg delete HKEY_CLASSES_ROOT\\*\\shell\\NotepadFree /f\" -Verb RunAs -WindowStyle hidden -wait"
+		]
+	},
+	"bin": "notepadfree.exe",
+	"shortcuts": [
+		[
+			"notepadfree.exe",
+			"NotepadFree"
+		]
+	],
+	"persist": [
+		"backup",
+		"cloud",
+		"plugins",
+		"themes",
+		"userDefineLangs",
+		"config.xml",
+		"session.xml",
+		"userDefineLang.xml"
+	]
+}
