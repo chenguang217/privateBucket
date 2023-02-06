@@ -9,28 +9,13 @@
 	"url": "https://download3.vmware.com/software/WKST-1701-WIN-NEW/VMware-workstation-full-17.0.1.21139696.exe#/cosi.exe",
 	"hash": "",
 	"installer": {
-		"args": [
-			"/s",
-			"/v\"",
-			"/qn",
-			"EULAS_AGREED=1",
-			"DATACOLLECTION=0",
-			"DESKTOP_SHORTCUT=0",
-			"STARTMENU_SHORTCUT=0",
-			"AUTOSOFTWAREUPDATE=0",
-			"INSTALLDIR=\"\"$dir\"\"",
-			"\""
-		],
-		"keep": true
+		"script": [
+			"Start-Process cmd -ArgumentList \"/c cd /D `\"$dir`\" && cosi.exe /s /v `\"/qn EULAS_AGREED=1 DATACOLLECTION=0 DESKTOP_SHORTCUT=0 STARTMENU_SHORTCUT=0 AUTOSOFTWAREUPDATE=0 INSTALLDIR=`\"`\"$dir`\"`\"`\" && icacls `\"$dir`\" /grant Everyone:F\" -Verb RunAs -WindowStyle hidden -wait"
+		]
 	},
 	"uninstaller": {
-		"file": "cosi.exe",
-		"args": [
-			"/s",
-			"/v\"",
-			"/qn",
-			"REMOVE=ALL",
-			"\""
+		"script": [
+			"Start-Process cmd -ArgumentList \"/c cd /D `\"$dir`\" && cosi.exe /s /v `\"/qn REMOVE=ALL`\"\" -Verb RunAs -WindowStyle hidden -wait"
 		]
 	},
 	"shortcuts": [
