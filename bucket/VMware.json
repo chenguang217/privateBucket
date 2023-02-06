@@ -18,6 +18,9 @@
 			"Start-Process cmd -ArgumentList \"/c cd /D `\"$dir`\" && cosi.exe /s /v `\"/qn REMOVE=ALL`\"\" -Verb RunAs -WindowStyle hidden -wait"
 		]
 	},
+	"depends": [
+		"vcredist2017"
+	],
 	"shortcuts": [
 		[
 			"vmware.exe",
