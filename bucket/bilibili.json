@@ -17,7 +17,7 @@
 		"script": [
 			"Get-ChildItem $dir | ForEach-Object -Process{ if ( $_.name -match 'cer'){$certification = $_.name} }",
 			"Get-ChildItem $dir | ForEach-Object -Process{ if ( $_.name -match '\\.msixbundle'){$app = $_.name} }",
-			"Start-Process powershell \"certutil -addstore root $dir\\$certification;Add-AppxPackage '$dir\\$app';Get-AppxPackage | Select Publisher, PackageFullName | ForEach-Object -Process{ if (`$_.Publisher -match '\u4e91\u4e4b\u5e7b'){move-AppxPackage -Package `$_.PackageFullName -Volume D:\\} }\" -Verb RunAs -WindowStyle hidden -wait"
+			"Start-Process powershell \"certutil -addstore root $dir\\$certification;Add-AppxPackage '$dir\\$app';Get-AppxPackage | Select Publisher, PackageFullName | ForEach-Object -Process{ if (`$_.Publisher -match '\u4e91\u4e4b\u5e7b'){move-AppxPackage -Package `$_.PackageFullName -Volume $(expr substr `\"$dir`\" 1 3)} }\" -Verb RunAs -WindowStyle hidden -wait"
 		]
 	},
 	"uninstaller": {
