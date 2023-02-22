@@ -1,28 +1,29 @@
 {
-	"version": "4.4.8",
+	"version": "2.2302.1.0",
 	"description": "a UWP client for bilibili",
 	"homepage": "https://www.showdoc.com.cn/biliuwpv4",
+	"extract_dir": "App_2.2302.1.0_Test",
 	"architecture": {
 		"32bit": {
-			"url": "https://github.com/chenguang217/bucketFiles/releases/download/1.0/bilibili32.zip",
-			"hash": "md5:0f9a2b7825d23f9ada1a1b3e3375582a"
+			"url": "https://github.com/Richasy/Bili.Uwp/releases/download/v2.2302.1.0/Bili.Uwp_2.2302.1.0_x86.zip",
+			"hash": "eb6f983010627d938aa8177b9a5e5186b9fe3127de955c25ebfb986e5c0e92c0"
 		},
 		"64bit": {
-			"url": "https://github.com/chenguang217/bucketFiles/releases/download/1.0/bilibili64.zip",
-			"hash": "md5:5a36237e152693fc251299ebb855a780"
+			"url": "https://github.com/Richasy/Bili.Uwp/releases/download/v2.2302.1.0/Bili.Uwp_2.2302.1.0_x64.zip",
+			"hash": "5ff0b37cfaafbac2aa47e08fe351eea855ebdce273e4b33c7fed5fa1238abdcf"
 		}
 	},
 	"installer": {
 		"script": [
 			"Get-ChildItem $dir | ForEach-Object -Process{ if ( $_.name -match 'cer'){$certification = $_.name} }",
-			"Get-ChildItem $dir | ForEach-Object -Process{ if ( $_.name -match '\\.msix'){$app = $_.name} }",
-			"Start-Process powershell \"certutil -addstore root $dir\\$certification;Add-AppxPackage '$dir\\$app';Get-AppxPackage | Select Publisher, PackageFullName | ForEach-Object -Process{ if (`$_.Publisher -match 'xiaoyaocz'){move-AppxPackage -Package `$_.PackageFullName -Volume D:\\} }\" -Verb RunAs -WindowStyle hidden -wait"
+			"Get-ChildItem $dir | ForEach-Object -Process{ if ( $_.name -match '\\.msixbundle'){$app = $_.name} }",
+			"Start-Process powershell \"certutil -addstore root $dir\\$certification;Add-AppxPackage '$dir\\$app';Get-AppxPackage | Select Publisher, PackageFullName | ForEach-Object -Process{ if (`$_.Publisher -match '\u4e91\u4e4b\u5e7b'){move-AppxPackage -Package `$_.PackageFullName -Volume D:\\} }\" -Verb RunAs -WindowStyle hidden -wait"
 		]
 	},
 	"uninstaller": {
 		"script": [
-			"Get-AppxPackage | Select Publisher, PackageFullName | ForEach-Object -Process{ if ($_.Publisher -match 'xiaoyaocz'){$app = $_.PackageFullName} }",
-			"Start-Process powershell \"Remove-AppxPackage -Package $app;certutil -delstore root xiaoyaocz\" -Verb RunAs -WindowStyle hidden -wait"
+			"Get-AppxPackage | Select Publisher, PackageFullName | ForEach-Object -Process{ if ($_.Publisher -match '\u4e91\u4e4b\u5e7b'){$app = $_.PackageFullName} }",
+			"Start-Process powershell \"Remove-AppxPackage -Package $app;certutil -delstore root \u4e91\u4e4b\u5e7b\" -Verb RunAs -WindowStyle hidden -wait"
 		]
 	}
 }
