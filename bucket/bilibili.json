@@ -1,16 +1,16 @@
 {
-	"version": "2.2302.1.0",
+	"version": "2.2303.1.0",
 	"description": "a UWP client for bilibili",
 	"homepage": "https://www.showdoc.com.cn/biliuwpv4",
-	"extract_dir": "App_2.2302.1.0_Test",
+	"extract_dir": "App_2.2303.1.0_Test",
 	"architecture": {
 		"32bit": {
-			"url": "https://github.com/Richasy/Bili.Uwp/releases/download/v2.2302.1.0/Bili.Uwp_2.2302.1.0_x86.zip",
-			"hash": "eb6f983010627d938aa8177b9a5e5186b9fe3127de955c25ebfb986e5c0e92c0"
+			"url": "https://github.com/Richasy/Bili.Uwp/releases/download/v2.2303.1.0/Bili.Uwp_2.2303.1.0_x86.zip",
+			"hash": "49f534a2fb45bda896822c6f9fd480b3600178266e5fcd21f17754b52387fbd4"
 		},
 		"64bit": {
-			"url": "https://github.com/Richasy/Bili.Uwp/releases/download/v2.2302.1.0/Bili.Uwp_2.2302.1.0_x64.zip",
-			"hash": "5ff0b37cfaafbac2aa47e08fe351eea855ebdce273e4b33c7fed5fa1238abdcf"
+			"url": "https://github.com/Richasy/Bili.Uwp/releases/download/v2.2303.1.0/Bili.Uwp_2.2303.1.0_x64.zip",
+			"hash": "e52103d118af631f63b140b3a5e338c11df239971b34c06a2c71ae1271159abc"
 		}
 	},
 	"installer": {
