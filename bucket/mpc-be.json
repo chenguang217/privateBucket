@@ -1,5 +1,5 @@
 {
-	"version": "1.6.5.216.20230207",
+	"version": "1.6.6.145.20230330",
 	"description": "Fork of Media Player Classic containing additional features and bug fixes.",
 	"homepage": "https://sourceforge.net/projects/mpcbe/",
 	"license": "GPL-3.0-only",
@@ -7,14 +7,14 @@
 		"64bit": {
 			"url": [
 				"https://github.com/chenguang217/bucketFiles/releases/download/1.0/mpc-be.x64.7z",
-				"https://github.com/hooke007/MPCVR_chs/releases/download/chs_v03.5/MPCVR_chs_20230207.7z"
+				"https://github.com/hooke007/MPCVR_chs/releases/download/chs_v03.6/MPCVR_chs_20230330.7z"
 			],
 			"hash": [
-				"md5:0d7db22eca1a94628d8689c9c6d71c95",
-				"md5:6fc4ffe7a05970c9ed3d390ba41b9bcf"
+				"md5:5fde980d8f4baaef128705badbf8a749",
+				"md5:ac30b1d60afba73bacb4543947ca740a"
 			],
 			"extract_dir": [
-				"MPC-BE.1.6.5.216.x64",
+				"MPC-BE.1.6.6.145.x64",
 				"mpcvr"
 			],
 			"bin": [
@@ -34,14 +34,14 @@
 		"32bit": {
 			"url": [
 				"https://github.com/chenguang217/bucketFiles/releases/download/1.0/mpc-be.x32.7z",
-				"https://github.com/hooke007/MPCVR_chs/releases/download/chs_v03.5/MPCVR_chs_20230207.7z"
+				"https://github.com/hooke007/MPCVR_chs/releases/download/chs_v03.6/MPCVR_chs_20230330.7z"
 			],
 			"hash": [
-				"md5:08592e211b33d4809a2293a6ef4984c4",
-				"md5:6fc4ffe7a05970c9ed3d390ba41b9bcf"
+				"md5:3e8711f3bc2f838b25a484c64041898e",
+				"md5:ac30b1d60afba73bacb4543947ca740a"
 			],
 			"extract_dir": [
-				"MPC-BE.1.6.5.216.x86",
+				"MPC-BE.1.6.6.145.x86",
 				"mpcvr"
 			],
 			"bin": "mpc-be.exe",
