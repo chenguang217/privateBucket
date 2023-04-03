@@ -1,10 +1,10 @@
   
 {
-	"version": "8.0",
+	"version": "9.0",
 	"description": "open emby link with potplayer and update progress with js",
 	"homepage": "https://github.com/chenguang217/bucketFiles",
 	"url": "https://raw.githubusercontent.com/chenguang217/bucketFiles/main/emby2Mpc.py",
-	"hash": "f95943805455272efc145834c60df0a71592e1c630323a3e284982c7f3f60efb",
+	"hash": "cd36c6e544f53a4ce9f4c3e71bda154cf6a3a8c035a04d2d91950311554eb75c",
 	"depends": [
 		"mpc-be"
 	],
@@ -27,7 +27,7 @@
 			"$script = $dir.toString() + \"\\emby2Mpc.py\" -replace \"\\\\\", \"\\\\\"",
 			"'    ws.Run \"python ' + $script +' \"\"\"+args1(x)+\"\"\"\",0' | out-file -append $dir\\test.vbs -encoding ascii",
 			"'Next' | out-file -append $dir\\test.vbs -encoding ascii",
-			"if (!(Test-Path \"$persist_dir\\config.ini\")) { '[baseconf]' | out-file -append $dir\\config.ini -encoding ascii;'persist=' + $scoopdir | out-file -append $dir\\config.ini -encoding ascii;'token=' | out-file -append $dir\\config.ini -encoding ascii;'userName=' | out-file -append $dir\\config.ini -encoding ascii }",
+			"if (!(Test-Path \"$persist_dir\\config.ini\")) { '[baseconf]' | out-file -append $dir\\config.ini -encoding ascii;'persist=' + $scoopdir | out-file -append $dir\\config.ini -encoding ascii;'token=' | out-file -append $dir\\config.ini -encoding ascii;'userName=' | out-file -append $dir\\config.ini -encoding ascii;'dmitriRender=false' | out-file -append $dir\\config.ini -encoding ascii }",
 			"'need token and userName in config.ini'"
 		]
 	},
