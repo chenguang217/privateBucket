@@ -8,7 +8,9 @@
 	},
 	"url": [
 		"https://webcdn.m.qq.com/spcmgr/download/WeChat3.9.2.23.exe#/dl.7z",
-		"https://raw.githubusercontent.com/chenguang217/bucketFiles/main/wechatStartShort.py"
+		"https://raw.githubusercontent.com/chenguang217/bucketFiles/main/wechatStartShort.py",
+		"https://github.com/chenguang217/bucketFiles/releases/download/1.0/wechatInfo.rar",
+		"https://raw.githubusercontent.com/chenguang217/bucketFiles/main/pluginDownload.py"
 	],
 	"shortcuts": [
 		[
@@ -55,6 +57,15 @@
 			"        mkdir \"$persist_dir\\WeChat\"",
 			"        New-Item -Type Junction -Path \"$env:APPDATA\\Tencent\\WeChat\" -Target \"$persist_dir\\WeChat\" | Out-Null",
 			"    }",
+			"}",
+			"if (!(Test-Path \"$persist_dir\\WeChat\\XPlugin\\Info\")) {",
+			"    if (!(Test-Path \"$persist_dir\\WeChat\\XPlugin\")) {",
+			"        mkdir \"$persist_dir\\WeChat\\XPlugin\"",
+			"    }",
+			"    Move-Item \"$dir\\WeChat\\XPlugin\\Info\" \"$persist_dir\\WeChat\\XPlugin\\Info\"",
+			"}",
+			"if (!(Test-Path \"$persist_dir\\WeChat\\XPlugin\\Plugins\")) {",
+			"    python \"$dir\\pluginDownload.py\"",
 			"}"
 		]
 	},
@@ -75,6 +86,8 @@
 	"persist": "WeChat",
 	"hash": [
 		"md5:17a215a93b3b24741fb2f4356b94654d",
-		"e91b6ef07a15f07567ab975978e3c0ccb7c6a2cd6ce324021cd489e6dced236a"
+		"e91b6ef07a15f07567ab975978e3c0ccb7c6a2cd6ce324021cd489e6dced236a",
+		"5abc3c9497fbd6f3f48857354b292301cfaa96698acd3720a3625d8e16a9454e",
+		"6b6756424eed44119ea96f7d9d36e508b73a86d1bc1666c3b2ba46691468edee"
 	]
 }
