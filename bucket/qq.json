@@ -5,7 +5,7 @@
 	"version": "9.7.6.28989",
 	"url": "https://github.com/chenguang217/bucketFiles/releases/download/1.0/qq.7z",
 	"hash": "7025fe8b1efd511c3e047135a1cd64a638765e6734281a865c8d6d7f32294c04",
-	"extract_dir": "QQ_9.7.6.28989_Green/QQ",
+	"extract_dir": "QQ_v9.7.6.28989_Green/QQ",
 	"pre_install": [
 		"$line1 = \"taskkill /f /im QQSetupEx.exe >NUL 2>NUL\"",
 		"$line2 = \"taskkill /f /im QQProtect.exe >NUL 2>NUL\"",
