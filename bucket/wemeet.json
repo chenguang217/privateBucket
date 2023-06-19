@@ -1,9 +1,9 @@
 {
-	"version": "3.16.7.405",
+	"version": "3.17.4.447",
 	"description": "",
 	"homepage": "https://meeting.tencent.com/",
-	"url": "https://updatecdn.meeting.qq.com/cos/8bbce2cbe3c709e72fb78db246a53596/TencentMeeting_0300000000_3.16.7.405.publish.officialwebsite.exe#/dl.7z",
-	"hash": "md5:8bbce2cbe3c709e72fb78db246a53596",
+	"url": "https://updatecdn.meeting.qq.com/cos/29a9f86e52176a500c3179001f1798da/TencentMeeting_0300000000_3.17.4.447.publish.officialwebsite.exe#/dl.7z",
+	"hash": "md5:29a9f86e52176a500c3179001f1798da",
 	"persist": [
 		"WeMeet"
 	],
