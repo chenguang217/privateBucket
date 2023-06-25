@@ -1,15 +1,15 @@
 {
-	"version": "1.42.0",
+	"version": "1.44.0",
 	"description": "a vpn software",
 	"homepage": "https://tailscale.com/",
-	"url": "https://pkgs.tailscale.com/stable/tailscale-setup-1.42.0.exe#/dl.exe",
-	"hash": "5240b5c4f03f6c305f465127b15066c4426df4b223c2c0e94257e2274d20b688",
+	"url": "https://pkgs.tailscale.com/stable/tailscale-setup-1.44.0.exe#/dl.exe",
+	"hash": "d092a06ab72b06526f8e9fee218bb21523dbcc37c32d61ecd0fd3c26bd5ed69b",
 	"architecture": {
 		"64bit": {
 			"installer": {
 				"script": [
 					"dark -x $dir $dir\\dl.exe",
-					"mv $dir\\AttachedContainer\\tailscale-setup-1.42.0-amd64.msi $dir\\installer.exe",
+					"mv $dir\\AttachedContainer\\tailscale-setup-1.44.0-amd64.msi $dir\\installer.exe",
 					"lessmsi x $dir\\installer.exe $dir\\",
 					"mv $dir\\SourceDir\\Tailscale\\* $dir",
 					"rm -Recurse -Force $dir\\AttachedContainer",
@@ -48,7 +48,7 @@
 			"installer": {
 				"script": [
 					"dark -x $dir $dir\\dl.exe",
-					"mv $dir\\AttachedContainer\\tailscale-setup-1.42.0-x86.msi $dir\\installer.exe",
+					"mv $dir\\AttachedContainer\\tailscale-setup-1.44.0-x86.msi $dir\\installer.exe",
 					"lessmsi x $dir\\installer.exe $dir\\",
 					"mv $dir\\SourceDir\\Tailscale\\* $dir",
 					"rm -Recurse -Force $dir\\AttachedContainer",
