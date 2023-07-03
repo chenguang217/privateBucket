@@ -7,7 +7,7 @@
 	"extract_dir": "IDM/Bin",
 	"installer": {
 		"script": [
-			"Start-Process \"$dir\\`!`)绿化.bat\""
+			"Start-Process \"$dir\\`!`)绿化.bat\" -Verb RunAs -wait -WindowStyle hidden"
 		]
 	},
 	"uninstaller": {
