@@ -3,8 +3,14 @@
 	"description": "An instant messaging software service developed by Tencent",
 	"license": "Freeware",
 	"version": "9.7.9.29056",
-	"url": "https://github.com/chenguang217/bucketFiles/releases/download/1.0/qq.7z",
-	"hash": "f1063b063865dd9ed0d719829696c808c15fe4acf6ef7dd56767e91e755d7f87",
+	"url": [
+		"https://github.com/chenguang217/bucketFiles/releases/download/1.0/qq.7z",
+		"https://raw.githubusercontent.com/chenguang217/bucketFiles/main/startQQ.py"
+	],
+	"hash": [
+		"f1063b063865dd9ed0d719829696c808c15fe4acf6ef7dd56767e91e755d7f87",
+		"58dc362a5a4e3f6ed22030bf0b0ae21fb76799dd413d920f6517166d3683f250"
+	],
 	"extract_dir": "QQ",
 	"pre_install": [
 		"$line1 = \"taskkill /f /im QQSetupEx.exe >NUL 2>NUL\"",
@@ -200,7 +206,7 @@
 	},
 	"shortcuts": [
 		[
-			"Bin/QQScLauncher.exe",
+			"start.vbs",
 			"\u817e\u8bafQQ",
 			"",
 			"Bin/QQScLauncher.exe"
