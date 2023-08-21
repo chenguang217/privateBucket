@@ -1,0 +1,41 @@
+{
+	"version": "1.21",
+	"description": "A free source code editor and Notepad replacement that supports several languages.",
+	"homepage": "https://gitee.com/cxasm/notepad--",
+	"url": "https://gitee.com/cxasm/notepad--/releases/download/v1.21/ndd-1.21.1.zip",
+	"hash": "3b9d91b0ee6876b39af2f03c90a2c82fafca3265d019bd0ee56fd37198f785d0",
+	"extract_dir": "ndd-1.21.1",
+	"pre_install": [
+		"'Windows Registry Editor Version 5.00' | out-file $dir\\test.reg -encoding ascii",
+		"'[HKEY_CLASSES_ROOT\\*\\shell\\NotePad--]' | out-file -append $dir\\test.reg -encoding ascii",
+		"'@=\"Edit with NotePad--\"' | out-file -append $dir\\test.reg -encoding ascii",
+		"$result = $dir.toString() + \"\\Notepad--.exe\" -replace \"\\\\\", \"\\\\\"",
+		"'\"Icon\"=\"' + $result + '\"' | out-file -append $dir\\test.reg -encoding ascii",
+		"'[HKEY_CLASSES_ROOT\\*\\shell\\NotePad--\\Command]' | out-file -append $dir\\test.reg -encoding ascii",
+		"'@=\"\\\"' + $result + '\\\" \\\"%1\\\"\"' | out-file -append $dir\\test.reg -encoding ascii",
+		"Start-Process powershell \"regedit /s $dir\\test.reg\" -Verb RunAs -WindowStyle hidden -wait",
+		"$runtimeCache = \"$env:APPDATA\\notepad\"",
+		"$runtimeCachePersist = \"$persist_dir\\notepad\"",
+		"if (Test-Path $runtimeCachePersist) {",
+		"    Remove-Item $runtimeCache -Force -Recurse -ErrorAction SilentlyContinue",
+		"    New-Item -Type Junction -Path $runtimeCache -Target $runtimeCachePersist | Out-Null",
+		"} else {",
+		"    if (Test-Path $runtimeCache) {",
+		"        Move-Item $runtimeCache $runtimeCachePersist -Force",
+		"        New-Item -Type Junction -Path $runtimeCache -Target $runtimeCachePersist | Out-Null",
+		"    }",
+		"}"
+	],
+	"uninstaller": {
+		"script": [
+			"Start-Process powershell \"reg delete HKEY_CLASSES_ROOT\\*\\shell\\NotePad-- /f\" -Verb RunAs -WindowStyle hidden -wait"
+		]
+	},
+	"bin": "Notepad--.exe",
+	"shortcuts": [
+		[
+			"Notepad--.exe",
+			"Notepad--"
+		]
+	]
+}
