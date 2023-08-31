@@ -11,7 +11,7 @@
 	],
 	"uninstaller": {
 		"script": [
-			"Start-Process powershell \"Remove-MpPreference -ExclusionPath $dir;Remove-MpPreference -ExclusionPath $dir\\IDMan.exe;$dir\\``!``)卸载.bat\" -Verb RunAs -WindowStyle hidden -wait"
+			"Start-Process powershell \"$dir\\``!``)卸载.bat;Remove-MpPreference -ExclusionPath $dir;Remove-MpPreference -ExclusionPath $dir\\IDMan.exe\" -Verb RunAs -WindowStyle hidden -wait"
 		]
 	},
 	"shortcuts": [
