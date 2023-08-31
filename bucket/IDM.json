@@ -5,11 +5,10 @@
 	"url": "https://github.com/chenguang217/bucketFiles/releases/download/1.0/IDM.7z",
 	"hash": "md5:e52c953ccc528eca82bf17cc99d2e1f5",
 	"extract_dir": "IDM/Bin",
-	"installer": {
-		"script": [
-			"Start-Process powershell \"Set-MpPreference -DisableRealtimeMonitoring 1;Add-MpPreference -ExclusionPath $dir;Add-MpPreference -ExclusionPath $dir\\IDMan.exe;$dir\\``!``)绿化.bat;Set-MpPreference -DisableRealtimeMonitoring 0\" -Verb RunAs -WindowStyle hidden -wait"
-		]
-	},
+	"pre_install": [
+		"Start-Process powershell \"Set-MpPreference -DisableRealtimeMonitoring 1;Add-MpPreference -ExclusionPath $dir;Add-MpPreference -ExclusionPath $dir\\IDMan.exe;$dir\\``!``)绿化.bat;Set-MpPreference -DisableRealtimeMonitoring 0\" -Verb RunAs -WindowStyle hidden -wait"
+		
+	],
 	"uninstaller": {
 		"script": [
 			"$line1 = \"taskkill /F /IM `\"IDM*`\" /T >NUL 2>NUL\"",
