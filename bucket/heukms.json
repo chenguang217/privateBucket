@@ -5,7 +5,7 @@
 	"url": "https://hub.gitfast.tk/zbezj/HEU_KMS_Activator/releases/download/30.3.0/HEU_KMS_Activator_v30.3.0.zip#/dl.zip_",
 	"hash": "md5:3969180176a5500c3d8833875a89bf6f",
 	"pre_install": [
-		"Start-Process powershell \"Set-MpPreference -DisableRealtimeMonitoring 1;Add-MpPreference -ExclusionPath $dir\\HEU_KMS_Activator_v30.3.0.exe;Set-MpPreference -DisableRealtimeMonitoring 0\" -Verb RunAs -WindowStyle hidden -wait",
+		"Add-MpPreference -ExclusionPath $dir\\HEU_KMS_Activator_v30.3.0.exe\" -Verb RunAs -WindowStyle hidden -wait",
 		"7z x $dir\\dl.zip_ -pHEU168 $('-o' + $dir)",
 		"'Start-Process powershell \"Set-MpPreference -DisableRealtimeMonitoring 1;Start-Process ' + $dir + '\\HEU_KMS_Activator_v30.3.0.exe;Start-Sleep 30;Set-MpPreference -DisableRealtimeMonitoring 0;\" -Verb RunAs -WindowStyle Hidden' | out-file $dir/test.ps1 -encoding ascii",
 		"'@set Path=%Path%;%SystemRoot%\\system32\\WindowsPowerShell\\v1.0\\ & powershell -ExecutionPolicy Unrestricted -NoProfile %~dpn0.ps1 -Verb RunAs -WindowStyle Hidden' | out-file $dir/test.cmd -encoding ascii",
@@ -23,5 +23,6 @@
 		"script": [
 			"Start-Process powershell \"Remove-MpPreference -ExclusionPath $dir\\HEU_KMS_Activator_v30.3.0.exe\" -Verb RunAs -WindowStyle hidden -wait"
 		]
-	}
+	},
+	"secureProblem": true
 }
