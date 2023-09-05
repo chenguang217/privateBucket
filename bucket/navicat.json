@@ -25,5 +25,6 @@
 			"navicat.exe",
 			"Navicat"
 		]
-	]
+	],
+	"secureProblem": true
 }

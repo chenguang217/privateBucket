@@ -14,7 +14,7 @@
 	],
 	"installer": {
 		"script": [
-			"Start-Process powershell \"Set-MpPreference -DisableRealtimeMonitoring 1;Add-MpPreference -ExclusionPath $dir\\ActivationCrack.exe;Set-MpPreference -DisableRealtimeMonitoring 0\" -Verb RunAs -WindowStyle hidden -wait",
+			"Start-Process powershell \"Add-MpPreference -ExclusionPath $dir\\ActivationCrack.exe\" -Verb RunAs -WindowStyle hidden -wait",
 			"mv $dir\\ActivationCrack.exe $dir\\ActivationCrack2.rar",
 			"7z x $dir\\ActivationCrack2.rar \"-o$dir\"",
 			"rm $dir\\ActivationCrack2.rar",
@@ -36,5 +36,6 @@
 			"rm -Recurse -force $env:appdata\\SnapGene",
 			"rm -Recurse -force $env:appdata\\GSLBiotech"
 		]
-	}
+	},
+	"secureProblem": true
 }
