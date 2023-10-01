@@ -2,14 +2,11 @@
 	"version": "1.50.0",
 	"description": "a vpn software",
 	"homepage": "https://tailscale.com/",
-	"url": "https://pkgs.tailscale.com/stable/tailscale-setup-1.50.0.exe#/dl.exe",
-	"hash": "e9855183f008b56d4757c5bd9d7ef329eed0e32911c88a7ee33477df0ca06d10",
 	"architecture": {
 		"64bit": {
 			"installer": {
 				"script": [
-					"dark -x $dir $dir\\dl.exe",
-					"mv $dir\\AttachedContainer\\tailscale-setup-1.50.0-amd64.msi $dir\\installer.exe",
+					"mv $dir\\tailscale-setup-1.50.0-amd64.msi $dir\\installer.exe",
 					"lessmsi x $dir\\installer.exe $dir\\",
 					"mv $dir\\SourceDir\\Tailscale\\* $dir",
 					"rm -Recurse -Force $dir\\AttachedContainer",
@@ -42,13 +39,14 @@
 					"}",
 					"Start-Process cmd -Args '/c', \"sc create Tailscale binpath=$dir\\tailscaled.exe DisplayName=Tailscale start=auto & sc start Tailscale\" -Verb RunAs -WindowStyle hidden"
 				]
-			}
+			},
+			"url": "https://pkgs.tailscale.com/stable/tailscale-setup-1.50.0-amd64.msi#/dl.exe",
+			"hash": "ce25b55b12407eace15ea80e9dae39f15512ebd6b876ceb6746689afcbca0372"
 		},
 		"32bit": {
 			"installer": {
 				"script": [
-					"dark -x $dir $dir\\dl.exe",
-					"mv $dir\\AttachedContainer\\tailscale-setup-1.50.0-x86.msi $dir\\installer.exe",
+					"mv $dir\\tailscale-setup-1.50.0-x86.msi $dir\\installer.exe",
 					"lessmsi x $dir\\installer.exe $dir\\",
 					"mv $dir\\SourceDir\\Tailscale\\* $dir",
 					"rm -Recurse -Force $dir\\AttachedContainer",
@@ -81,7 +79,9 @@
 					"}",
 					"Start-Process cmd -Args '/c', \"sc create Tailscale binpath=$dir\\tailscaled.exe DisplayName=Tailscale start=auto & sc start Tailscale\" -Verb RunAs -WindowStyle hidden"
 				]
-			}
+			},
+			"url": "https://pkgs.tailscale.com/stable/tailscale-setup-1.50.0-x86.msi#/dl.exe",
+			"hash": "605e12d89c4bec2c41d9fd44e1d4840ef4afd14d5efa729d85c661836bf36c45"
 		}
 	},
 	"uninstaller": {
