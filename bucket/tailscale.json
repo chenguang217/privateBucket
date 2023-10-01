@@ -6,7 +6,7 @@
 		"64bit": {
 			"installer": {
 				"script": [
-					"mv $dir\\tailscale-setup-1.50.0-amd64.msi $dir\\installer.exe",
+					"mv $dir\\dl.exe $dir\\installer.exe",
 					"lessmsi x $dir\\installer.exe $dir\\",
 					"mv $dir\\SourceDir\\Tailscale\\* $dir",
 					"rm -Recurse -Force $dir\\AttachedContainer",
@@ -46,7 +46,7 @@
 		"32bit": {
 			"installer": {
 				"script": [
-					"mv $dir\\tailscale-setup-1.50.0-x86.msi $dir\\installer.exe",
+					"mv $dir\\dl.exe $dir\\installer.exe",
 					"lessmsi x $dir\\installer.exe $dir\\",
 					"mv $dir\\SourceDir\\Tailscale\\* $dir",
 					"rm -Recurse -Force $dir\\AttachedContainer",
