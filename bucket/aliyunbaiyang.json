@@ -16,7 +16,7 @@
 		"script": [
 			"7z x $dir\\`$PLUGINSDIR\\app-64.7z \"-o$dir\""
 		]
-	}
+	},
 	"shortcuts": [
 		[
 			"\u5c0f\u767d\u7f8a\u4e91\u76d8.exe",
