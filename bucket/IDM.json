@@ -7,9 +7,9 @@
 	"extract_dir": "IDM/Bin",
 	"pre_install": [
 		"Start-Process powershell \"Add-MpPreference -ExclusionPath $dir;Add-MpPreference -ExclusionPath $dir\\IDMan.exe;$dir\\``!``)\u7eff\u5316.bat\" -Verb RunAs -WindowStyle hidden -wait",
-		"$content = Get-Content -Encoding Default $dir\\``!``)\u5378\u8f7d.bat",
+		"$content = Get-Content -Encoding Default \"$dir\\``!``)\u5378\u8f7d.bat\"",
 		"$content = $content -replace \"CHOICE /C 12 /N >NUL 2>NUL\", \"REM CHOICE /C 12 /N >NUL 2>NUL\"",
-		"$content | Out-File -Encoding Default $dir\\``!``)\u5378\u8f7d.bat"
+		"$content | Out-File -Encoding Default \"$dir\\``!``)\u5378\u8f7d.bat\""
 	],
 	"uninstaller": {
 		"script": [
