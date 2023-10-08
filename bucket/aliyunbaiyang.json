@@ -1,13 +1,21 @@
 {
-	"version": "2.12.14",
+	"version": "3.11.16",
 	"description": "the client for ecloud",
 	"homepage": "https://cloud.189.cn/",
-	"url": "https://github.com/chenguang217/bucketFiles/releases/download/1.0/aliyunbaiyang.rar",
-	"hash": "e6af517c652511b9acffc6499af77e6bf8a54a4aba7fbecbf04446b2209e0372",
+	"architecture": {
+		"64bit": {
+			"url": "https://github.com/gaozhangmin/aliyunpan/releases/download/3.11.16/XBYDriver-3.11.16-win-x64.exe#dl.7z",
+			"hash": "33576e4ba9c0098daba86a2dce4f5412e241e969f1b1017621cb7a531167fbac"
+		},
+		"32bit": {
+			"url": "https://github.com/gaozhangmin/aliyunpan/releases/download/3.11.16/XBYDriver-3.11.16-win-ia32.exe#dl.7z",
+			"hash": "f510711e077a80fa91a18ce610fac5d88d3b758331e7755506b78ad6ab870e8f"
+		}
+	},
 	"shortcuts": [
 		[
-			"阿里云盘小白羊版v2.exe",
-			"阿里云盘小白羊版"
+			"\u963f\u91cc\u4e91\u76d8\u5c0f\u767d\u7f8a\u7248v2.exe",
+			"\u963f\u91cc\u4e91\u76d8\u5c0f\u767d\u7f8a\u7248"
 		]
 	]
 }
