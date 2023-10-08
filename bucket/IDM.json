@@ -13,7 +13,7 @@
 	],
 	"uninstaller": {
 		"script": [
-			"Start-Process powershell \"$dir\\``!``)\u5378\u8f7d.bat;Remove-MpPreference -ExclusionPath $dir;Remove-MpPreference -ExclusionPath $dir\\IDMan.exe\" -Verb RunAs -WindowStyle hidden -wait",
+			"Start-Process powershell \"$dir\\``!``)\u5378\u8f7d.bat;Remove-MpPreference -ExclusionPath $dir;Remove-MpPreference -ExclusionPath $dir\\IDMan.exe\" -Verb RunAs -WindowStyle hidden -wait"
 		]
 	},
 	"shortcuts": [
