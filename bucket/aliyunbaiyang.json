@@ -12,6 +12,11 @@
 			"hash": "2ff35bc5d5c2e661220cebd6553218ac52862cb2c89bf598e2e233732269e333"
 		}
 	},
+	"installer": {
+		"script": [
+			"7z x $dir\\`$PLUGINSDIR\\app-64.7z \"-o$dir\""
+		]
+	}
 	"shortcuts": [
 		[
 			"\u5c0f\u767d\u7f8a\u4e91\u76d8.exe",
