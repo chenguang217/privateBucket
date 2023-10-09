@@ -14,7 +14,20 @@
 	},
 	"installer": {
 		"script": [
-			"7z x $dir\\`$PLUGINSDIR\\app-64.7z \"-o$dir\""
+			"7z x $dir\\`$PLUGINSDIR\\app-64.7z \"-o$dir\"",
+			"Remove-Item $dir\\`$PLUGINSDIR",
+			"Remove-Item $dir\\`$R0",
+			"$runtimeCache = \"$env:APPDATA\\alixby3\"",
+			"$runtimeCachePersist = \"$persist_dir\\alixby3\"",
+			"if (Test-Path $runtimeCachePersist) {",
+			"    Remove-Item $runtimeCache -Force -Recurse -ErrorAction SilentlyContinue",
+			"    New-Item -Type Junction -Path $runtimeCache -Target $runtimeCachePersist | Out-Null",
+			"} else {",
+			"    if (Test-Path $runtimeCache) {",
+			"        Move-Item $runtimeCache $runtimeCachePersist -Force",
+			"        New-Item -Type Junction -Path $runtimeCache -Target $runtimeCachePersist | Out-Null",
+			"    }",
+			"}"
 		]
 	},
 	"shortcuts": [
