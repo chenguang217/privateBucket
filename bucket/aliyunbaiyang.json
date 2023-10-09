@@ -15,8 +15,8 @@
 	"installer": {
 		"script": [
 			"7z x $dir\\`$PLUGINSDIR\\app-64.7z \"-o$dir\"",
-			"Remove-Item $dir\\`$PLUGINSDIR",
-			"Remove-Item $dir\\`$R0",
+			"Remove-Item $dir\\`$PLUGINSDIR -Force -Recurse",
+			"Remove-Item $dir\\`$R0 -Force -Recurse",
 			"$runtimeCache = \"$env:APPDATA\\alixby3\"",
 			"$runtimeCachePersist = \"$persist_dir\\alixby3\"",
 			"if (Test-Path $runtimeCachePersist) {",
