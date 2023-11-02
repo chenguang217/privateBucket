@@ -2,12 +2,12 @@
 	"homepage": "https://im.qq.com/pcqq/",
 	"description": "An instant messaging software service developed by Tencent",
 	"license": "Freeware",
-	"version": "9.7.17.29225",
+	"version": "9.7.18.29244",
 	"url": [
 		"https://github.com/chenguang217/bucketFiles/releases/download/1.0/qq.7z",
 		"https://raw.githubusercontent.com/chenguang217/bucketFiles/main/startQQ.py"
 	],
-	"hash": "68102bfd5f6aff9526e7305c1f11a5def38c926b5f57dc958eb4b91d28602ef7",
+	"hash": "ee69743b8ee141b2421d192ff8b1db10a0c819a2798f5c0e67bc41c4872ef749",
 	"extract_dir": "QQ",
 	"pre_install": [
 		"$line1 = \"taskkill /f /im QQSetupEx.exe >NUL 2>NUL\"",
