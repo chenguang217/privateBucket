@@ -1,15 +1,15 @@
 {
-	"version": "3.12.1",
+	"version": "3.12.2",
 	"description": "the client for ecloud",
 	"homepage": "https://cloud.189.cn/",
 	"architecture": {
 		"64bit": {
-			"url": "https://github.com/gaozhangmin/aliyunpan/releases/download/v3.12.1/XBYDriver-3.12.1-win-x64.exe#dl.7z",
-			"hash": "b87784f60307b1d1a3bd83ab09aa4590a358b87a008d23549a122779b430e8e5"
+			"url": "https://github.com/gaozhangmin/aliyunpan/releases/download/v3.12.2/XBYDriver-3.12.2-win-x64.exe#dl.7z",
+			"hash": "689709db0624aceceeb2fa4b4262c6fab1a02d26699eccc1815d40069ee76fa1"
 		},
 		"32bit": {
-			"url": "https://github.com/gaozhangmin/aliyunpan/releases/download/v3.12.1/XBYDriver-3.12.1-win-ia32.exe#dl.7z",
-			"hash": "13845ca4f3ae2adc9785eda284777ece5ec842a03ed438745c843abaf0737211"
+			"url": "https://github.com/gaozhangmin/aliyunpan/releases/download/v3.12.2/XBYDriver-3.12.2-win-ia32.exe#dl.7z",
+			"hash": "9fa98302389955523395790418f8d11d0f1fde9ba164eb36dee1585ceb570826"
 		}
 	},
 	"installer": {
