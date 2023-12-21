@@ -1,9 +1,9 @@
 {
-	"version": "6.5.8",
+	"version": "6.6.0",
 	"description": "the client for ecloud",
 	"homepage": "https://cloud.189.cn/",
 	"url": "https://github.com/chenguang217/bucketFiles/releases/download/1.0/ecloud.7z",
-	"hash": "md5:57cfb7eda4613bc239028de95b515db7",
+	"hash": "md5:ab212cc54c5226c4786df6323f3b829b",
 	"extract_dir": "eCloud",
 	"shortcuts": [
 		[
