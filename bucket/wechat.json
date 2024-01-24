@@ -1,7 +1,7 @@
 {
 	"homepage": "https://pc.weixin.qq.com/",
 	"description": "Free messaging and calling app.",
-	"version": "3.9.8.25",
+	"version": "3.9.9.27",
 	"license": {
 		"identifier": "EULA",
 		"url": "https://weixin.qq.com/cgi-bin/readtemplate?lang=zh_CN&t=weixin_agreement&s=default"
@@ -85,7 +85,7 @@
 	},
 	"persist": "WeChat",
 	"hash": [
-		"31ca72265d46110a4ec24f05ec3bfa99f0700895317396b89ec5f8d2e5f91950",
+		"001aedccb59ec9e9067d0703ba0ba9f8e1454159dd7aa4fa9f82c0f9b9a57428",
 		"e91b6ef07a15f07567ab975978e3c0ccb7c6a2cd6ce324021cd489e6dced236a",
 		"5abc3c9497fbd6f3f48857354b292301cfaa96698acd3720a3625d8e16a9454e",
 		"6b6756424eed44119ea96f7d9d36e508b73a86d1bc1666c3b2ba46691468edee"
