@@ -1,15 +1,15 @@
 {
-	"version": "0.10.0",
+	"version": "0.11.0",
 	"homepage": "https://github.com/zetamatta/expect",
 	"description": "cross-platform strong encryption and not detectable proxy",
 	"architecture": {
 		"32bit": {
-			"url": "https://github.com/hymkor/expect/releases/download/v0.10.0/expect-v0.10.0-386.zip",
-			"hash": "md5:4f6bb74696de652def12bec5fee62a75"
+			"url": "https://github.com/hymkor/expect/releases/download/v0.11.0/expect-v0.11.0-windows-386.zip",
+			"hash": "md5:459b23be2199c83d3c1a074a6bfdc4c9"
 		},
 		"64bit": {
-			"url": "https://github.com/hymkor/expect/releases/download/v0.10.0/expect-v0.10.0-amd64.zip",
-			"hash": "md5:1aef8e544985335c2c2b7c46afeb1613"
+			"url": "https://github.com/hymkor/expect/releases/download/v0.11.0/expect-v0.11.0-windows-amd64.zip",
+			"hash": "md5:3a419d6795f22d7a8661ca5aadd28323"
 		}
 	},
 	"installer": {
