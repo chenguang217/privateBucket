@@ -2,11 +2,21 @@
 	"version": "3.1.4",
 	"description": "client for Quark Netdisk",
 	"homepage": "https://pan.quark.cn/",
-	"url": "https://pdds.quark.cn/download/stfile/ggmjkgjpoghkgiois/QuarkCloudDrive_v3.1.4_release_(Build1694206-20240301135030).exe#/dl.7z",
+	"url": "https://pdds.quark.cn/download/stfile/ggmjkgjpoghkgiois/QuarkCloudDrive_v3.1.4_release_(Build1694206-20240301135030).exe#/dl.exe",
 	"hash": "8f4ac21b237c42afbdd0c630e6f8731c66f4f9bcc5a7c8823a48e94036da718d",
-	"innosetup": true,
 	"installer": {
 		"script": [
+			"innounp -x $dir\\dl.exe -d\"$dir\"",
+			"Move-Item \"$dir\\{code_GetDestDir}\\*\" \"$dir\"",
+			"Remove-Item \"$dir\\{code_GetDestDir}\" -Force -Recurse -ErrorAction SilentlyContinue",
+			"Move-Item \"$dir\\{app}\\*\" \"$dir\"",
+			"Remove-Item \"$dir\\{app}\" -Force -Recurse -ErrorAction SilentlyContinue",
+			"Copy-Item \"$dir\\{usercf}\\*\" \"$env:LOCALAPPDATA\\Programs\\Common\"",
+			"mkdir \"$env:LOCALAPPDATA\\Programs\\Common\\XDrive\"",
+			"Move-Item \"$dir\\{usercf}\\*\" \"$env:LOCALAPPDATA\\Programs\\Common\\XDrive\"",
+			"Remove-Item \"$dir\\{usercf}\" -Force -Recurse -ErrorAction SilentlyContinue",
+			"Remove-Item \"$dir\\{tmp}\" -Force -Recurse -ErrorAction SilentlyContinue",
+			"Remove-Item \"$dir\\{autocf64}\" -Force -Recurse -ErrorAction SilentlyContinue",
 			"if (Test-Path \"$persist_dir\\quark-cloud-drive\") {",
 			"    Remove-Item \"$env:APPDATA\\quark-cloud-drive\" -Force -Recurse -ErrorAction SilentlyContinue",
 			"    New-Item -Type Junction -Path \"$env:APPDATA\\quark-cloud-drive\" -Target \"$persist_dir\\quark-cloud-drive\" | Out-Null",
@@ -39,7 +49,9 @@
 			"    Move-Item \"$env:APPDATA\\quark-cloud-drive\" \"$persist_dir\\quark-cloud-drive\" -Force",
 			"} else {",
 			"    Remove-Item \"$env:APPDATA\\quark-cloud-drive\" -Force -Recurse -ErrorAction SilentlyContinue",
-			"}"
+			"}",
+			"Remove-Item \"$env:LOCALAPPDATA\\Programs\\Common\\XDrive\" -Force -Recurse -ErrorAction SilentlyContinue",
+			"Remove-Item \"$env:LOCALAPPDATA\\Programs\\Common\\xdrive.node\" -Force -Recurse -ErrorAction SilentlyContinue"
 		]
 	},
 	"shortcuts": [
