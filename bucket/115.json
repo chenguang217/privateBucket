@@ -1,9 +1,9 @@
 {
-	"version": "2.0.8.5",
+	"version": "2.0.9.3",
 	"homepage": "https://pan.baidu.com/download",
 	"description": "a client for baidu netdisk",
-	"url": "https://down.115.com/client/115pc/win/115pc_2.0.8.5.exe#/dl.7z",
-	"hash": "md5:b33c5a1ee98f88f50b66f73c1fcb4ddb",
+	"url": "https://down.115.com/client/115pc/win/115pc_2.0.9.3.exe#/dl.7z",
+	"hash": "md5:25e8250170afa465beddf4dc794ce181",
 	"pre_install": [
 		"Remove-Item \"$dir\\`$PLUGINSDIR\" -Recurse",
 		"mv $dir\\115\\Application\\* $dir",
