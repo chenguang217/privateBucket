@@ -10,7 +10,7 @@
 	"installer": {
 		"script": [
 			"Remove-Item \"$dir\\wemeetapp_new.exe\" -Force",
-			"Rename-Item \"$dir\\`$_10_\" \"$dir\\$version\"",
+			"Rename-Item \"$dir\\`$_22_\" \"$dir\\$version\"",
 			"Remove-Item \"$dir\\`$WINDIR\",\"$dir\\`$PLUGINSDIR\",\"$dir\\`$TEMP\" -Force -Recurse",
 			"'$dir=dir .. | ?{$_.LinkType} | select Target' | out-file $dir/test.ps1 -encoding ascii",
 			"'$dir=$dir.target' | out-file -append $dir/test.ps1 -encoding ascii",
