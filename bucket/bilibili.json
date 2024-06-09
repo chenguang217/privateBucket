@@ -2,7 +2,6 @@
 	"version": "1.2406.2.0",
 	"description": "a UWP client for bilibili",
 	"homepage": "https://www.showdoc.com.cn/biliuwpv4",
-	"extract_dir": "App_2.2310.1.0_Test",
 	"url": "https://github.com/Richasy/Bili.Copilot/releases/download/v1.2406.2.0/Bili.Copilot_1.2406.2.0_x64.zip",
 	"hash": "5a9cc2bee648aff0a56e6043fd459ad53ab9337dd0c8355f33c2e3d23d9193bd",
 	"installer": {
