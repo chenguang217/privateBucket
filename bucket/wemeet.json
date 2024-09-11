@@ -16,7 +16,7 @@
 			"'$dir=$dir.target' | out-file -append $dir/test.ps1 -encoding ascii",
 			"'start-process $dir\\wemeetapp.exe' | out-file -append $dir/test.ps1 -encoding ascii",
 			"'set ws=WScript.CreateObject(\"WScript.Shell\")' | out-file $dir/test.vbs -encoding ascii",
-			"'ws.Run \"powershell.exe -WindowStyle Hidden -file D:\\\\scoop\\\\apps\\\\wemeet\\\\current\\\\test.ps1\",0' | out-file -append $dir/test.vbs -encoding ascii",
+			"'ws.Run \"powershell.exe -WindowStyle Hidden -file $dir.Replace('\\', '\\\\')\\\\test.ps1\",0' | out-file -append $dir/test.vbs -encoding ascii",
 			"if (Test-Path \"$persist_dir\\WeMeet\") {",
 			"    Remove-Item \"$env:APPDATA\\Tencent\\WeMeet\" -Force -Recurse -ErrorAction SilentlyContinue",
 			"    New-Item -Type Junction -Path \"$env:APPDATA\\Tencent\\WeMeet\" -Target \"$persist_dir\\WeMeet\" | Out-Null",
