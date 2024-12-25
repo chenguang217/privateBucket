@@ -1,15 +1,15 @@
 {
-	"version": "8.7.0",
+	"version": "8.7.4",
 	"description": "A free source code editor and Notepad replacement that supports several languages.",
 	"homepage": "https://notepad-plus-plus.org",
 	"architecture": {
 		"64bit": {
-			"url": "https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.7/npp.8.7.portable.x64.zip",
-			"hash": "1955191d7fe07d2a1cb10ceb6f6c2c55b6c2fef07623dcef72efbd5417c334fa"
+			"url": "https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.7.4/npp.8.7.4.portable.x64.zip",
+			"hash": "cb9d0f6e87cacfc34bca1b43d0f359337e3e80cc84fa996712f2236c2e701fbb"
 		},
 		"32bit": {
-			"url": "https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.7/npp.8.7.portable.zip",
-			"hash": "958e1d5711c7f54346bfef169991bdac69f4217a07cbf16df04a3b01eb72699e"
+			"url": "https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.7.4/npp.8.7.4.portable.zip",
+			"hash": "c9c4e348c396b224fc30302079f93d37c917a693e191a0d454f9378dd9719da2"
 		}
 	},
 	"pre_install": [

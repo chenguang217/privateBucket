@@ -1,13 +1,13 @@
 {
 	"homepage": "https://www.epicgames.com/store/",
 	"description": "The Launcher of the digital video game platform operated by Epic Games.",
-	"version": "15.17.1",
+	"version": "17.2.0",
 	"license": {
 		"identifier": "Proprietary",
 		"url": "https://www.epicgames.com/store/en-US/eula"
 	},
-	"url": "https://epicgames-download1.akamaized.net/Builds/UnrealEngineLauncher/Installers/Win32/EpicInstaller-15.17.1.msi?launcherfilename=EpicInstaller-15.17.1.msi",
-	"hash": "6f3f486d7a8409fc174198818c039152c6268bd9fdf210ee6be1c91bf832b7e9",
+	"url": "https://epicgames-download1.akamaized.net/Builds/UnrealEngineLauncher/Installers/Win32/EpicInstaller-17.2.0.msi?launcherfilename=EpicInstaller-17.2.0.msi",
+	"hash": "bdb77e87b9d666634e182ea42482d9559125ca8e62c2399b8ad2c6b42395aaa8",
 	"extract_dir": "Epic Games",
 	"shortcuts": [
 		[
