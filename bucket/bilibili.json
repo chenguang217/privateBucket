@@ -1,9 +1,9 @@
 {
-	"version": "2.2501.2.0",
+	"version": "2.2502.1.0",
 	"description": "a UWP client for bilibili",
 	"homepage": "https://www.showdoc.com.cn/biliuwpv4",
-	"url": "https://github.com/Richasy/Bili.Copilot/releases/download/v2.2501.2.0/BiliCopilot_2.2501.2.0_x64.7z",
-	"hash": "05d056cfe56e12b0f23f4865a4c4a876307fa26424fc78316305546dca3e5af9",
+	"url": "https://github.com/Richasy/Bili.Copilot/releases/download/v2.2502.1.0/BiliCopilot_2.2502.1.0_x64.7z",
+	"hash": "32712c3219236cc3f6bb75f5e5ac9f16328c2cecb2247a16209e46057b8079d0",
 	"installer": {
 		"script": [
 			"Get-ChildItem $dir | ForEach-Object -Process{ if ( $_.name -match 'cer'){$certification = $_.name} }",
