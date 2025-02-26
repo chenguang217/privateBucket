@@ -1,10 +1,10 @@
 {
 	"homepage": "https://github.com/zzzgydi/clash-verge",
 	"description": "A Clash GUI based on tauri",
-	"version": "2.1.0",
+	"version": "2.1.1",
 	"license": "GPL-3.0-only",
-	"url": "https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v2.1.0/Clash.Verge_2.1.0_x64-setup.exe#dl.7z",
-	"hash": "ebe6a9c77851fb1cfbbc8a4fb9aac371efb2e6a81a4d8b72bbc297385ce3cc53",
+	"url": "https://github.com/clash-verge-rev/clash-verge-rev/releases/download/v2.1.1/Clash.Verge_2.1.1_x64-setup.exe#dl.7z",
+	"hash": "d329eeb14c04f96b68f50ff485b562ac59bb23aca867d9ce356b3b436ef9b604",
 	"shortcuts": [
 		[
 			"clash-verge.exe",
