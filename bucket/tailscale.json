@@ -8,7 +8,7 @@
 				"script": [
 					"mv $dir\\dl.exe $dir\\installer.exe",
 					"lessmsi x $dir\\installer.exe $dir\\",
-					"mv $dir\\SourceDir\\Tailscale\\* $dir",
+					"mv $dir\\SourceDir\\pFiles64\\Tailscale\\* $dir",
 					"rm -Recurse -Force $dir\\SourceDir",
 					"rm -Force $dir\\installer.exe",
 					"$WshShell = New-Object -comObject WScript.Shell",
