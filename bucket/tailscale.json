@@ -1,5 +1,5 @@
 {
-	"version": "1.84.0",
+	"version": "1.84.2",
 	"description": "a vpn software",
 	"homepage": "https://tailscale.com/",
 	"architecture": {
@@ -37,8 +37,8 @@
 					"Start-Process cmd -Args '/c', \"sc create Tailscale binpath=$dir\\tailscaled.exe DisplayName=Tailscale start=auto & sc start Tailscale\" -Verb RunAs -WindowStyle hidden"
 				]
 			},
-			"url": "https://pkgs.tailscale.com/stable/tailscale-setup-1.84.0-amd64.msi#/dl.exe",
-			"hash": "0cb2029b2c38ce72df6d4583f33bd856b60af1f25696dd9d5b205fc5e6676953"
+			"url": "https://pkgs.tailscale.com/stable/tailscale-setup-1.84.2-amd64.msi#/dl.exe",
+			"hash": "ca28055e39566cfe1bcf6e3033a43cb9bafcad6b118d0e04c412bc656c23b230"
 		},
 		"32bit": {
 			"installer": {
@@ -74,8 +74,8 @@
 					"Start-Process cmd -Args '/c', \"sc create Tailscale binpath=$dir\\tailscaled.exe DisplayName=Tailscale start=auto & sc start Tailscale\" -Verb RunAs -WindowStyle hidden"
 				]
 			},
-			"url": "https://pkgs.tailscale.com/stable/tailscale-setup-1.84.0-x86.msi#/dl.exe",
-			"hash": "45b60091608cab46e5d5cfc56de7509c80e28e571e3df50a2714035ff0f5ec0f"
+			"url": "https://pkgs.tailscale.com/stable/tailscale-setup-1.84.2-x86.msi#/dl.exe",
+			"hash": "1c39d27ec797ef6108ac371b5bf5696e7586f04558702525804cfa925e5e6a21"
 		}
 	},
 	"uninstaller": {
