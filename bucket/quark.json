@@ -1,13 +1,13 @@
 {
-	"version": "3.20.0",
+	"version": "3.21.0",
 	"description": "client for Quark Netdisk",
 	"homepage": "https://pan.quark.cn/",
-	"url": "https://pdds.quark.cn/download/stfile/yy6483z56yz4y282g/QuarkCloudDrive_v3.20.0_release_(Build2169440-20250424163932).exe#/dl.exe",
-	"hash": "d379a93af4002f9d2534e706d628df55e7067c75c4305afcf25c905614778b17",
+	"url": "https://pdds.quark.cn/download/stfile/nntrwoqqsnornpvpg/QuarkCloudDrive_v3.21.0_release_(Build2235214-20250611142636).exe#/dl.exe",
+	"hash": "9ff486f1cc4970e760149926d75174b0fc744a99a3b9a50a2ef1bcbbdee1c982",
 	"installer": {
 		"script": [
 			"innounp -x $dir\\dl.exe -d\"$dir\"",
-			"Move-Item \"$dir\\{app}\\app-3.20.0\\*\" \"$dir\"",
+			"Move-Item \"$dir\\{app}\\app-3.21.0\\*\" \"$dir\"",
 			"Remove-Item \"$dir\\{app}\" -Force -Recurse -ErrorAction SilentlyContinue",
 			"Remove-Item \"$dir\\{tmp}\" -Force -Recurse -ErrorAction SilentlyContinue",
 			"if (Test-Path \"$persist_dir\\quark-cloud-drive\") {",
