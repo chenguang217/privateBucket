@@ -1,9 +1,9 @@
 {
-	"version": "8.9.5",
+	"version": "8.9.6",
 	"description": "the client for douyu",
 	"homepage": "http://www.douyu.com",
-	"url": "https://sta-op.douyucdn.cn/dypc-client/pkg/Douyu_Live_PC_Client/20250623155238250/DouyuLive_8.9.5.0_Server_1.1.1.4.exe#/dl.7z",
-	"hash": "md5:aa086ac12c2433b61c0f80308d8071f3",
+	"url": "https://sta-op.douyucdn.cn/dypc-client/pkg/Douyu_Live_PC_Client/20250709134910666/DouyuLive_8.9.6.2_Server_1.1.1.4.exe#/dl.7z",
+	"hash": "md5:6301b9431ff512e4cb8ac02b2a610979",
 	"post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\" -Force -Recurse",
 	"shortcuts": [
 		[
