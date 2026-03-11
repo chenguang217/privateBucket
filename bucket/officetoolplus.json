@@ -1,11 +1,11 @@
 {
 	"homepage": "https://github.com/YerongAI/Office-Tool",
 	"description": "Office Tool Plus is a tool for managing, downloading and installing Office.",
-	"version": "11.0.27.0",
+	"version": "11.1.16.0",
 	"license": "GPL-3.0-only",
 	"architecture": {
 		"64bit": {
-			"url": "https://github.com/YerongAI/Office-Tool/releases/download/v11.0.27.0/Office_Tool_with_runtime_v11.0.27.0_x64.zip",
+			"url": "https://github.com/YerongAI/Office-Tool/releases/download/v11.1.16.0/Office_Tool_with_runtime_v11.1.16.0_x64.zip",
 			"hash": "4961b12611b0a3c08b6cbb40106002239370a3d8a2d28c88f71756a7e267ea5f"
 		}
 	},
