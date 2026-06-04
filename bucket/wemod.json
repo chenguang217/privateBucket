@@ -1,15 +1,15 @@
 {
-	"version": "12.27.1",
+	"version": "12.28.2",
 	"description": "PC Game Cheats, Trainers, and Mods in One App",
 	"homepage": "https://www.wemod.com/",
 	"url": "https://api.wemod.com/client/channels/stable/releases/latest#dl.7z",
-	"hash": "md5:5addb21ff4b3dde71e10322bae154497",
+	"hash": "md5:ed5a6c978130595876fca3850379835c",
 	"pre_install": [
-		"7z x $dir\\WeMod-12.27.1-full.nupkg 'lib/net45/*' \"-o$dir\"",
+		"7z x $dir\\WeMod-12.28.2-full.nupkg 'lib/net45/*' \"-o$dir\"",
 		"mv $dir\\lib\\net45\\* $dir",
 		"Remove-Item $dir\\RELEASES",
 		"Remove-Item $dir\\Update.exe",
-		"Remove-Item $dir\\WeMod-12.27.1-full.nupkg",
+		"Remove-Item $dir\\WeMod-12.28.2-full.nupkg",
 		"Remove-Item $dir\\background.gif",
 		"Remove-Item $dir\\setupIcon.ico"
 	],
