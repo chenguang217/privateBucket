@@ -1,5 +1,5 @@
 {
-	"version": "1.102.1",
+	"version": "1.102.2",
 	"description": "a vpn software",
 	"homepage": "https://tailscale.com/",
 	"architecture": {
@@ -37,8 +37,8 @@
 					"Start-Process cmd -Args '/c', \"sc create Tailscale binpath=$dir\\tailscaled.exe DisplayName=Tailscale start=auto & sc start Tailscale\" -Verb RunAs -WindowStyle hidden"
 				]
 			},
-			"url": "https://pkgs.tailscale.com/stable/tailscale-setup-1.102.1-amd64.msi#/dl.exe",
-			"hash": "988a38ab854ad176778955b0c92b27b1af14bf5e0146ea43076d829496d7ac77"
+			"url": "https://pkgs.tailscale.com/stable/tailscale-setup-1.102.2-amd64.msi#/dl.exe",
+			"hash": "d2eb69e103b08a5b77de9d7cb8555541aa99f7dfc6048850b2286a1048c885f9"
 		},
 		"32bit": {
 			"installer": {
@@ -74,8 +74,8 @@
 					"Start-Process cmd -Args '/c', \"sc create Tailscale binpath=$dir\\tailscaled.exe DisplayName=Tailscale start=auto & sc start Tailscale\" -Verb RunAs -WindowStyle hidden"
 				]
 			},
-			"url": "https://pkgs.tailscale.com/stable/tailscale-setup-1.102.1-x86.msi#/dl.exe",
-			"hash": "7599c76f8ff0aac49f3c6d4a125bf679c0829dd381f3757988e732c1ce0ede3a"
+			"url": "https://pkgs.tailscale.com/stable/tailscale-setup-1.102.2-x86.msi#/dl.exe",
+			"hash": "c628a6ea3bb435e568dee22bc1a627f8d29b9d20d9b94b832323a53a24321e6e"
 		}
 	},
 	"uninstaller": {
