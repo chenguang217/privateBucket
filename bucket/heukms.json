@@ -2,7 +2,7 @@
 	"version": "64.0.0",
 	"description": "a KMS activator",
 	"homepage": "https://github.com/zbezj/HEU_KMS_Activator",
-	"url": "https://github.com/zbezj/HEU_KMS_Activator/releases/download/64.0.0/HEU_KMS_Activator_v64.0.0.iso#/dl.zip",
+	"url": "https://github.com/zbezj/HEU_KMS_Activator/releases/download/64.0.0/HEU_KMS_Activator_v64.0.0.iso#/dl.zip_",
 	"hash": "md5:912d7d43f6ac2f25276a91a5db88862e",
 	"pre_install": [
 		"Start-Process powershell \"Set-MpPreference -DisableRealtimeMonitoring 1;Add-MpPreference -ExclusionPath $dir\\HEU_KMS_Activator_64.0.0.exe;Set-MpPreference -DisableRealtimeMonitoring 0\" -Verb RunAs -WindowStyle hidden -wait",
