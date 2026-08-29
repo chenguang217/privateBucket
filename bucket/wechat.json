@@ -22,14 +22,14 @@
 			"7z x \"$dir\\install.7z\" -o\"$dir\"",
 			"if (Test-Path \"$persist_dir\\xwechat_files\") {",
 			"    Remove-Item \"$env:USERPROFILE\\Documents\\xwechat_files\" -Force -Recurse -ErrorAction SilentlyContinue",
-			"    New-Item -Type Junction -Path \"$env:USERPROFILE\\Documents\\xwechat_files\" -Target \"$persist_dir\\WeChat\" | Out-Null",
+			"    New-Item -Type Junction -Path \"$env:USERPROFILE\\Documents\\xwechat_files\" -Target \"$persist_dir\\xwechat_files\" | Out-Null",
 			"} else {",
 			"    if (Test-Path \"$env:USERPROFILE\\Documents\\xwechat_files\") {",
 			"        Move-Item \"$env:USERPROFILE\\Documents\\xwechat_files\" \"$persist_dir\\xwechat_files\" -Force",
 			"        New-Item -Type Junction -Path \"$env:USERPROFILE\\Documents\\xwechat_files\" -Target \"$persist_dir\\xwechat_files\" | Out-Null",
 			"    } else {",
 			"        mkdir \"$persist_dir\\xwechat_files\"",
-			"        New-Item -Type Junction -Path \"$env:USERPROFILE\\Documents\\WeChat\" -Target \"$persist_dir\\xwechat_files\" | Out-Null",
+			"        New-Item -Type Junction -Path \"$env:USERPROFILE\\Documents\\xwechat_files\" -Target \"$persist_dir\\xwechat_files\" | Out-Null",
 			"    }",
 			"}"
 		]
@@ -37,7 +37,7 @@
 	"uninstaller": {
 		"script": [
 			"if (!(Test-Path \"$persist_dir\\xwechat_files\")) {",
-			"    Move-Item \"$env:USERPROFILE\\Documents\\xwechat_files\" \"$persist_dir\\WeChat\" -Force",
+			"    Move-Item \"$env:USERPROFILE\\Documents\\xwechat_files\" \"$persist_dir\\xwechat_files\" -Force",
 			"} else {",
 			"    Remove-Item \"$env:USERPROFILE\\Documents\\xwechat_files\" -Force -Recurse -ErrorAction SilentlyContinue",
 			"}"
