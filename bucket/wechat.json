@@ -19,7 +19,7 @@
 	],
 	"installer": {
 		"script": [
-			"7z x \"$dir\\install.7z\" -o \"$dir\"",
+			"7z x \"$dir\\install.7z\" -o\"$dir\"",
 			"if (Test-Path \"$persist_dir\\xwechat_files\") {",
 			"    Remove-Item \"$env:USERPROFILE\\Documents\\xwechat_files\" -Force -Recurse -ErrorAction SilentlyContinue",
 			"    New-Item -Type Junction -Path \"$env:USERPROFILE\\Documents\\xwechat_files\" -Target \"$persist_dir\\WeChat\" | Out-Null",
