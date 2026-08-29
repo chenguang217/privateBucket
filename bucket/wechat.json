@@ -1,81 +1,44 @@
 {
 	"homepage": "https://pc.weixin.qq.com/",
 	"description": "Free messaging and calling app.",
-	"version": "3.9.12.57",
+	"version": "4.1.13",
 	"license": {
 		"identifier": "EULA",
 		"url": "https://weixin.qq.com/cgi-bin/readtemplate?lang=zh_CN&t=weixin_agreement&s=default"
 	},
 	"url": [
-		"https://dldir1v6.qq.com/weixin/Windows/WeChatSetup.exe#/dl.7z",
-		"https://raw.githubusercontent.com/chenguang217/bucketFiles/main/wechatStartShort.py",
-		"https://github.com/chenguang217/bucketFiles/releases/download/1.0/wechatInfo.rar",
-		"https://raw.githubusercontent.com/chenguang217/bucketFiles/main/pluginDownload.py"
+		"https://dldir1v6.qq.com/weixin/Universal/Windows/WeChatWin_4.1.13.exe#/dl.7z"
 	],
 	"shortcuts": [
 		[
-			"start.vbs",
+			"Weixin.exe",
 			"WeChat",
 			"",
-			"wechat.exe"
+			"Weixin.exe"
 		]
-	],
-	"post_install": [
-		"Remove-Item \"$dir\\`$PLUGINSDIR\" -Force -Recurse"
 	],
 	"installer": {
 		"script": [
-			"pip install psutil requests xmltodict configparser",
-			"if (!(Test-Path \"$persist_dir\\config.ini\")) { '[baseconf]' | out-file -append $dir\\config.ini -encoding ascii;'persist=' + $persist_dir | out-file -append $dir\\config.ini -encoding ascii;'dir=' + $dir | out-file -append $dir\\config.ini -encoding ascii }",
-			"'set ws=WScript.CreateObject(\"WScript.Shell\")' | out-file -append $dir\\start.vbs -encoding ascii",
-			"$python = $scoopdir.toString() + \"\\shims\\python.exe\" -replace \"\\\\\", \"\\\\\"",
-			"$script = $dir.toString() + \"\\wechatStartShort.py\" -replace \"\\\\\", \"\\\\\"",
-			"'ws.Run \"python ' + $script + '\",0' | out-file -append $dir\\start.vbs -encoding ascii",
-			"'$triggers = @()' | out-file -append $dir\\register.ps1 -encoding ascii",
-			"'$CIMTriggerClass = Get-CimClass -ClassName MSFT_TaskEventTrigger -Namespace Root/Microsoft/Windows/TaskScheduler:MSFT_TaskEventTrigger' | out-file -append $dir\\register.ps1 -encoding ascii",
-			"'$trigger = New-CimInstance -CimClass $CIMTriggerClass -ClientOnly' | out-file -append $dir\\register.ps1 -encoding ascii",
-			"'$trigger.Subscription = \"<QueryList><Query Id=`\"0`\" Path=`\"System`\"><Select Path=`\"System`\">*[System[Provider[@Name=' + \"'Microsoft-Windows-Kernel-Power'] and EventID=42]]</Select></Query></QueryList>\" + '\"' | out-file -append $dir\\register.ps1 -encoding ascii",
-			"'$trigger.Enabled = $True' | out-file -append $dir\\register.ps1 -encoding ascii",
-			"'$triggers += $trigger' | out-file -append $dir\\register.ps1 -encoding ascii",
-			"'$CIMTriggerClass = Get-CimClass -ClassName MSFT_TaskEventTrigger -Namespace Root/Microsoft/Windows/TaskScheduler:MSFT_TaskEventTrigger' | out-file -append $dir\\register.ps1 -encoding ascii",
-			"'$trigger = New-CimInstance -CimClass $CIMTriggerClass -ClientOnly' | out-file -append $dir\\register.ps1 -encoding ascii",
-			"'$trigger.Subscription = \"<QueryList><Query Id=`\"0`\" Path=`\"System`\"><Select Path=`\"System`\">*[System[Provider[@Name=' + \"'Microsoft-Windows-Kernel-Power'] and EventID=1074]]</Select></Query></QueryList>\" + '\"' | out-file -append $dir\\register.ps1 -encoding ascii",
-			"'$trigger.Enabled = $True' | out-file -append $dir\\register.ps1 -encoding ascii",
-			"'$triggers += $trigger' | out-file -append $dir\\register.ps1 -encoding ascii",
-			"'$User=\"Nt Authority\\System\"' | out-file -append $dir\\register.ps1 -encoding ascii",
-			"'$Action=New-ScheduledTaskAction -Execute \"cmd.exe\" -Argument \"/c taskkill /f /im WeChat.exe\"' | out-file -append $dir\\register.ps1 -encoding ascii",
-			"\"Register-ScheduledTask -TaskName 'WeChat Shutdown' -Trigger `$triggers -User `$User -Action `$Action -RunLevel Highest -Force\" | out-file -append $dir\\register.ps1 -encoding ascii",
-			"start-process powershell -ArgumentList \"-noprofile -file $dir\\register.ps1\" -verb RunAs -WindowStyle hidden -wait",
-			"if (Test-Path \"$persist_dir\\WeChat\") {",
-			"    Remove-Item \"$env:APPDATA\\Tencent\\WeChat\" -Force -Recurse -ErrorAction SilentlyContinue",
-			"    New-Item -Type Junction -Path \"$env:APPDATA\\Tencent\\WeChat\" -Target \"$persist_dir\\WeChat\" | Out-Null",
+			"if (Test-Path \"$persist_dir\\xwechat_files\") {",
+			"    Remove-Item \"$env:USERPROFILE\\Documents\\xwechat_files\" -Force -Recurse -ErrorAction SilentlyContinue",
+			"    New-Item -Type Junction -Path \"$env:USERPROFILE\\Documents\\xwechat_files\" -Target \"$persist_dir\\WeChat\" | Out-Null",
 			"} else {",
-			"    if (Test-Path \"$env:APPDATA\\Tencent\\WeChat\") {",
-			"        Move-Item \"$env:APPDATA\\Tencent\\WeChat\" \"$persist_dir\\WeChat\" -Force",
-			"        New-Item -Type Junction -Path \"$env:APPDATA\\Tencent\\WeChat\" -Target \"$persist_dir\\WeChat\" | Out-Null",
+			"    if (Test-Path \"$env:USERPROFILE\\Documents\\xwechat_files\") {",
+			"        Move-Item \"$env:USERPROFILE\\Documents\\xwechat_files\" \"$persist_dir\\xwechat_files\" -Force",
+			"        New-Item -Type Junction -Path \"$env:USERPROFILE\\Documents\\xwechat_files\" -Target \"$persist_dir\\xwechat_files\" | Out-Null",
 			"    } else {",
-			"        mkdir \"$persist_dir\\WeChat\"",
-			"        New-Item -Type Junction -Path \"$env:APPDATA\\Tencent\\WeChat\" -Target \"$persist_dir\\WeChat\" | Out-Null",
+			"        mkdir \"$persist_dir\\xwechat_files\"",
+			"        New-Item -Type Junction -Path \"$env:USERPROFILE\\Documents\\WeChat\" -Target \"$persist_dir\\xwechat_files\" | Out-Null",
 			"    }",
-			"}",
-			"if (!(Test-Path \"$persist_dir\\WeChat\\XPlugin\\Info\")) {",
-			"    if (!(Test-Path \"$persist_dir\\WeChat\\XPlugin\")) {",
-			"        mkdir \"$persist_dir\\WeChat\\XPlugin\"",
-			"    }",
-			"    Move-Item \"$dir\\WeChat\\XPlugin\\Info\" \"$persist_dir\\WeChat\\XPlugin\\Info\"",
-			"}",
-			"if (!(Test-Path \"$persist_dir\\WeChat\\XPlugin\\Plugins\")) {",
-			"    python \"$dir\\pluginDownload.py\"",
 			"}"
 		]
 	},
 	"uninstaller": {
 		"script": [
-			"Start-Process powershell \"unregister-scheduledtask -taskname 'WeChat Shutdown' -confirm:`$false\" -Verb RunAs -WindowStyle hidden -wait",
-			"if (!(Test-Path \"$persist_dir\\WeChat\")) {",
-			"    Move-Item \"$env:APPDATA\\Tencent\\WeChat\" \"$persist_dir\\WeChat\" -Force",
+			"if (!(Test-Path \"$persist_dir\\xwechat_files\")) {",
+			"    Move-Item \"$env:USERPROFILE\\Documents\\xwechat_files\" \"$persist_dir\\WeChat\" -Force",
 			"} else {",
-			"    Remove-Item \"$env:APPDATA\\Tencent\\WeChat\" -Force -Recurse -ErrorAction SilentlyContinue",
+			"    Remove-Item \"$env:USERPROFILE\\Documents\\xwechat_files\" -Force -Recurse -ErrorAction SilentlyContinue",
 			"}"
 		]
 	},
@@ -83,11 +46,8 @@
 	"autoupdate": {
 		"url": "https://dldir1.qq.com/weixin/Windows/WeChatSetup.exe#/dl.7z"
 	},
-	"persist": "WeChat",
+	"persist": "xwechat_files",
 	"hash": [
-		"c29fc05630cfc95ef6483f6b5b52aabfe74265bb260e210e78ae437d305d8990",
-		"e91b6ef07a15f07567ab975978e3c0ccb7c6a2cd6ce324021cd489e6dced236a",
-		"5abc3c9497fbd6f3f48857354b292301cfaa96698acd3720a3625d8e16a9454e",
-		"6b6756424eed44119ea96f7d9d36e508b73a86d1bc1666c3b2ba46691468edee"
+		"74570be9fa1dbabf11a901e00e24279e139ade7277da4c8852d60faa6403345e"
 	]
 }
